@@ -80,7 +80,98 @@ export default function BlogPage() {
       title: 'Calculadora de Amortización: Cómo Leer Tu Tabla de Pagos Hipotecarios',
       description: 'Por qué los primeros años son casi todo interés, cómo los pagos extra transforman tu préstamo, y comparativa 15 vs 30 años.',
     },
-  ];
+
+    {
+      slug: 'free-mortgage-calculator-no-email',
+      tag: 'Mortgage Tools',
+      title: 'Free Mortgage Calculator — No Email, No Sign-Up, No Ads',
+      description: 'A truly free mortgage calculator that requires no email address, no registration, and displays no targeted ads. Just the math.',
+    },
+    {
+      slug: 'how-much-house-can-i-afford-2026',
+      tag: 'Affordability',
+      title: 'How Much House Can I Afford in 2026?',
+      description: 'Income-based affordability rules, DTI limits, down payment impact, and stress-testing your budget against rate increases.',
+    },
+    {
+      slug: '30-year-vs-15-year-mortgage-guide',
+      tag: 'Loan Comparison',
+      title: '30-Year vs 15-Year Mortgage: Total Cost Analysis for 2026',
+      description: 'Complete cost breakdown including total interest, monthly payment difference, and opportunity cost of capital for both loan terms.',
+    },
+    {
+      slug: 'mortgage-amortization-schedule-explained',
+      tag: 'Mortgage Education',
+      title: 'Mortgage Amortization Schedule Explained',
+      description: 'How principal and interest shift over the life of your loan, why early payments are mostly interest, and how extra payments accelerate payoff.',
+    },
+    {
+      slug: 'pmi-calculator-guide',
+      tag: 'PMI & Insurance',
+      title: 'PMI Calculator: How to Calculate Private Mortgage Insurance',
+      description: 'PMI rates by LTV, how lenders calculate it, when it cancels automatically, and how to eliminate it faster.',
+    },
+    {
+      slug: 'extra-mortgage-payment-calculator',
+      tag: 'Payment Strategy',
+      title: 'Extra Mortgage Payment Calculator: How Much Can You Save?',
+      description: 'Exact interest savings and years removed from your loan for every extra payment strategy — monthly, annual, or lump sum.',
+    },
+    {
+      slug: 'should-i-refinance-mortgage-2026',
+      tag: 'Refinancing',
+      title: 'Should I Refinance My Mortgage in 2026?',
+      description: 'Break-even calculation, rate difference thresholds, cash-out vs rate-term analysis, and when refinancing destroys equity.',
+    },
+    {
+      slug: 'fha-vs-conventional-loan-2026',
+      tag: 'Loan Comparison',
+      title: 'FHA vs Conventional Loan 2026: Which Costs Less?',
+      description: 'Side-by-side cost comparison including MIP, PMI, down payment requirements, and break-even crossover point.',
+    },
+    {
+      slug: 'down-payment-calculator-guide',
+      tag: 'Down Payment',
+      title: 'Down Payment Calculator: How Much Do You Actually Need?',
+      description: 'Minimum requirements by loan type, PMI thresholds, how down payment size affects your rate, and assistance programs.',
+    },
+    {
+      slug: 'mortgage-closing-costs-explained',
+      tag: 'Closing Costs',
+      title: 'Mortgage Closing Costs Explained: What You Actually Pay',
+      description: 'Complete breakdown of every closing cost line item, which are negotiable, and how to calculate your true cash-to-close.',
+    },
+    {
+      slug: 'bankrate-mortgage-calculator-review',
+      tag: 'Calculator Comparison',
+      title: "Bankrate Mortgage Calculator Review: Accuracy, Ads, and Alternatives",
+      description: "How Bankrate's calculator compares to no-ad alternatives on accuracy, required inputs, and hidden upsells.",
+    },
+    {
+      slug: 'how-to-calculate-mortgage-payment-by-hand',
+      tag: 'Mortgage Education',
+      title: 'How to Calculate Mortgage Payment by Hand',
+      description: 'The exact amortization formula with step-by-step worked examples for any loan amount, rate, and term.',
+    },
+    {
+      slug: 'mortgage-points-calculator',
+      tag: 'Discount Points',
+      title: 'Mortgage Points Calculator: Are Discount Points Worth It?',
+      description: 'Break-even analysis for buying points, how much each point reduces your rate, and when points make financial sense.',
+    },
+    {
+      slug: 'interest-only-mortgage-calculator',
+      tag: 'Mortgage Types',
+      title: 'Interest-Only Mortgage Calculator: Payments, Risks, and Real Costs',
+      description: 'How interest-only loans work, payment shock when amortization begins, and who should — and should not — use them.',
+    },
+    {
+      slug: 'arm-vs-fixed-rate-mortgage-2026',
+      tag: 'Loan Comparison',
+      title: 'ARM vs Fixed-Rate Mortgage 2026: Which Is Safer?',
+      description: 'Cap structures, worst-case payment scenarios, break-even horizon, and when an adjustable-rate mortgage makes sense in 2026.',
+    },
+  ];;
 
   const tagColors: Record<string, string> = {
     'FHA Loans': 'text-blue-600 bg-blue-50',
@@ -93,6 +184,17 @@ export default function BlogPage() {
     'Investment': 'text-amber-600 bg-amber-50',
     'Payoff Strategy': 'text-cyan-600 bg-cyan-50',
     'En Español': 'text-rose-600 bg-rose-50',
+    'Mortgage Tools': 'text-blue-600 bg-blue-50',
+    'Affordability': 'text-emerald-600 bg-emerald-50',
+    'Mortgage Education': 'text-violet-600 bg-violet-50',
+    'PMI & Insurance': 'text-pink-600 bg-pink-50',
+    'Payment Strategy': 'text-cyan-600 bg-cyan-50',
+    'Refinancing': 'text-orange-600 bg-orange-50',
+    'Down Payment': 'text-lime-600 bg-lime-50',
+    'Closing Costs': 'text-yellow-600 bg-yellow-50',
+    'Calculator Comparison': 'text-slate-600 bg-slate-50',
+    'Discount Points': 'text-fuchsia-600 bg-fuchsia-50',
+    'Mortgage Types': 'text-indigo-600 bg-indigo-50',
   };
 
   return (
@@ -114,7 +216,7 @@ export default function BlogPage() {
         <div className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-600 mb-3">Mortgage Education</div>
         <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-3">Mortgage Guides</h1>
         <p className="text-[16px] text-gray-500 leading-relaxed mb-10">
-          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 12 articles.
+          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 27 articles.
         </p>
 
         <div className="space-y-4">

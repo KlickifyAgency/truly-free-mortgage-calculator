@@ -27,6 +27,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "mortgage-payoff-calculator",
     "calculadora-hipoteca-fha",
     "calculadora-amortizacion",
+    "free-mortgage-calculator-no-email",
+    "how-much-house-can-i-afford-2026",
+    "30-year-vs-15-year-mortgage-guide",
+    "mortgage-amortization-schedule-explained",
+    "pmi-calculator-guide",
+    "extra-mortgage-payment-calculator",
+    "should-i-refinance-mortgage-2026",
+    "fha-vs-conventional-loan-2026",
+    "down-payment-calculator-guide",
+    "mortgage-closing-costs-explained",
+    "bankrate-mortgage-calculator-review",
+    "how-to-calculate-mortgage-payment-by-hand",
+    "mortgage-points-calculator",
+    "interest-only-mortgage-calculator",
+    "arm-vs-fixed-rate-mortgage-2026",
   ];
 
   return [
