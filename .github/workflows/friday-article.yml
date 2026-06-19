@@ -1,0 +1,173 @@
+name: Publish Friday Article
+
+on:
+  schedule:
+    - cron: '0 14 * * 5'  # Every Friday 2pm UTC (9am CDT)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish pre-scheduled article or generate new one
+        id: article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # --- Priority 1: publish from _scheduled/ folder ---
+          NEXT=$(ls _scheduled/*.tsx 2>/dev/null | sort | head -1)
+          if [ -n "$NEXT" ]; then
+            FILENAME=$(basename "$NEXT" .tsx)
+            SLUG=$(echo "$FILENAME" | sed 's/^[0-9-]*_//')
+            mkdir -p "src/app/blog/$SLUG"
+            mv "$NEXT" "src/app/blog/$SLUG/page.tsx"
+            echo "slug=$SLUG" >> $GITHUB_OUTPUT
+            echo "Published pre-scheduled: $SLUG"
+            exit 0
+          fi
+
+          # --- Priority 2: generate with Claude API ---
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "No scheduled articles and ANTHROPIC_API_KEY not set. Skipping."
+            exit 0
+          fi
+
+          WEEK=$(date +%V | python3 -c "import sys; w=int(sys.stdin.read().strip()); print(w)")
+          TODAY=$(date +%Y-%m-%d)
+
+          TOPICS=(
+            "How to pay off your mortgage 10 years early with extra payments"
+            "Understanding escrow: what it is and why your payment includes it"
+            "Mortgage pre-approval vs pre-qualification: the real difference"
+            "Should I rent or buy in 2026? A financial decision framework"
+            "How to calculate your debt-to-income ratio for mortgage approval"
+            "What is PMI and how to get rid of it faster"
+            "Adjustable rate mortgages (ARM): when they make sense and when to avoid them"
+            "How mortgage interest deductions work in 2026"
+            "First-time homebuyer programs: which ones actually help"
+            "How to compare mortgage offers: APR vs interest rate explained"
+            "Jumbo loans: what qualifies and how rates differ"
+            "How much house can you actually afford on your salary"
+            "VA loans: the complete guide for veterans and military families"
+            "FHA loans vs conventional loans: when each makes more sense"
+            "What happens at closing: a step-by-step walkthrough"
+            "How to negotiate a lower mortgage rate"
+            "Cash-out refinancing: when it makes sense and when it is a trap"
+            "HELOC vs home equity loan: choosing the right option"
+            "How property taxes are calculated and how to appeal them"
+            "Mortgage points: should you buy down your interest rate"
+            "How to read your mortgage statement"
+            "What credit score do you need to buy a house in 2026"
+            "The hidden costs of buying a home beyond the mortgage payment"
+            "How to refinance a mortgage: step-by-step guide"
+            "Interest-only mortgages: who they work for and who they hurt"
+            "How inflation affects mortgage rates"
+            "Biweekly mortgage payments: do they actually save money"
+            "How to handle mortgage payments during financial hardship"
+            "Investment property mortgages: rates, requirements, and rules"
+            "How mortgage amortization really works with a real example"
+            "Down payment assistance programs by state"
+            "How to get a mortgage as a self-employed borrower"
+            "What is a mortgage escrow shortage and how to fix it"
+            "How to calculate the true cost of a 30-year mortgage"
+            "Conventional loans: the complete guide for 2026"
+            "How to buy a house with bad credit"
+            "What happens to your mortgage if your lender goes bankrupt"
+            "Home inspection vs appraisal: what buyers need to know"
+            "How to avoid overpaying for a house in a hot market"
+            "Construction loans: how they work and what to watch out for"
+            "Reverse mortgages explained: who they help and who they hurt"
+            "How to calculate break-even on mortgage refinancing"
+            "Mobile home mortgages: financing options and what to expect"
+            "How mortgage forbearance works and when to request it"
+            "Multi-family property mortgages: house hacking explained"
+            "What is title insurance and do you need it"
+            "How to protect yourself from mortgage fraud"
+            "Condo mortgages: how they differ from single-family loans"
+            "What is a mortgage contingency and should you waive it"
+            "Rural home loans: USDA loans explained"
+            "How to calculate equity and net worth from your home"
+            "Portfolio loans: when banks hold your mortgage instead of selling it"
+          )
+
+          IDX=$(( ($WEEK - 1) % ${#TOPICS[@]} ))
+          TOPIC="${TOPICS[$IDX]}"
+
+          echo "Generating article for topic: $TOPIC"
+
+          SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | cut -c1-60)
+
+          python3 - <<PYEOF
+import json, urllib.request, os, re
+
+api_key = os.environ["ANTHROPIC_API_KEY"]
+topic = """$TOPIC"""
+slug = """$SLUG"""
+today = """$TODAY"""
+
+prompt = f"""Write a complete Next.js blog article (TSX file) for trulyfreemortgage.com about: "{topic}"
+
+Requirements:
+- Complete, ready-to-deploy TSX file
+- Import: import AuthorBox from '@/components/blog/AuthorBox' and import type {{ Metadata }} from 'next'
+- Export metadata with title, description, canonical URL: https://trulyfreemortgage.com/blog/{slug}
+- Article JSON-LD schema as const (not exported), datePublished: "{today}", author: George Smith
+- Component: export default function Page() returning full JSX
+- Use Tailwind CSS classes (not inline styles) — same pattern as existing mortgage articles
+- Dark navy/blue header section, author box, 5-7 content sections with practical financial data
+- Include a data comparison table or calculator-style table showing numbers
+- Link back to /mortgage-calculator in CTA section
+- FAQ section with 4 questions and schema
+- Do NOT mention "Google AdSense" — just say "ad-supported" if revenue model mentioned
+- Write as George Smith, practical and data-driven, no fluff
+- Word count: 1,200-1,800 words of actual content
+- Output ONLY the complete TSX code, no explanation, no markdown code blocks"""
+
+data = json.dumps({
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 8000,
+    "messages": [{"role": "user", "content": prompt}]
+}).encode()
+
+req = urllib.request.Request(
+    "https://api.anthropic.com/v1/messages",
+    data=data,
+    headers={
+        "x-api-key": api_key,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json"
+    }
+)
+
+with urllib.request.urlopen(req) as resp:
+    result = json.loads(resp.read())
+
+content = result["content"][0]["text"]
+content = re.sub(r'^```(?:tsx|typescript|jsx)?\n', '', content, flags=re.MULTILINE)
+content = re.sub(r'\n```\s*$', '', content, flags=re.MULTILINE)
+
+os.makedirs(f"src/app/blog/{slug}", exist_ok=True)
+with open(f"src/app/blog/{slug}/page.tsx", "w") as f:
+    f.write(content)
+
+print(f"Article written to src/app/blog/{slug}/page.tsx")
+PYEOF
+
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        run: |
+          git config user.name "Klickify Agency Bot"
+          git config user.email "info@klickifyagency.com"
+          git add .
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "publish: weekly article - ${{ steps.article.outputs.slug }}"
+            git push
+          fi
