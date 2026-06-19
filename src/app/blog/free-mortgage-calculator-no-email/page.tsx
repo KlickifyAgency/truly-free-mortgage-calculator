@@ -122,7 +122,7 @@ export default function FreeMortgageCalculatorNoEmailPage() {
             LendingTree is the most aggressive. Their entire business model is lead aggregation. When you fill out their mortgage calculator, you are actually filling out a loan application that gets auctioned to lenders in real time. LendingTree earns an average of $400 per funded loan. They do not care if you get the best rate. They care that you close with one of their partner lenders.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Truly Free Mortgage Calculator does none of this. I run Google AdSense ads on the calculator page. The ads are clearly marked. You see them, I earn a few cents per visit. That is the only revenue. I do not capture your email. I do not sell your phone number. I do not have a &quot;get matched&quot; button because I am not in the lead generation business. I built this tool because I am a home owner who got tired of spam calls after using Bankrate. You deserve better.
+            Truly Free Mortgage Calculator does none of this. The site displays non-intrusive ads — that is the only revenue. No email capture. No phone number. No &quot;get matched&quot; button because this is not a lead generation business. I built this tool because I am a home owner who got tired of spam calls after using Bankrate. You deserve better.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">

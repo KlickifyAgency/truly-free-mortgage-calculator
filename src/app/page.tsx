@@ -113,7 +113,7 @@ export default function HomePage() {
           <h2 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '20px', lineHeight: 1.2 }}>Why Every Mortgage Calculator Asks for Your Email (And Why This One Doesn't)</h2>
           <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>Here's the thing most people don't realize: the major mortgage calculators aren't tools. They're lead funnels. Bankrate, LendingTree, Zillow — you enter your home price and income, and within minutes a loan officer is calling you. Your "free" calculation cost you your contact information, which was sold to four or five lenders simultaneously.</p>
           <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>That model works fine for lenders. It's terrible for borrowers who just want to run numbers before they're ready to talk to anyone. Which is exactly why this calculator asks for nothing. No email. No phone number. No account. You get the same calculation the lenders' systems use, without giving up your contact information to get it.</p>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75 }}>The tool is supported by Google AdSense — advertising, not lead generation. That's the entire business model. It costs nothing and collects nothing.</p>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75 }}>The tool is ad-supported — display advertising, not lead generation. That's the entire business model. It costs nothing and collects nothing.</p>
         </div>
       </div>
 

@@ -122,7 +122,7 @@ export default function BankrateMortgageCalculatorReviewPage() {
             Zillow&apos;s mortgage calculator is integrated with their real estate platform. If you are logged into Zillow, they already have your contact information. They use calculator inputs to target you with listings and lender offers.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            The only truly free calculators are those that do not have a lead generation business model. That means they are funded by advertising (like mine) or by donations (like open-source projects). AdSense does not require me to collect your data. I get paid for showing ads, not for selling your information.
+            The only truly free calculators are those that do not have a lead generation business model. That means they are funded by advertising (like mine) or by donations (like open-source projects). Display advertising does not require collecting your data — the revenue model is showing ads, not selling your information.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
