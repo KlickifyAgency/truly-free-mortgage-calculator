@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: 'Is Bankrate\'s mortgage calculator accurate?', a: 'Yes, the math is accurate. But the calculator is not the product. The leads are the product. The accuracy is just bait. They want you to trust the calculator so you will trust their lender recommendations.' },
   { q: 'Will my phone ring if I use Bankrate\'s calculator?', a: 'Only if you click "Get My Rate" or any button that submits your information. But even if you do not submit, Bankrate tracks your IP and browser fingerprint. They may retarget you with ads on other sites.' },
-  { q: 'How does Bankrate make money if the calculator is free?', a: 'Lead generation. They earned $120 million in 2025 from mortgage leads alone. Their other revenue comes from credit card and banking product referrals.' },
+  { q: 'How does Bankrate make money if the calculator is free?', a: 'Lead generation. Bankrate reports roughly 25 million monthly page views and sells rate-table advertising placements to lenders on top of selling submitted leads directly. Their other revenue comes from credit card and banking product referrals. The exact dollar figure from mortgage leads specifically isn\'t broken out in public filings, but the model is well documented: you fill the form, your data becomes the product.' },
   { q: 'Is there any way to use Bankrate without getting spammed?', a: 'Use a fake email and a Google Voice number. But Bankrate still tracks your IP address. Better to use a tool that does not require any personal information at all.' },
   { q: 'Does Truly Free Mortgage Calculator have lender relationships?', a: 'No. I do not partner with any lenders. I do not get paid for referrals. The only money comes from AdSense ads, which are clearly labeled. You can block ads with an ad blocker and still use the calculator.' },
   { q: 'Why should I trust a free calculator that is ad-supported?', a: 'Because my incentive is aligned with yours. I want you to use the calculator repeatedly. If I sold your data or caused you to get spam calls, you would never come back. My business depends on repeat usage. Bankrate\'s business depends on one-time lead capture. That is the fundamental difference.' },
@@ -24,7 +24,7 @@ const jsonLd = {
       'headline': "Bankrate Mortgage Calculator: What They Don't Tell You",
       'description': 'How Bankrate\'s lead generation model works, what it costs you in privacy and spam, and how to use a real free mortgage calculator without lead gen.',
       'datePublished': '2026-06-10',
-      'dateModified': '2026-06-10',
+      'dateModified': '2026-07-03',
       'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/bankrate-mortgage-calculator-review',
@@ -83,7 +83,7 @@ export default function BankrateMortgageCalculatorReviewPage() {
             You type &quot;mortgage calculator&quot; into Google. Bankrate is the first result. You click. The calculator is clean. You enter a home price, down payment, and rate. It shows a monthly payment. Then you see a big green button: &quot;Get My Rate.&quot; You are curious. You click. A form appears: name, email, phone number, credit score. You hesitate. Then you see a pop-up: &quot;By submitting, you agree to be contacted by up to 5 lenders.&quot; You close the tab.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Bankrate&apos;s mortgage calculator is not a calculator. It is a lead generation machine disguised as a tool. Bankrate makes over $100 million annually from selling mortgage leads. Their calculator is designed to make you feel comfortable — it looks neutral and helpful — then push you into the sales funnel at the right moment.
+            Bankrate&apos;s mortgage calculator is not a calculator. It is a lead generation machine disguised as a tool. Bankrate reports around 25 million monthly page views and monetizes that traffic primarily through rate-table advertising and lead sales to lenders — the exact mortgage-lead revenue isn&apos;t broken out publicly, but the model is well documented industry-wide. Their calculator is designed to make you feel comfortable — it looks neutral and helpful — then push you into the sales funnel at the right moment.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-8">
             I am going to show you exactly how Bankrate&apos;s model works, what it costs you in privacy and spam, and introduce you to a true free alternative that does not sell your data. I built Truly Free Mortgage Calculator after getting burned by Bankrate&apos;s calls myself.
