@@ -251,7 +251,7 @@ export default function ARMvsFixedRatePage() {
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
+                ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
                 ['/blog/mortgage-refinance-calculator', 'Refinance Calculator', 'Break-even formula, closing costs, when refinancing costs you money.'],
                 ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments shave years off your loan.'],
                 ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'See exactly how every payment breaks down, month by month.'],

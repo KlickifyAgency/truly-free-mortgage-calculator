@@ -4,7 +4,10 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Calculadora de Hipoteca FHA — Gratis, Sin Registro | Truly Free Mortgage',
   description: 'Calcula tu pago mensual FHA al instante. Seguro hipotecario MIP, pago inicial por puntaje de crédito, tabla de amortización completa. Gratis para siempre.',
-  alternates: { canonical: 'https://trulyfreemortgage.com/blog/calculadora-hipoteca-fha' },
+  alternates: {
+    canonical: 'https://trulyfreemortgage.com/blog/calculadora-hipoteca-fha',
+    languages: { 'es': 'https://trulyfreemortgage.com/blog/calculadora-hipoteca-fha' },
+  },
 };
 
 const jsonLd = {

@@ -47,6 +47,12 @@ const sections = [
   },
 ];
 
+const relatedGuides = [
+  { href: '/blog/fha-mortgage-calculator', title: 'FHA Mortgage Calculator', desc: 'MIP costs, down payment by credit score, FHA vs conventional.' },
+  { href: '/blog/mortgage-refinance-calculator', title: 'Mortgage Refinance Calculator', desc: 'The break-even formula for when refinancing actually saves money.' },
+  { href: '/blog/30-year-vs-15-year-mortgage-guide', title: '30-Year vs 15-Year Mortgage', desc: 'Total interest, monthly payment difference, and opportunity cost compared.' },
+];
+
 export default function Page() {
   return (
     <>
@@ -69,6 +75,23 @@ export default function Page() {
                 <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.75, margin: 0 }}>{body}</p>
               </div>
             ))}
+          </div>
+
+          <div style={{ marginTop: '48px' }}>
+            <h2 style={{ fontSize: '22px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '8px', lineHeight: 1.2 }}>
+              Related Guides
+            </h2>
+            <p style={{ fontSize: '15px', color: '#718096', marginBottom: '20px', letterSpacing: '-0.01em' }}>
+              Go deeper on specific loan types and comparisons.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+              {relatedGuides.map(({ href, title, desc }) => (
+                <a key={href} href={href} style={{ display: 'block', background: '#f7fafc', borderRadius: '8px', padding: '20px', textDecoration: 'none' }}>
+                  <p style={{ fontSize: '15px', fontWeight: 700, color: '#0058c3', marginBottom: '6px', letterSpacing: '-0.01em' }}>{title}</p>
+                  <p style={{ fontSize: '13px', color: '#718096', lineHeight: 1.5, margin: 0 }}>{desc}</p>
+                </a>
+              ))}
+            </div>
           </div>
 
           <div style={{ marginTop: '48px', background: '#f7fafc', borderRadius: '8px', padding: '24px' }}>

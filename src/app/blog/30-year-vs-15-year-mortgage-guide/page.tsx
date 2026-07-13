@@ -159,7 +159,6 @@ export default function ThirtyVsFifteenYearMortgageGuidePage() {
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
                 ['/blog/extra-mortgage-payment-calculator', 'Extra Mortgage Payment Calculator', 'How extra payments shave years off your loan.'],
                 ['/blog/mortgage-amortization-schedule-explained', 'Amortization Schedule Explained', 'See exactly where your money goes every month for 30 years.'],
                 ['/blog/should-i-refinance-mortgage-2026', 'Should I Refinance in 2026?', 'The break-even math on refinancing your current loan.'],

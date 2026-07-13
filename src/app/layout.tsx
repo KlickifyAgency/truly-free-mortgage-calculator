@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Truly Free Mortgage Calculator — No Registration Required",
@@ -77,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: `window.ezstandalone = window.ezstandalone || {}; ezstandalone.cmd = ezstandalone.cmd || [];` }} />
         <script src="//ezoicanalytics.com/analytics.js"></script>
       </head>
-      <body className={inter.className} style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <body style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: siteSchemas }} />
         {children}
         <Footer />

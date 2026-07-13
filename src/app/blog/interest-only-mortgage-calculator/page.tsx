@@ -162,7 +162,7 @@ export default function InterestOnlyMortgageCalculatorPage() {
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                ['/blog/arm-vs-fixed-rate-mortgage-2026', 'ARM vs Fixed Rate Mortgage', 'The worst-case scenario lenders do not show you.'],
+                ['/blog/arm-vs-fixed-rate', 'ARM vs Fixed Rate Mortgage', 'The worst-case scenario lenders do not show you.'],
                 ['/blog/mortgage-amortization-schedule-explained', 'Amortization Schedule Explained', 'See exactly where your money goes every month for 30 years.'],
                 ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', 'The $273,000 difference nobody shows you up front.'],
                 ['/blog/free-mortgage-calculator-no-email', 'Free Mortgage Calculator — No Email', 'Honest mortgage math without the lead-capture funnel.'],

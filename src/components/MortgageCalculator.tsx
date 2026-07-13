@@ -475,7 +475,7 @@ export default function MortgageCalculator() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   ['/blog/fha-mortgage-calculator', 'FHA Mortgage Calculator', 'Calculate your FHA payment including upfront and annual MIP. Down payment requirements by credit score.'],
-                  ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', 'Side-by-side interest cost analysis. On a $300,000 loan the difference is $237,000.'],
+                  ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', 'Side-by-side interest cost analysis. On a $300,000 loan the difference is $237,000.'],
                   ['/blog/mortgage-refinance-calculator', 'Mortgage Refinance Calculator', 'Calculate your break-even point. When refinancing saves money and when it costs you.'],
                   ['/blog/va-loan-calculator', 'VA Loan Calculator', 'No PMI, no down payment. Calculate your VA loan payment with funding fee included.'],
                   ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'How to read your payment breakdown and where extra payments have the most impact.'],

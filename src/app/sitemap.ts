@@ -16,7 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const articles = [
     "fha-mortgage-calculator",
-    "15-year-vs-30-year-mortgage",
     "mortgage-refinance-calculator",
     "amortization-schedule-generator",
     "va-loan-calculator",
@@ -41,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-calculate-mortgage-payment-by-hand",
     "mortgage-points-calculator",
     "interest-only-mortgage-calculator",
-    "arm-vs-fixed-rate-mortgage-2026",
   ];
 
   return [

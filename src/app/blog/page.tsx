@@ -15,12 +15,6 @@ export default function BlogPage() {
       description: 'The true cost of FHA loans including upfront and annual MIP. Down payment requirements by credit score. No email required.',
     },
     {
-      slug: '15-year-vs-30-year-mortgage',
-      tag: 'Loan Comparison',
-      title: '15-Year vs 30-Year Mortgage: The Complete Interest Cost Analysis',
-      description: 'Side-by-side comparison of total interest paid, monthly payment difference, and the opportunity cost of capital for each loan term.',
-    },
-    {
       slug: 'mortgage-refinance-calculator',
       tag: 'Refinance',
       title: 'Mortgage Refinance Calculator: How to Calculate Your Break-Even Point',
@@ -165,12 +159,6 @@ export default function BlogPage() {
       title: 'Interest-Only Mortgage Calculator: Payments, Risks, and Real Costs',
       description: 'How interest-only loans work, payment shock when amortization begins, and who should — and should not — use them.',
     },
-    {
-      slug: 'arm-vs-fixed-rate-mortgage-2026',
-      tag: 'Loan Comparison',
-      title: 'ARM vs Fixed-Rate Mortgage 2026: Which Is Safer?',
-      description: 'Cap structures, worst-case payment scenarios, break-even horizon, and when an adjustable-rate mortgage makes sense in 2026.',
-    },
   ];;
 
   const tagColors: Record<string, string> = {
@@ -216,7 +204,7 @@ export default function BlogPage() {
         <div className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-600 mb-3">Mortgage Education</div>
         <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-3">Mortgage Guides</h1>
         <p className="text-[16px] text-gray-500 leading-relaxed mb-10">
-          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 27 articles.
+          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 25 articles.
         </p>
 
         <div className="space-y-4">

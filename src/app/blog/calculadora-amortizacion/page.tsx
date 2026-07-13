@@ -4,7 +4,10 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Calculadora de Amortización — Gratis, Sin Registro | Truly Free Mortgage',
   description: 'Genera tu tabla de amortización completa al instante. Ve cada pago desglosado en capital e interés con el saldo restante. Gratis para siempre, sin cuenta requerida.',
-  alternates: { canonical: 'https://trulyfreemortgage.com/blog/calculadora-amortizacion' },
+  alternates: {
+    canonical: 'https://trulyfreemortgage.com/blog/calculadora-amortizacion',
+    languages: { 'es': 'https://trulyfreemortgage.com/blog/calculadora-amortizacion' },
+  },
 };
 
 const jsonLd = {
@@ -261,7 +264,7 @@ export default function CalculadoraAmortizacionPage() {
               {[
                 ['/blog/calculadora-hipoteca-fha', 'Calculadora de Hipoteca FHA', 'Seguro MIP, pago inicial por puntaje, FHA vs convencional en español.'],
                 ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'Tabla de amortización completa en inglés con exportación CSV.'],
-                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 de diferencia en interés total en un préstamo de $300k.'],
+                ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', '$237,000 de diferencia en interés total en un préstamo de $300k.'],
                 ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'Cómo los pagos extra eliminan años de tu préstamo.'],
               ].map(([href, title, desc]) => (
                 <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">

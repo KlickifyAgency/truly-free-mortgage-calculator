@@ -259,7 +259,7 @@ export default function AmortizationScheduleGeneratorPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments shave years off your loan.'],
-                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
+                ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
                 ['/blog/fha-mortgage-calculator', 'FHA Mortgage Calculator', 'MIP costs, down payment by credit score, FHA vs conventional.'],
                 ['/blog/mortgage-refinance-calculator', 'Refinance Calculator', 'Break-even formula, closing costs, when refinancing costs you money.'],
               ].map(([href, title, desc]) => (

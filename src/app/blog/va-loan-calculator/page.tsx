@@ -278,7 +278,7 @@ export default function VALoanCalculatorPage() {
               {[
                 ['/blog/usda-rural-home-loan-calculator', 'USDA Rural Home Loan Calculator', 'Zero-down for eligible rural and suburban areas — more common than you think.'],
                 ['/blog/fha-mortgage-calculator', 'FHA Mortgage Calculator', 'MIP costs, down payment by credit score, FHA vs conventional.'],
-                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
+                ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
                 ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments shave years off your loan.'],
               ].map(([href, title, desc]) => (
                 <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
