@@ -140,7 +140,7 @@ export default function VALoanCalculatorPage() {
 
           <h2 id="eligibility" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">VA Loan Eligibility Requirements</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            VA loan eligibility is determined by your military service history. The basic requirements are as follows. Active-duty service members become eligible after 90 continuous days of service. Veterans who served during wartime need 90 days of active duty. Veterans who served during peacetime need 181 days. National Guard and Reserve members need six years of service or 90 days of active-duty deployment under Title 10 orders.
+            VA loan eligibility, as <a href="https://www.va.gov/housing-assistance/home-loans/eligibility/" target="_blank" rel="noopener noreferrer">VA.gov details</a>, is determined by your military service history. The basic requirements are as follows. Active-duty service members become eligible after 90 continuous days of service. Veterans who served during wartime need 90 days of active duty. Veterans who served during peacetime need 181 days. National Guard and Reserve members need six years of service or 90 days of active-duty deployment under Title 10 orders.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Surviving spouses of veterans who died in the line of duty or from a service-connected disability are also eligible, provided they have not remarried.
@@ -165,7 +165,7 @@ export default function VALoanCalculatorPage() {
 
           <h2 id="funding-fee" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">The VA Funding Fee Explained</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            The VA funding fee is a one-time charge that helps sustain the VA loan program for future generations of veterans. It is not paid to the lender — it goes directly to the Department of Veterans Affairs. The fee varies based on your down payment amount, whether this is your first VA loan use, and your service category.
+            The <a href="https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/" target="_blank" rel="noopener noreferrer">VA funding fee</a> is a one-time charge that helps sustain the VA loan program for future generations of veterans. It is not paid to the lender — it goes directly to the Department of Veterans Affairs. The fee varies based on your down payment amount, whether this is your first VA loan use, and your service category.
           </p>
 
           <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">

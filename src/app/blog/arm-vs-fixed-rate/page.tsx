@@ -144,7 +144,7 @@ export default function ARMvsFixedRatePage() {
 
           <h2 id="cap-structure" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Rate Cap Structures Explained</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Caps protect borrowers from unlimited rate increases. The standard cap structure has three components expressed as three numbers separated by slashes.
+            Caps protect borrowers from unlimited rate increases. As the <a href="https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/" target="_blank" rel="noopener noreferrer">Consumer Financial Protection Bureau explains</a>, the standard cap structure has three components expressed as three numbers separated by slashes.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             The initial cap limits how much the rate can increase at the first adjustment. The periodic cap limits how much the rate can change at any subsequent adjustment. The lifetime cap limits how much the rate can ever increase above the original note rate.

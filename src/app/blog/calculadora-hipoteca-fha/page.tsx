@@ -137,7 +137,7 @@ export default function CalculadoraHipotecaFHAPage() {
 
           <h2 id="que-es" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">¿Qué es un Préstamo FHA?</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Un préstamo FHA es una hipoteca asegurada por la Administración Federal de Vivienda, una agencia del gobierno federal de los Estados Unidos. La FHA no presta dinero directamente — asegura el préstamo, lo que permite a los prestamistas privados ofrecer condiciones más flexibles a compradores con puntajes de crédito más bajos o menor capital para el pago inicial.
+            Un préstamo FHA es una hipoteca asegurada por la Administración Federal de Vivienda, una agencia del gobierno federal de los Estados Unidos. La FHA no presta dinero directamente — asegura el préstamo, lo que permite a los prestamistas privados ofrecer condiciones más flexibles a compradores con puntajes de crédito más bajos o menor capital para el pago inicial, según describe <a href="https://www.hud.gov/hud-partners/housing-mip" target="_blank" rel="noopener noreferrer">HUD.gov, la agencia que administra el programa</a>.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             El programa existe desde 1934 y fue creado para ampliar el acceso a la propiedad de vivienda. En la actualidad representa aproximadamente el 15% de todas las hipotecas originadas en Estados Unidos, con una concentración mayor entre compradores de primera vivienda y compradores de ingresos bajos a moderados.
@@ -159,7 +159,7 @@ export default function CalculadoraHipotecaFHAPage() {
 
           <h2 id="mip" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">El Seguro MIP Explicado</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            El MIP tiene dos componentes que debes calcular por separado. El MIP inicial, conocido como UFMIP, es el 1.75% del monto del préstamo y se cobra al momento del cierre. En la mayoría de los casos se financia directamente en el préstamo, lo que significa que no necesitas pagarlo de tu bolsillo pero aumenta tu balance.
+            El MIP tiene dos componentes que debes calcular por separado, tal como los define <a href="https://www.hud.gov/hud-partners/housing-upfront-mip" target="_blank" rel="noopener noreferrer">la página oficial de HUD sobre el MIP inicial</a>. El MIP inicial, conocido como UFMIP, es el 1.75% del monto del préstamo y se cobra al momento del cierre. En la mayoría de los casos se financia directamente en el préstamo, lo que significa que no necesitas pagarlo de tu bolsillo pero aumenta tu balance.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             El MIP anual es actualmente el 0.55% del balance del préstamo para la mayoría de los préstamos FHA a 30 años con menos del 10% de pago inicial. Este cargo se divide entre 12 y se añade a cada pago mensual. En un préstamo de $350,000 el MIP anual inicial es $1,925, o $160 por mes.

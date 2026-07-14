@@ -152,7 +152,7 @@ export default function CalculadoraAmortizacionPage() {
             La palabra amortización proviene del latín y significa extinguir gradualmente una deuda. Un préstamo completamente amortizado está diseñado para que el último pago programado reduzca tu saldo exactamente a cero. La mayoría de las hipotecas residenciales en Estados Unidos son préstamos de tasa fija completamente amortizados.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Esto significa que tu pago mensual permanece constante durante toda la vida del préstamo, pero la composición interna de ese pago — cuánto es capital versus interés — cambia cada mes sin excepción.
+            Esto significa que tu pago mensual permanece constante durante toda la vida del préstamo, pero la composición interna de ese pago — cuánto es capital versus interés — cambia cada mes sin excepción, tal como lo explica la <a href="https://www.consumerfinance.gov/es/obtener-respuestas/como-funciona-el-pago-de-una-hipoteca-es-1943/" target="_blank" rel="noopener noreferrer">Oficina para la Protección Financiera del Consumidor (CFPB)</a>.
           </p>
 
           <h2 id="formula" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">La Fórmula Matemática Detrás de Cada Pago</h2>

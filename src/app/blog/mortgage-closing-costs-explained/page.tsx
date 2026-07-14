@@ -80,7 +80,7 @@ export default function MortgageClosingCostsExplainedPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-4">
-            You found a home. You negotiated the price. You are ready to close. The lender sends you a Closing Disclosure. It is 5 pages long. There are dozens of fees: origination charge, appraisal fee, credit report fee, title search, title insurance, recording fees, transfer taxes, prepaid interest, escrow funding. The total is $12,000. You had no idea.
+            You found a home. You negotiated the price. You are ready to close. The lender sends you a <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/" target="_blank" rel="noopener noreferrer">Closing Disclosure</a>. It is 5 pages long. There are dozens of fees: origination charge, appraisal fee, credit report fee, title search, title insurance, recording fees, transfer taxes, prepaid interest, escrow funding. The total is $12,000. You had no idea.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Closing costs are the biggest surprise for first-time home buyers. Most online calculators only show the down payment. They do not show the additional 2-5% of the home price that you need to bring to closing. On a $400,000 home, that is $8,000 to $20,000. If you only saved for the down payment, you might be short.

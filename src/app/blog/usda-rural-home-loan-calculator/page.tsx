@@ -144,7 +144,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
 
           <h2 id="eligibility" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Geographic and Income Eligibility</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Geographic eligibility is determined by the USDA based on census data. Areas with populations under 35,000 that are not part of a major metropolitan statistical area are generally eligible. The easiest way to verify a specific address is the USDA eligibility map available at eligibility.sc.egov.usda.gov. Many areas within commuting distance of major cities qualify.
+            Geographic eligibility is determined by the USDA based on census data. Areas with populations under 35,000 that are not part of a major metropolitan statistical area are generally eligible. The easiest way to verify a specific address is the <a href="https://eligibility.sc.egov.usda.gov/eligibility/welcomeAction.do?pageAction=sfp" target="_blank" rel="noopener noreferrer">official USDA eligibility map</a>. Many areas within commuting distance of major cities qualify.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Income eligibility is set at 115% of the area median income, adjusted for household size. The USDA counts income from all adult household members, not just the borrowers on the loan. In 2026 the standard income limits are approximately $110,650 for households of one to four people and $146,050 for households of five to eight people. These limits vary significantly by county.

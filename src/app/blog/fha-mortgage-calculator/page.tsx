@@ -97,7 +97,7 @@ export default function FHAMortgageCalculator() {
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">What Is an FHA Loan?</h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
-            An FHA loan is a mortgage insured by the Federal Housing Administration, a division of the U.S. Department of Housing and Urban Development (HUD). Because the federal government backstops these loans against default, approved lenders can offer them with more flexible qualification standards than conventional mortgages. The tradeoff is mandatory mortgage insurance that protects the lender — not you — in the event of default.
+            An FHA loan is a mortgage insured by the Federal Housing Administration, a division of the U.S. Department of Housing and Urban Development (HUD). Because the federal government backstops these loans against default, approved lenders can offer them with more flexible qualification standards than conventional mortgages, as <a href="https://www.hud.gov/hud-partners/housing-mip" target="_blank" rel="noopener noreferrer">HUD's own mortgage insurance premium documentation</a> lays out. The tradeoff is mandatory mortgage insurance that protects the lender — not you — in the event of default.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             FHA loans are particularly relevant for first-time buyers, borrowers rebuilding credit, and those with limited savings for a down payment. The program has been operational since 1934 and has insured over 50 million mortgages since inception.
@@ -135,7 +135,7 @@ export default function FHAMortgageCalculator() {
           </p>
           <div className="bg-gray-50 rounded-lg p-5 mb-6 space-y-4">
             <div>
-              <p className="text-sm font-bold text-gray-900 mb-1">1. Upfront MIP (UFMIP)</p>
+              <p className="text-sm font-bold text-gray-900 mb-1">1. Upfront MIP (UFMIP) — <a href="https://www.hud.gov/hud-partners/housing-upfront-mip" target="_blank" rel="noopener noreferrer" className="font-normal text-blue-600 no-underline">per HUD.gov</a></p>
               <p className="text-sm text-gray-600">Rate: 1.75% of the base loan amount. Paid at closing or rolled into the loan balance. On a $338,000 loan (after 3.5% down on a $350,000 home), UFMIP = $5,915. This amount is added to your loan balance on day one.</p>
             </div>
             <div>

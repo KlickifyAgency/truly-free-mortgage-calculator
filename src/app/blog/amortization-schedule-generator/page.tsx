@@ -148,7 +148,7 @@ export default function AmortizationScheduleGeneratorPage() {
             The word amortization comes from the Old French amortir, meaning to extinguish. In lending it refers to the process of gradually eliminating a debt through scheduled payments. A fully amortizing loan is designed so that the final scheduled payment reduces your balance to exactly zero.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Most residential mortgages in the United States are fully amortizing fixed-rate loans. Your monthly payment stays constant for the life of the loan, but the internal composition of that payment changes every single month.
+            Most residential mortgages in the United States are fully amortizing fixed-rate loans. Your monthly payment stays constant for the life of the loan, but the internal composition of that payment changes every single month — a mechanic the <a href="https://www.consumerfinance.gov/ask-cfpb/how-does-paying-down-a-mortgage-work-en-1943/" target="_blank" rel="noopener noreferrer">Consumer Financial Protection Bureau explains in plain language</a>.
           </p>
 
           <h2 id="math" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">The Math Behind Every Payment</h2>

@@ -133,7 +133,7 @@ export default function InvestmentPropertyCalculatorPage() {
 
           <h2 id="financing" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Investment Property Financing Requirements</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Investment properties cannot be financed with VA, USDA, or FHA loans — those programs require owner occupancy. Conventional financing through Fannie Mae or Freddie Mac is the standard path, with down payment requirements that vary by property type.
+            Investment properties cannot be financed with VA, USDA, or FHA loans — those programs require owner occupancy, a rule <a href="https://www.va.gov/housing-assistance/home-loans/eligibility/" target="_blank" rel="noopener noreferrer">VA.gov spells out for VA-backed loans specifically</a>. Conventional financing through Fannie Mae or Freddie Mac is the standard path, with down payment requirements that vary by property type.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             For single-family investment properties, well-qualified borrowers can put as little as 15% down. For 2-to-4-unit properties the minimum is 20% to 25% depending on the lender. Loan amounts above the conforming limit enter jumbo territory with even stricter requirements.

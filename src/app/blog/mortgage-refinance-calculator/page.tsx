@@ -63,7 +63,7 @@ export default function RefinanceCalculator() {
               <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
             </div>
           </div>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">Refinancing without calculating your break-even point is a financial error. Lenders benefit from every refinance regardless of whether it helps you — they collect new origination fees and reset your amortization schedule. This guide gives you the exact formula to determine whether refinancing produces a net financial gain in your specific situation.</p>
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">Refinancing without calculating your break-even point is a financial error. Lenders benefit from every refinance regardless of whether it helps you — they collect new origination fees and reset your amortization schedule. This guide gives you the exact formula to determine whether refinancing produces a net financial gain in your specific situation, the same question the <a href="https://files.consumerfinance.gov/f/documents/cfpb_should_i_refinance_handout.pdf" target="_blank" rel="noopener noreferrer">CFPB's own &quot;Should I refinance?&quot; guide</a> walks borrowers through.</p>
           <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
             <p className="text-lg font-bold">Model your refinance scenario — no email required</p>

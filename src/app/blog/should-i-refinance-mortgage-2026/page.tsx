@@ -86,7 +86,7 @@ export default function ShouldIRefinanceMortgage2026Page() {
             Most refinance calculators online are designed to convince you to refinance. Bankrate&apos;s calculator will show you a low break-even point (like 12 months) because they assume low closing costs. Then they connect you with a lender who charges higher fees. NerdWallet&apos;s calculator is more honest, but it pushes you to &quot;compare offers&quot; which means giving up your email. LendingTree&apos;s refinance calculator is just a lead form.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-8">
-            The truth is that refinancing is a numbers game. You need to calculate your break-even point: total closing costs divided by monthly savings. If you plan to stay in the home longer than the break-even period, refinancing makes sense. If you might move sooner, it does not. Here is how to do the math with real numbers, without giving up your contact information.
+            The truth is that refinancing is a numbers game. You need to calculate your break-even point: total closing costs divided by monthly savings — the same approach the <a href="https://files.consumerfinance.gov/f/documents/cfpb_should_i_refinance_handout.pdf" target="_blank" rel="noopener noreferrer">CFPB recommends in its refinancing guidance</a>. If you plan to stay in the home longer than the break-even period, refinancing makes sense. If you might move sooner, it does not. Here is how to do the math with real numbers, without giving up your contact information.
           </p>
 
           <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">The Real Math of Refinancing (With 2026 Numbers)</h2>

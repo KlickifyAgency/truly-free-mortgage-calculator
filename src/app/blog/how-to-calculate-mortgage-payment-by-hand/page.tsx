@@ -91,7 +91,7 @@ export default function HowToCalculateMortgagePaymentByHandPage() {
 
           <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">The Mortgage Payment Formula Explained</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            The formula for a fixed-rate mortgage payment is:
+            The formula for a fixed-rate mortgage payment is the same annuity math behind the amortization process the <a href="https://www.consumerfinance.gov/ask-cfpb/how-does-paying-down-a-mortgage-work-en-1943/" target="_blank" rel="noopener noreferrer">CFPB describes for how paying down a mortgage works</a>:
           </p>
           <div className="bg-white rounded-lg p-5 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] mb-4">
             <p className="text-[15px] font-semibold text-gray-900 text-center" style={{ fontVariantNumeric: 'tabular-nums' }}>M = P * [ r(1 + r)^n ] / [ (1 + r)^n - 1 ]</p>

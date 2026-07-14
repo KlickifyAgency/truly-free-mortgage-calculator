@@ -218,7 +218,7 @@ export default function MortgagePayoffCalculatorPage() {
             When submitting extra payments, always include a written note — in the memo field of a check, in the notes field of an online payment, or in a separate communication — stating: apply to principal only. After each extra payment, verify on your next monthly statement that the principal balance decreased by the expected amount.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            If your servicer does not offer a clear mechanism for designating principal-only payments, call their customer service line and get the correct procedure in writing. Servicers are legally required to apply designated principal payments correctly under the Real Estate Settlement Procedures Act.
+            If your servicer does not offer a clear mechanism for designating principal-only payments, call their customer service line and get the correct procedure in writing. Servicers are legally required to follow federal mortgage servicing rules, which the <a href="https://www.consumerfinance.gov/consumer-tools/mortgages/your-mortgage-servicer-must-comply-with-federal-rules/" target="_blank" rel="noopener noreferrer">CFPB outlines for borrowers</a>, including how payments must be credited.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">

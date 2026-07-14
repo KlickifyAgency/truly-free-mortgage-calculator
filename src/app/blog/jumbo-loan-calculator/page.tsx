@@ -133,7 +133,7 @@ export default function JumboLoanCalculatorPage() {
 
           <h2 id="limits" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Conforming vs. Jumbo Loan Limits in 2026</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            The conforming loan limit is the maximum loan amount that Fannie Mae and Freddie Mac will purchase from lenders. In 2026 this limit is $806,500 for a single-family home in most U.S. counties. In designated high-cost areas — primarily coastal metro markets — the limit extends up to $1,209,750.
+            The <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-jumbo-loan-en-127/" target="_blank" rel="noopener noreferrer">conforming loan limit, as the CFPB defines it</a>, is the maximum loan amount that Fannie Mae and Freddie Mac will purchase from lenders. In 2026 this limit is $806,500 for a single-family home in most U.S. counties. In designated high-cost areas — primarily coastal metro markets — the limit extends up to $1,209,750.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Any loan that exceeds these thresholds cannot be sold to Fannie or Freddie and must be held on the lender&apos;s balance sheet or sold to private investors. This changes the economics for lenders and results in different underwriting standards, reserve requirements, and rate structures.
