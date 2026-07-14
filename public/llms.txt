@@ -1,0 +1,50 @@
+# Truly Free Mortgage — Free Mortgage Calculator Suite
+> Free mortgage calculator suite: payment, refinance, amortization, FHA/VA/USDA/jumbo loans. No email required, no lead-gen forms.
+
+## Pages
+https://trulyfreemortgage.com/ — Homepage: free mortgage calculator, no signup
+https://trulyfreemortgage.com/mortgage-calculator — Main payment calculator with full amortization, PMI, taxes, HOA
+https://trulyfreemortgage.com/blog — Technical guides on mortgage calculations, loan types, and financing strategy
+https://trulyfreemortgage.com/about — About George Smith, founder of Klickify Agency and creator of the site
+https://trulyfreemortgage.com/contact — Contact form for bug reports and feedback
+https://trulyfreemortgage.com/privacy — Privacy policy: no data collection, no tracking
+https://trulyfreemortgage.com/terms — Terms of service
+
+## State Calculators
+https://trulyfreemortgage.com/california-mortgage-calculator — Free California mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/texas-mortgage-calculator — Free Texas mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/florida-mortgage-calculator — Free Florida mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/new-york-mortgage-calculator — Free New York mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/washington-mortgage-calculator — Free Washington mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/arizona-mortgage-calculator — Free Arizona mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/colorado-mortgage-calculator — Free Colorado mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/georgia-mortgage-calculator — Free Georgia mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/north-carolina-mortgage-calculator — Free North Carolina mortgage calculator with state property tax, PMI, insurance, HOA
+https://trulyfreemortgage.com/virginia-mortgage-calculator — Free Virginia mortgage calculator with state property tax, PMI, insurance, HOA
+
+## Guides
+https://trulyfreemortgage.com/blog/fha-mortgage-calculator — FHA loan payment calculator including MIP insurance, 3.5% minimum down payment
+https://trulyfreemortgage.com/blog/mortgage-refinance-calculator — Refinance break-even point, monthly savings, and total interest reduction
+https://trulyfreemortgage.com/blog/amortization-schedule-generator — Full amortization schedule generator, payment broken down by principal and interest
+https://trulyfreemortgage.com/blog/va-loan-calculator — VA loan payment calculator, no PMI, no down payment required
+https://trulyfreemortgage.com/blog/usda-rural-home-loan-calculator — USDA loan payment calculator, zero down payment, rural and suburban areas
+https://trulyfreemortgage.com/blog/jumbo-loan-calculator — Jumbo loan payment calculator for loans above conforming limits
+https://trulyfreemortgage.com/blog/investment-property-calculator — Investment property payment, cash flow, cap rate, and cash-on-cash return calculator
+https://trulyfreemortgage.com/blog/arm-vs-fixed-rate — Adjustable-rate vs fixed-rate mortgage comparison, break-even point, worst-case payment scenarios
+https://trulyfreemortgage.com/blog/mortgage-payoff-calculator — Extra payment payoff calculator: interest savings, payoff date, lump-sum vs monthly extra
+https://trulyfreemortgage.com/blog/calculadora-hipoteca-fha — Calculadora de pago mensual FHA con seguro MIP (Spanish)
+https://trulyfreemortgage.com/blog/calculadora-amortizacion — Generador de tabla de amortización completa (Spanish)
+https://trulyfreemortgage.com/blog/free-mortgage-calculator-no-email — Why most mortgage calculators are lead-gen tools, and how this one is different
+https://trulyfreemortgage.com/blog/how-much-house-can-i-afford-2026 — Affordability calculator using the 28/36 rule with 2026 numbers
+https://trulyfreemortgage.com/blog/30-year-vs-15-year-mortgage-guide — 30-year vs 15-year mortgage total interest comparison
+https://trulyfreemortgage.com/blog/mortgage-amortization-schedule-explained — How amortization works, full 360-month payment table
+https://trulyfreemortgage.com/blog/pmi-calculator-guide — How PMI is calculated and when it can be cancelled
+https://trulyfreemortgage.com/blog/extra-mortgage-payment-calculator — Impact of extra monthly payments on loan term and total interest
+https://trulyfreemortgage.com/blog/should-i-refinance-mortgage-2026 — Refinance break-even calculation: closing costs vs monthly savings
+https://trulyfreemortgage.com/blog/fha-vs-conventional-loan-2026 — FHA MIP vs conventional PMI cost comparison
+https://trulyfreemortgage.com/blog/down-payment-calculator-guide — Monthly cost comparison across down payment levels (3%, 5%, 20%)
+https://trulyfreemortgage.com/blog/mortgage-closing-costs-explained — Fee-by-fee closing cost breakdown for a typical home purchase
+https://trulyfreemortgage.com/blog/bankrate-mortgage-calculator-review — Review of Bankrate's calculator as a lead-generation tool, and a privacy-respecting alternative
+https://trulyfreemortgage.com/blog/how-to-calculate-mortgage-payment-by-hand — Mortgage payment formula explained step by step
+https://trulyfreemortgage.com/blog/mortgage-points-calculator — Discount points cost vs rate reduction and break-even period
+https://trulyfreemortgage.com/blog/interest-only-mortgage-calculator — Interest-only mortgage timeline including the post-IO payment jump

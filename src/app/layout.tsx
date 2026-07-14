@@ -38,6 +38,8 @@ function Footer() {
           2026 Truly Free Mortgage · Built by{" "}
           <a href="https://klickifyagency.com" target="_blank" rel="noopener noreferrer" style={{ color: "#0058c3", fontWeight: 600, textDecoration: "none" }}>Klickify Agency</a>
           {" "}· Your data never leaves your browser.
+          {" "}·{" "}
+          <a href="https://google.com/preferences/source?q=trulyfreemortgage.com" target="_blank" rel="noopener noreferrer" style={{ color: "#0058c3", fontWeight: 600, textDecoration: "none" }}>Preferred Source on Google</a>
         </span>
       </div>
     </footer>
