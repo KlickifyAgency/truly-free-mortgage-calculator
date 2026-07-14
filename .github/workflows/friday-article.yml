@@ -103,60 +103,60 @@ jobs:
           SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | cut -c1-60)
 
           python3 - <<PYEOF
-import json, urllib.request, os, re
+          import json, urllib.request, os, re
 
-api_key = os.environ["ANTHROPIC_API_KEY"]
-topic = """$TOPIC"""
-slug = """$SLUG"""
-today = """$TODAY"""
+          api_key = os.environ["ANTHROPIC_API_KEY"]
+          topic = """$TOPIC"""
+          slug = """$SLUG"""
+          today = """$TODAY"""
 
-prompt = f"""Write a complete Next.js blog article (TSX file) for trulyfreemortgage.com about: "{topic}"
+          prompt = f"""Write a complete Next.js blog article (TSX file) for trulyfreemortgage.com about: "{topic}"
 
-Requirements:
-- Complete, ready-to-deploy TSX file
-- Import: import AuthorBox from '@/components/blog/AuthorBox' and import type {{ Metadata }} from 'next'
-- Export metadata with title, description, canonical URL: https://trulyfreemortgage.com/blog/{slug}
-- Article JSON-LD schema as const (not exported), datePublished: "{today}", author: George Smith
-- Component: export default function Page() returning full JSX
-- Use Tailwind CSS classes (not inline styles) — same pattern as existing mortgage articles
-- Dark navy/blue header section, author box, 5-7 content sections with practical financial data
-- Include a data comparison table or calculator-style table showing numbers
-- Link back to /mortgage-calculator in CTA section
-- FAQ section with 4 questions and schema
-- Do NOT mention "Google AdSense" — just say "ad-supported" if revenue model mentioned
-- Write as George Smith, practical and data-driven, no fluff
-- Word count: 1,200-1,800 words of actual content
-- Output ONLY the complete TSX code, no explanation, no markdown code blocks"""
+          Requirements:
+          - Complete, ready-to-deploy TSX file
+          - Import: import AuthorBox from '@/components/blog/AuthorBox' and import type {{ Metadata }} from 'next'
+          - Export metadata with title, description, canonical URL: https://trulyfreemortgage.com/blog/{slug}
+          - Article JSON-LD schema as const (not exported), datePublished: "{today}", author: George Smith
+          - Component: export default function Page() returning full JSX
+          - Use Tailwind CSS classes (not inline styles) — same pattern as existing mortgage articles
+          - Dark navy/blue header section, author box, 5-7 content sections with practical financial data
+          - Include a data comparison table or calculator-style table showing numbers
+          - Link back to /mortgage-calculator in CTA section
+          - FAQ section with 4 questions and schema
+          - Do NOT mention "Google AdSense" — just say "ad-supported" if revenue model mentioned
+          - Write as George Smith, practical and data-driven, no fluff
+          - Word count: 1,200-1,800 words of actual content
+          - Output ONLY the complete TSX code, no explanation, no markdown code blocks"""
 
-data = json.dumps({
-    "model": "claude-sonnet-4-6",
-    "max_tokens": 8000,
-    "messages": [{"role": "user", "content": prompt}]
-}).encode()
+          data = json.dumps({
+              "model": "claude-sonnet-4-6",
+              "max_tokens": 8000,
+              "messages": [{"role": "user", "content": prompt}]
+          }).encode()
 
-req = urllib.request.Request(
-    "https://api.anthropic.com/v1/messages",
-    data=data,
-    headers={
-        "x-api-key": api_key,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json"
-    }
-)
+          req = urllib.request.Request(
+              "https://api.anthropic.com/v1/messages",
+              data=data,
+              headers={
+                  "x-api-key": api_key,
+                  "anthropic-version": "2023-06-01",
+                  "content-type": "application/json"
+              }
+          )
 
-with urllib.request.urlopen(req) as resp:
-    result = json.loads(resp.read())
+          with urllib.request.urlopen(req) as resp:
+              result = json.loads(resp.read())
 
-content = result["content"][0]["text"]
-content = re.sub(r'^```(?:tsx|typescript|jsx)?\n', '', content, flags=re.MULTILINE)
-content = re.sub(r'\n```\s*$', '', content, flags=re.MULTILINE)
+          content = result["content"][0]["text"]
+          content = re.sub(r'^```(?:tsx|typescript|jsx)?\n', '', content, flags=re.MULTILINE)
+          content = re.sub(r'\n```\s*$', '', content, flags=re.MULTILINE)
 
-os.makedirs(f"src/app/blog/{slug}", exist_ok=True)
-with open(f"src/app/blog/{slug}/page.tsx", "w") as f:
-    f.write(content)
+          os.makedirs(f"src/app/blog/{slug}", exist_ok=True)
+          with open(f"src/app/blog/{slug}/page.tsx", "w") as f:
+              f.write(content)
 
-print(f"Article written to src/app/blog/{slug}/page.tsx")
-PYEOF
+          print(f"Article written to src/app/blog/{slug}/page.tsx")
+          PYEOF
 
           echo "slug=$SLUG" >> $GITHUB_OUTPUT
 
