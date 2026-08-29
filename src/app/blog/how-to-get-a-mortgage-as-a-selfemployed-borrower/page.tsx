@@ -18,7 +18,10 @@ const schema = {
   author: {
     '@type': 'Person',
     name: 'George Smith',
+    url: 'https://www.linkedin.com/in/george-smith-832113217/',
+    sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'],
   },
+  dateModified: '2026-08-29',
   publisher: {
     '@type': 'Organization',
     name: 'Truly Free Mortgage',
@@ -29,16 +32,36 @@ const schema = {
   },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'What is the minimum credit score required for a self-employed borrower?', acceptedAnswer: { '@type': 'Answer', text: 'The minimum credit score required for a self-employed borrower varies depending on the lender and the loan program. However, a credit score of 620 or higher is typically required for conventional loans.' } },
+    { '@type': 'Question', name: 'Can I use my business income to qualify for a mortgage?', acceptedAnswer: { '@type': 'Answer', text: "Yes, you can use your business income to qualify for a mortgage. However, you'll need to provide additional documentation, such as business tax returns and financial statements, to verify your income." } },
+    { '@type': 'Question', name: 'How long does it take to get approved for a mortgage as a self-employed borrower?', acceptedAnswer: { '@type': 'Answer', text: 'The approval process for a self-employed borrower can take longer than for a traditional borrower. However, with the right documentation and a smooth application process, you can expect to get approved within 30-60 days.' } },
+    { '@type': 'Question', name: 'Can I get a mortgage with a low down payment as a self-employed borrower?', acceptedAnswer: { '@type': 'Answer', text: "Yes, you can get a mortgage with a low down payment as a self-employed borrower. However, you'll need to pay private mortgage insurance (PMI) to protect the lender in case of default." } },
+  ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
+};
+
 export default function Page() {
   return (
     <div className="container mx-auto p-4 pt-6 mt-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <header className="bg-darknavy text-white p-4 rounded">
         <h1 className="text-3xl font-bold mb-4">How to Get a Mortgage as a Self-Employed Borrower</h1>
         <p className="text-lg">
           As a self-employed individual, getting a mortgage can be more challenging than for those with traditional employment. However, with the right preparation and understanding of the process, you can secure the best loan terms and achieve your dream of homeownership.
         </p>
       </header>
-      <AuthorBox author="George Smith" date="August 7, 2026" />
+      <AuthorBox />
       <section className="py-8">
         <h2 className="text-2xl font-bold mb-4">Understanding the Challenges of Self-Employed Borrowers</h2>
         <p className="text-lg">
@@ -112,7 +135,7 @@ export default function Page() {
         </p>
       </section>
       <section className="py-8">
-        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <h2 id="faq" className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
         <div className="flex flex-col">
           <details className="mb-4">
             <summary className="text-lg font-bold">What is the minimum credit score required for a self-employed borrower?</summary>

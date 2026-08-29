@@ -17,7 +17,7 @@ const jsonLd = {
       'description': 'A complete guide to USDA loan eligibility, guarantee fees, income limits, and how to calculate your monthly payment with no down payment required.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-20',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/usda-rural-home-loan-calculator',
     },
@@ -51,6 +51,10 @@ const jsonLd = {
         },
       ],
     },
+  {
+    '@type': 'SpeakableSpecification',
+    'cssSelector': ['#faq'],
+  },
   ],
 };
 

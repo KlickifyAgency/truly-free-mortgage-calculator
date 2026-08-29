@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'The real math of mortgage points on a $300,000 loan: break-even timeline, time value of money, diminishing returns of multiple points, and when points actually make sense.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/mortgage-points-calculator',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Adjust the "years you plan to stay" slider', 'If you plan to stay only 3 years, the calculator will show that buying points loses money. If you plan to stay 10 years, it saves money.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Use the Mortgage Points Calculator',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function MortgagePointsCalculatorPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -136,7 +153,7 @@ export default function MortgagePointsCalculatorPage() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

@@ -13,7 +13,7 @@ const faqs = [
   { q: 'Will my phone ring if I use Bankrate\'s calculator?', a: 'Only if you click "Get My Rate" or any button that submits your information. But even if you do not submit, Bankrate tracks your IP and browser fingerprint. They may retarget you with ads on other sites.' },
   { q: 'How does Bankrate make money if the calculator is free?', a: 'Lead generation. Bankrate reports roughly 25 million monthly page views and sells rate-table advertising placements to lenders on top of selling submitted leads directly. Their other revenue comes from credit card and banking product referrals. The exact dollar figure from mortgage leads specifically isn\'t broken out in public filings, but the model is well documented: you fill the form, your data becomes the product.' },
   { q: 'Is there any way to use Bankrate without getting spammed?', a: 'Use a fake email and a Google Voice number. But Bankrate still tracks your IP address. Better to use a tool that does not require any personal information at all.' },
-  { q: 'Does Truly Free Mortgage Calculator have lender relationships?', a: 'No. I do not partner with any lenders. I do not get paid for referrals. The only money comes from AdSense ads, which are clearly labeled. You can block ads with an ad blocker and still use the calculator.' },
+  { q: 'Does Truly Free Mortgage Calculator have lender relationships?', a: 'No. I do not partner with any lenders. I do not get paid for referrals. The only money comes from display ads, which are clearly labeled. You can block ads with an ad blocker and still use the calculator.' },
   { q: 'Why should I trust a free calculator that is ad-supported?', a: 'Because my incentive is aligned with yours. I want you to use the calculator repeatedly. If I sold your data or caused you to get spam calls, you would never come back. My business depends on repeat usage. Bankrate\'s business depends on one-time lead capture. That is the fundamental difference.' },
 ];
 
@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'How Bankrate\'s lead generation model works, what it costs you in privacy and spam, and how to use a real free mortgage calculator without lead gen.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-07-03',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/bankrate-mortgage-calculator-review',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. That is it. No calls. No spam. No emails.', ''],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: How to Use a Real Free Mortgage Calculator (Without Lead Gen)',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function BankrateMortgageCalculatorReviewPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -133,7 +150,7 @@ export default function BankrateMortgageCalculatorReviewPage() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

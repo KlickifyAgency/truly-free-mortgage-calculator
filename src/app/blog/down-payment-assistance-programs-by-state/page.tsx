@@ -14,13 +14,39 @@ const schema = {
   '@type': 'Article',
   name: 'Down Payment Assistance Programs by State',
   datePublished: '2026-07-31',
-  author: 'George Smith',
+  dateModified: '2026-08-29',
+  author: {
+    '@type': 'Person',
+    name: 'George Smith',
+    url: 'https://www.linkedin.com/in/george-smith-832113217/',
+    sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'],
+  },
   description: 'Explore down payment assistance programs available in each state, including grants, loans, and tax credits.',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org/',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'What is a down payment assistance program?', acceptedAnswer: { '@type': 'Answer', text: 'A down payment assistance program is a type of financial assistance provided to homebuyers to help with the down payment on a home.' } },
+    { '@type': 'Question', name: 'How do I apply for a down payment assistance program?', acceptedAnswer: { '@type': 'Answer', text: 'Application procedures vary by program, but typically involve submitting an application and providing required documentation, such as income verification and credit reports.' } },
+    { '@type': 'Question', name: 'Are down payment assistance programs only for first-time homebuyers?', acceptedAnswer: { '@type': 'Answer', text: 'No, while some programs are restricted to first-time homebuyers, others are available to all homebuyers, regardless of their previous homeownership status.' } },
+    { '@type': 'Question', name: 'How much assistance can I receive through a down payment assistance program?', acceptedAnswer: { '@type': 'Answer', text: 'The amount of assistance varies by program, but can range from a few thousand dollars to tens of thousands of dollars.' } },
+  ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org/',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
 };
 
 export default function Page() {
   return (
     <article className="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <header className="bg-navy py-4 mb-8">
         <h1 className="text-3xl font-bold text-white">Down Payment Assistance Programs by State</h1>
       </header>
@@ -109,7 +135,7 @@ export default function Page() {
       </section>
       <AuthorBox />
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <h2 id="faq" className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
         <dl>
           <dt className="text-lg font-bold mb-2">What is a down payment assistance program?</dt>
           <dd className="text-lg mb-4">

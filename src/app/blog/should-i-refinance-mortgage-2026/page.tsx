@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'The real math of refinancing with 2026 numbers: closing costs, break-even period, rolling costs into the loan, and the term-reset trap.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/should-i-refinance-mortgage-2026',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Decide whether to roll closing costs into the loan', 'Toggle the option to see how the break-even changes. Rolling costs in reduces monthly savings but lowers upfront cash needed. The calculator will show both scenarios.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Use the Refinance Break-Even Calculator',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function ShouldIRefinanceMortgage2026Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -129,7 +146,7 @@ export default function ShouldIRefinanceMortgage2026Page() {
             LendingTree&apos;s refinance calculator is not a calculator at all. It is a form: &quot;Enter your loan balance, rate, and credit score to get offers.&quot; There is no calculation. You fill out the form, and they send your information to up to 5 lenders. Your phone will ring within minutes.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Truly Free Mortgage Calculator does not have any lender offers. There are no &quot;get rates&quot; buttons. The refinance calculator is just a tool. You see the math. You decide. I do not make money from refinances. My revenue is from AdSense ads, which are clearly marked. Your phone will not ring.
+            Truly Free Mortgage Calculator does not have any lender offers. There are no &quot;get rates&quot; buttons. The refinance calculator is just a tool. You see the math. You decide. I do not make money from refinances. My revenue is from display advertising, clearly marked as ads. Your phone will not ring.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -139,7 +156,7 @@ export default function ShouldIRefinanceMortgage2026Page() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

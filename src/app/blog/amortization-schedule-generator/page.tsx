@@ -17,7 +17,7 @@ const jsonLd = {
       'description': 'A complete guide to understanding amortization schedules, how they are calculated, and how to use a free generator to plan your mortgage payoff.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-20',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/amortization-schedule-generator',
     },
@@ -51,6 +51,10 @@ const jsonLd = {
         },
       ],
     },
+  {
+    '@type': 'SpeakableSpecification',
+    'cssSelector': ['#faq'],
+  },
   ],
 };
 

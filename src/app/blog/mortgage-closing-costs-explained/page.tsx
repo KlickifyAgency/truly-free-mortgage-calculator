@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'A realistic closing cost scenario for a $400,000 home with 10% down: lender fees, third-party fees, title fees, government fees, and prepaids — $11,125 total, broken down.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/mortgage-closing-costs-explained',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Use the "seller credit" option', 'If the seller has agreed to pay a portion of closing costs, enter that amount. The calculator will subtract it from your cash to close.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Estimate Your Closing Costs',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function MortgageClosingCostsExplainedPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -148,7 +165,7 @@ export default function MortgageClosingCostsExplainedPage() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

@@ -17,6 +17,7 @@ const jsonLd = JSON.stringify({
     "@type": "Person",
     name: "George Smith",
     url: "https://www.linkedin.com/in/george-smith-832113217/",
+    sameAs: ["https://www.linkedin.com/in/george-smith-832113217/"],
     email: "info@klickifyagency.com",
     jobTitle: "Founder",
     worksFor: { "@type": "Organization", name: "Klickify Agency" },
@@ -71,7 +72,7 @@ export default function AboutPage() {
 
               <p>I run Klickify Agency, a digital agency focused on web tools, SEO, and performance marketing. Before starting the agency, I spent years inside the digital marketing industry watching exactly how lead generation worked — including the mortgage space. The gap between what borrowers needed (a clean calculation tool) and what the industry provided (a contact harvesting mechanism) was obvious. Building this calculator was straightforward. The math is not proprietary. The decision to not collect data is a choice, not a technical limitation.</p>
 
-              <p>The tool is supported by Google AdSense advertising. That is the entire revenue model. No lead fees, no affiliate commissions, no lender partnerships. The business works as long as people find the calculator useful enough to return to it — which means the incentive is to build something genuinely useful, not something that extracts value from the people using it.</p>
+              <p>The tool is ad-supported — display advertising, clearly marked as ads. That is the entire revenue model. No lead fees, no affiliate commissions, no lender partnerships. The business works as long as people find the calculator useful enough to return to it — which means the incentive is to build something genuinely useful, not something that extracts value from the people using it.</p>
 
               <p>Truly Free Mortgage Calculator is part of a broader set of tools built on the same philosophy. The goal is not to build a portal that captures every financial product category. It is to build specific tools that solve one problem well, respect the person using them, and stay free without a hidden monetization model underneath.</p>
 

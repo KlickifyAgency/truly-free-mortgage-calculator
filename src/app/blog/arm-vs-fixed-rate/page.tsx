@@ -17,7 +17,7 @@ const jsonLd = {
       'description': 'A complete comparison of adjustable-rate and fixed-rate mortgages including initial savings, rate cap structures, worst-case payment scenarios, and break-even analysis.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-20',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/arm-vs-fixed-rate',
     },
@@ -47,10 +47,14 @@ const jsonLd = {
         {
           '@type': 'Question',
           'name': 'How much lower are ARM rates vs fixed rates?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'The spread between ARM and fixed rates varies with market conditions. In a normal yield curve environment a 5/1 ARM is typically 0.5% to 1.0% below a 30-year fixed rate. In an inverted yield curve environment the spread narrows or disappears, reducing the financial incentive to choose an ARM.' },
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'In a normal yield curve environment a 5/1 ARM is typically 0.5% to 1.0% below a 30-year fixed rate. The spread narrows or disappears in an inverted yield curve environment, reducing the financial incentive to choose an ARM.' },
         },
       ],
     },
+  {
+    '@type': 'SpeakableSpecification',
+    'cssSelector': ['#faq'],
+  },
   ],
 };
 

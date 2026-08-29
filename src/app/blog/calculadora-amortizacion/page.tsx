@@ -20,7 +20,7 @@ const jsonLd = {
       'description': 'Guía completa sobre la amortización hipotecaria: la fórmula matemática, por qué los primeros años son casi todo interés, cómo los pagos extra transforman tu préstamo, y cómo generar tu tabla gratis.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-20',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/calculadora-amortizacion',
       'inLanguage': 'es',
@@ -55,6 +55,10 @@ const jsonLd = {
         },
       ],
     },
+  {
+    '@type': 'SpeakableSpecification',
+    'cssSelector': ['#faq'],
+  },
   ],
 };
 

@@ -6,6 +6,25 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://trulyfreemortgage.com' },
 };
 
+const speakableJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
+});
+
+const orgJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Truly Free Mortgage',
+  url: 'https://trulyfreemortgage.com',
+  founder: {
+    '@type': 'Person',
+    name: 'George Smith',
+    url: 'https://www.linkedin.com/in/george-smith-832113217/',
+    sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'],
+  },
+});
+
 const faqJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -71,6 +90,8 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: speakableJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: orgJsonLd }} />
 
       <nav style={{ background: '#ffffff', boxShadow: '0px 1px 3px rgba(24,28,30,0.06)', padding: '0 24px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
@@ -126,7 +147,23 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div style={{ background: '#ffffff', padding: '72px 24px' }}>
+      <div style={{ background: '#ffffff', padding: '0 24px 72px' }}>
+        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+          <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px' }}>
+            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
+              A free mortgage calculator with no email wall, showing full PITI, not just P&amp;I.
+            </h2>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
+              Most calculators quote principal and interest only, which understates your real monthly cost by $400–700 on a typical loan once taxes, insurance, and PMI are added. This calculator computes full PITI, runs entirely in your browser, and never asks for an email or phone number to see the result.
+            </p>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
+              On a $400,000 loan at 7%, choosing a 15-year term over a 30-year term saves $246,000 in total interest — a real example computed with the standard amortization formula, viewable side by side in the calculator's Scenario Comparison tab.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ background: '#ffffff', padding: '0 24px 72px' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '8px', textAlign: 'center', lineHeight: 1.2 }}>When People Use This</h2>
           <p style={{ fontSize: '15px', color: '#718096', textAlign: 'center', marginBottom: '40px', letterSpacing: '-0.01em' }}>Six scenarios where running the numbers first changes the outcome.</p>
@@ -148,7 +185,7 @@ export default function HomePage() {
 
       <div style={{ background: '#f7fafc', padding: '72px 24px' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '8px', lineHeight: 1.2 }}>Common Questions</h2>
+          <h2 id="faq" style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '8px', lineHeight: 1.2 }}>Common Questions</h2>
           <p style={{ fontSize: '15px', color: '#718096', marginBottom: '36px', letterSpacing: '-0.01em' }}>Straightforward answers. No fluff.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             {faqs.map(({ q, a }) => (

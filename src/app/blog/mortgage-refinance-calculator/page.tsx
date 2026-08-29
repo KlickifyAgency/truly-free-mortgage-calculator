@@ -13,11 +13,11 @@ const jsonLd = JSON.stringify({
   '@type': 'Article',
   headline: 'Mortgage Refinance Calculator: The Break-Even Point Formula',
   description: 'How to calculate your exact refinance break-even month, total interest savings, and whether refinancing makes financial sense for your situation.',
-  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
+  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/', sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'] },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
   url: 'https://trulyfreemortgage.com/blog/mortgage-refinance-calculator',
   datePublished: '2026-05-09',
-  dateModified: '2026-05-20',
+  dateModified: '2026-08-29',
   mainEntityOfPage: 'https://trulyfreemortgage.com/blog/mortgage-refinance-calculator',
 });
 
@@ -33,11 +33,18 @@ const faqJsonLd = JSON.stringify({
   ],
 });
 
+const speakableJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
+});
+
 export default function RefinanceCalculator() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: speakableJsonLd }} />
       <div className="min-h-screen bg-gray-50">
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -70,6 +77,18 @@ export default function RefinanceCalculator() {
             <p className="text-lg font-bold">Model your refinance scenario — no email required</p>
             <p className="text-sm opacity-75 mt-1">Use Scenario Comparison to compare your current loan vs new terms</p>
           </a>
+
+          <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 40 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
+              Break-even month = total closing costs ÷ monthly savings.
+            </h2>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
+              On a $350,000 loan refinanced from 7.5% to 6.75% with $8,000 in closing costs, the new payment drops from $2,448 to $2,270 — a $178 monthly saving — putting the break-even at roughly 45 months, just under 4 years.
+            </p>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
+              Refinance closing costs typically run 2% to 5% of the loan amount. If you plan to stay in the home past the break-even month, the refinance produces a net financial gain; if you plan to move or refinance again sooner, it does not.
+            </p>
+          </div>
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">The Break-Even Point Formula</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">The break-even point is the month in which your cumulative monthly savings equal your total refinance closing costs. Before that month, refinancing has cost you money. After it, refinancing saves you money.</p>
@@ -163,7 +182,7 @@ export default function RefinanceCalculator() {
 
           <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-10" style={{ minHeight: 80 }}>Advertisement</div>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-5">
             {[
               ['How do you calculate the refinance break-even point?','Divide your total closing costs by your monthly payment savings. If closing costs are $6,000 and you save $200 per month, your break-even point is 30 months. If you plan to stay in the home beyond 30 months, refinancing is financially beneficial.'],

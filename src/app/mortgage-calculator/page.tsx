@@ -12,6 +12,7 @@ const howToJsonLd = JSON.stringify({
   '@type': 'HowTo',
   name: 'How to Use the Truly Free Mortgage Calculator',
   description: 'Calculate your full monthly mortgage payment including PMI, taxes, insurance, and HOA in four steps.',
+  dateModified: '2026-08-29',
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Enter Home Price', text: 'Type the purchase price of the home. The calculator automatically sets a 20% down payment as the starting point.' },
     { '@type': 'HowToStep', position: 2, name: 'Set Your Down Payment', text: 'Enter a dollar amount or adjust the percentage. Drop below 20% and enable the PMI toggle to see the true cost.' },
@@ -64,9 +65,21 @@ export default function Page() {
           <h2 style={{ fontSize: '22px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '8px', lineHeight: 1.2 }}>
             How This Calculator Works
           </h2>
-          <p style={{ fontSize: '15px', color: '#718096', marginBottom: '48px', letterSpacing: '-0.01em' }}>
+          <p style={{ fontSize: '15px', color: '#718096', marginBottom: '32px', letterSpacing: '-0.01em' }}>
             Methodology, data sources, and what each component means for your monthly payment.
           </p>
+
+          <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: '48px' }}>
+            <h3 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
+              PMI adds about $267/month on a $400,000 loan with under 20% down.
+            </h3>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
+              PMI runs roughly 0.8% of the loan amount per year — about $267/month on a $400,000 loan — and drops off automatically once your equity reaches 20% of the original appraised value. This calculator shows the exact month PMI cancels based on your own payment schedule, not a generic estimate.
+            </p>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
+              A 0.5-point rate difference matters more than most buyers expect: on a $400,000 loan, moving from 6.5% to 7.0% adds $132/month and $47,520 in total interest over 30 years. Run both rates in the Scenario Comparison tab to see the exact gap for your numbers.
+            </p>
+          </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
             {sections.map(({ heading, body }) => (

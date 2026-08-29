@@ -13,11 +13,11 @@ const jsonLd = JSON.stringify({
   '@type': 'Article',
   headline: 'FHA Mortgage Calculator: Calculate Your Payment Including MIP',
   description: 'Complete guide to FHA loans with free calculator. Includes MIP calculation, 3.5% down payment requirements, and credit score thresholds.',
-  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
+  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/', sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'] },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
   url: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator',
   datePublished: '2026-05-09',
-  dateModified: '2026-05-20',
+  dateModified: '2026-08-29',
   mainEntityOfPage: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator',
 });
 
@@ -53,10 +53,17 @@ const faqJsonLd = JSON.stringify({
   ],
 });
 
+const speakableJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
+});
+
 export default function FHAMortgageCalculator() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: speakableJsonLd }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <div className="min-h-screen bg-gray-50">
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
@@ -95,6 +102,18 @@ export default function FHAMortgageCalculator() {
             <p className="text-lg font-bold">Calculate your FHA payment now — no email required</p>
             <p className="text-sm opacity-75 mt-1">Enable PMI toggle to include mortgage insurance in your calculation</p>
           </a>
+
+          <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 40 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
+              FHA MIP costs 1.75% upfront plus 0.85% a year on most 30-year loans.
+            </h2>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
+              On a $338,000 loan (3.5% down on a $350,000 home), upfront MIP adds $5,915 to your loan balance at closing, and the 0.85% annual MIP adds about $238 to every monthly payment. Both figures come directly from HUD's own mortgage insurance premium schedule.
+            </p>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
+              With less than 10% down, that annual MIP does not cancel — it runs for the life of the loan, unlike conventional PMI which drops off at 20% equity. That is the single biggest reason FHA borrowers refinance into a conventional loan once they qualify.
+            </p>
+          </div>
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">What Is an FHA Loan?</h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
@@ -213,7 +232,7 @@ export default function FHAMortgageCalculator() {
 
           <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-10" style={{ minHeight: 80 }}>Advertisement</div>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-5">
             {[
               ['Why does this FHA calculator not ask for my email?', 'Because we do not sell leads. Every major mortgage calculator collects your contact information and sells it to lenders who will call you repeatedly. Our tool runs entirely in your browser. No data is transmitted to any server.'],

@@ -14,7 +14,7 @@ export default function AuthorBox() {
           <a href="mailto:info@klickifyagency.com" style={{ fontSize: "12px", color: "#718096", textDecoration: "none", letterSpacing: "-0.01em" }}>info@klickifyagency.com</a>
           <a href="https://www.linkedin.com/in/george-smith-832113217/" target="_blank" rel="noopener noreferrer" style={{ fontSize: "12px", color: "#0058c3", textDecoration: "none", fontWeight: 600, letterSpacing: "-0.01em" }}>LinkedIn</a>
         </div>
-        <div style={{ fontSize: "14px", color: "#4a5568", lineHeight: "1.6", letterSpacing: "-0.01em" }}>George builds free web tools that respect user privacy. Founder of Klickify Agency.</div>
+        <div style={{ fontSize: "14px", color: "#4a5568", lineHeight: "1.6", letterSpacing: "-0.01em" }}>George builds free, client-side mortgage and financial calculators with transparent, formula-based methodology and zero data collection. Founder of Klickify Agency. Not a licensed financial advisor or loan officer — figures on this site are educational estimates; consult a licensed lender for loan-specific guidance.</div>
       </div>
     </div>
   );

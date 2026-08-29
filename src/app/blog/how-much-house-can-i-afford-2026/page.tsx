@@ -25,14 +25,18 @@ const jsonLd = {
       'headline': 'How Much House Can I Afford? (2026 Calculator)',
       'description': 'The real question is not what a bank will lend you. It is what you can pay every month without becoming house-poor. The 28/36 rule explained with real 2026 numbers.',
       'datePublished': '2026-06-10',
-      'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'dateModified': '2026-08-29',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/how-much-house-can-i-afford-2026',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Adjust the down payment and see the impact', 'Try increasing your down payment by $10,000. See how much lower the monthly payment goes. On a $400,000 home, every extra $5,000 down reduces your monthly payment by about $32 (less interest and potentially lower PMI). Over 30 years, that $5,000 saves you $11,500 in interest if rates stay at 6.8%. That is a 130% return.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Use the Affordability Calculator (No Lead Forms)',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function HowMuchHouseCanIAfford2026Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -90,6 +107,18 @@ export default function HowMuchHouseCanIAfford2026Page() {
             The real question is not what a bank will lend you. It is what you can pay every month without becoming house-poor. A mortgage calculator that does not ask for your email is the first step. But you also need to understand the rule of thumb that actually works: your total housing payment should not exceed 28% of your gross monthly income, and total debts (including the mortgage) should not exceed 36% — the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/" target="_blank" rel="noopener noreferrer">debt-to-income ratio the CFPB tells borrowers to calculate</a> before shopping for a loan. These are the old-school underwriting guidelines that responsible lenders use. Most online calculators ignore them because tighter numbers mean smaller loans and smaller commissions.
           </p>
 
+          <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 32 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
+              Keep housing payments under 28% of gross income, total debt under 36% — the CFPB's own DTI benchmark.
+            </h2>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
+              On a $100,000 salary ($8,333/month gross), that caps your housing payment at $2,333 and total debt at $3,000. At 6.8% with 20% down, that supports roughly a $450,000 home — often well below what a lender's pre-approval letter offers, because pre-approval maximizes what they can lend, not what fits your budget.
+            </p>
+            <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
+              Drop to 10% down and PMI changes the math fast: a $450,000 home with 10% down runs about $3,475/month once PMI, taxes, and insurance are added — $1,142 over the 28% line on that same $100,000 salary.
+            </p>
+          </div>
+
           <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">The Real Math Behind Affordability (28/36 Rule)</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Let me explain the 28/36 rule with real numbers from 2026. Your gross monthly income is your salary before taxes. If you earn $100,000 per year, your gross monthly is $8,333. The 28% rule says your housing payment (principal, interest, taxes, insurance, and PMI) should be no more than $2,333 per month. The 36% rule says your total monthly debts (housing plus car loans, student loans, credit cards) should be no more than $3,000 per month.
@@ -126,7 +155,7 @@ export default function HowMuchHouseCanIAfford2026Page() {
             LendingTree is the worst. Their affordability calculator is actually a loan application in disguise. The moment you hit &quot;calculate,&quot; you are entered into their lead auction system. Your phone will ring within 90 seconds. I tested this. I entered fake information, and within two minutes, I received calls from three different lenders. One left a voicemail saying they had &quot;already pulled my credit.&quot; I did not give them permission.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Truly Free Mortgage Calculator does not ask for your email, phone number, or credit score. It does not save your inputs. It does not share anything with lenders. The only thing on the page is the calculator and some AdSense ads. You can run 100 scenarios, and your phone will never ring. That is how a free calculator should work.
+            Truly Free Mortgage Calculator does not ask for your email, phone number, or credit score. It does not save your inputs. It does not share anything with lenders. The only thing on the page is the calculator and some display ads. You can run 100 scenarios, and your phone will never ring. That is how a free calculator should work.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -136,7 +165,7 @@ export default function HowMuchHouseCanIAfford2026Page() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

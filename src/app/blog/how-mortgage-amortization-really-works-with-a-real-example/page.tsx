@@ -8,7 +8,27 @@ const schema = {
   author: {
     '@type': 'Person',
     name: 'George Smith',
+    url: 'https://www.linkedin.com/in/george-smith-832113217/',
+    sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'],
   },
+  dateModified: '2026-08-29',
+} as const;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'What is mortgage amortization?', acceptedAnswer: { '@type': 'Answer', text: 'Mortgage amortization is the process of gradually paying off a mortgage loan through regular payments, covering both interest and principal amounts.' } },
+    { '@type': 'Question', name: 'How does interest rate impact mortgage amortization?', acceptedAnswer: { '@type': 'Answer', text: 'A lower interest rate can result in substantial savings and a shorter payoff period, while a higher interest rate can increase the total interest paid over the life of the loan.' } },
+    { '@type': 'Question', name: 'Can I pay off my mortgage early?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, making extra payments or paying more than the minimum payment can help pay off the loan faster and reduce the total interest paid.' } },
+    { '@type': 'Question', name: 'Is this website ad-supported?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, this website is ad-supported, which helps us provide free and informative content to our readers.' } },
+  ],
+} as const;
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
 } as const;
 
 export const metadata: Metadata = {
@@ -22,6 +42,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="max-w-7xl mx-auto p-4 lg:p-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <header className="bg-navy text-white p-4 lg:p-6 mb-6">
         <h1 className="text-3xl lg:text-5xl font-bold mb-2">How Mortgage Amortization Really Works with a Real Example</h1>
         <p className="text-lg lg:text-2xl mb-4">Understand the power of mortgage amortization and its impact on your payments.</p>
@@ -64,29 +87,29 @@ export default function Page() {
             <tr>
               <td className="px-4 py-2">12</td>
               <td className="px-4 py-2">$1,013</td>
-              <td className="px-4 py-2">$693</td>
-              <td className="px-4 py-2">$320</td>
-              <td className="px-4 py-2">$198,333</td>
+              <td className="px-4 py-2">$739</td>
+              <td className="px-4 py-2">$275</td>
+              <td className="px-4 py-2">$196,771</td>
             </tr>
             <tr>
               <td className="px-4 py-2">120</td>
               <td className="px-4 py-2">$1,013</td>
-              <td className="px-4 py-2">$133</td>
-              <td className="px-4 py-2">$880</td>
-              <td className="px-4 py-2">$100,000</td>
+              <td className="px-4 py-2">$602</td>
+              <td className="px-4 py-2">$412</td>
+              <td className="px-4 py-2">$160,091</td>
             </tr>
             <tr>
               <td className="px-4 py-2">240</td>
               <td className="px-4 py-2">$1,013</td>
-              <td className="px-4 py-2">$25</td>
-              <td className="px-4 py-2">$988</td>
-              <td className="px-4 py-2">$20,000</td>
+              <td className="px-4 py-2">$368</td>
+              <td className="px-4 py-2">$646</td>
+              <td className="px-4 py-2">$97,520</td>
             </tr>
             <tr>
               <td className="px-4 py-2">360</td>
-              <td className="px-4 py-2">$0</td>
-              <td className="px-4 py-2">$0</td>
-              <td className="px-4 py-2">$0</td>
+              <td className="px-4 py-2">$1,013</td>
+              <td className="px-4 py-2">$4</td>
+              <td className="px-4 py-2">$1,009</td>
               <td className="px-4 py-2">$0</td>
             </tr>
           </tbody>
@@ -119,7 +142,7 @@ export default function Page() {
       <AuthorBox />
 
       <section className="mb-6">
-        <h2 className="text-2xl lg:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
+        <h2 id="faq" className="text-2xl lg:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
         <div className="mb-4">
           <h3 className="text-xl lg:text-3xl font-bold mb-2">Q: What is mortgage amortization?</h3>
           <p className="text-lg lg:text-xl mb-4">A: Mortgage amortization is the process of gradually paying off a mortgage loan through regular payments, covering both interest and principal amounts.</p>

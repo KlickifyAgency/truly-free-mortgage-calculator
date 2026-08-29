@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'How amortization works with real numbers: why your early payments go almost entirely to interest, and how to read the full 360-month table.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/mortgage-amortization-schedule-explained',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Print or save the schedule for tax purposes', 'The schedule shows your annual mortgage interest paid, which is tax-deductible if you itemize. You can use the totals to prepare your taxes. No need to wait for a year-end statement from your lender.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Read and Use an Amortization Schedule',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function MortgageAmortizationScheduleExplainedPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -123,7 +140,7 @@ export default function MortgageAmortizationScheduleExplainedPage() {
             LendingTree does not even offer an amortization table. Their &quot;mortgage calculator&quot; is just a lead form. You enter your loan details, and then they say &quot;Great! Now let&apos;s find you the best rates.&quot; The amortization table is not provided because they do not want you to see how much interest you will pay. It would hurt their conversion rates.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Truly Free Mortgage Calculator gives you the full 360-month amortization table instantly. There is no &quot;enter your email to continue.&quot; There is no account creation. There is no &quot;get the rest of the table&quot; button. It is all there, free, for any loan size. I can do this because AdSense pays for the server. I do not need your email.
+            Truly Free Mortgage Calculator gives you the full 360-month amortization table instantly. There is no &quot;enter your email to continue.&quot; There is no account creation. There is no &quot;get the rest of the table&quot; button. It is all there, free, for any loan size. I can do this because display advertising pays for the server. I do not need your email.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -133,7 +150,7 @@ export default function MortgageAmortizationScheduleExplainedPage() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

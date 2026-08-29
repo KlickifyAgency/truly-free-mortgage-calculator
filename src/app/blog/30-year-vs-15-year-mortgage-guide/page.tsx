@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'The real numbers for a $420,000 home with 20% down: monthly payments, total interest, opportunity cost, and the extra-payment middle path.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/30-year-vs-15-year-mortgage-guide',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Download the amortization schedule for both', 'See how much equity you build in the first 5 years with each option. On the 15-year, you build equity much faster. After 5 years on the 30-year at 6.8%, you will have paid down about $18,000 of principal. On the 15-year at 6.2%, about $68,000. That is a $50,000 difference in equity.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Compare 30-Year and 15-Year Using the Calculator',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function ThirtyVsFifteenYearMortgageGuidePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -126,7 +143,7 @@ export default function ThirtyVsFifteenYearMortgageGuidePage() {
             The most misleading are the &quot;calculator&quot; sites that are actually lead generation companies. They have names like &quot;MortgageCalculator.org&quot; and &quot;CalculateMyMortgage.com.&quot; These sites are owned by lending networks. Every input you type is tracked and saved. Even if you do not click &quot;submit,&quot; they have your IP address and the numbers you entered. They can match that data to your identity through third-party data brokers.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Truly Free Mortgage Calculator does not track your inputs. There is no lead form. No &quot;compare rates&quot; button. No lender network. The only way I make money is from AdSense ads on the page. You can run as many comparisons as you want, and your phone will never ring. That is the difference between a tool and a trap.
+            Truly Free Mortgage Calculator does not track your inputs. There is no lead form. No &quot;compare rates&quot; button. No lender network. The only way I make money is from display ads on the page. You can run as many comparisons as you want, and your phone will never ring. That is the difference between a tool and a trap.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -136,7 +153,7 @@ export default function ThirtyVsFifteenYearMortgageGuidePage() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">

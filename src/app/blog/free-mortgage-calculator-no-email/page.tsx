@@ -26,13 +26,17 @@ const jsonLd = {
       'description': 'Mortgage math should be free and private. How to calculate your monthly payment without giving up your personal data — and how lead-gen calculators actually make money.',
       'datePublished': '2026-06-10',
       'dateModified': '2026-06-10',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/free-mortgage-calculator-no-email',
     },
     {
       '@type': 'FAQPage',
       'mainEntity': faqs.map(({ q, a }) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#faq'],
     },
   ],
 };
@@ -48,10 +52,23 @@ const steps = [
   ['8. Use the amortization schedule button', 'Click "View Full Amortization Table" to see every payment from month 1 to month 360. You will see how in the first month, most of your $2,191 payment goes to interest (about $1,904) and only $287 goes to principal. By year 20, that flips. This table is gold if you are trying to decide whether to refinance or make extra payments.'],
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Step-by-Step: Use the Truly Free Mortgage Calculator (No Email Required)',
+  step: steps.map(([title, text], i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: String(title).replace(/^\d+\.\s*/, ''),
+    text,
+  })),
+};
+
 export default function FreeMortgageCalculatorNoEmailPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <a href="/mortgage-calculator" className="flex items-center gap-2.5">
@@ -87,7 +104,7 @@ export default function FreeMortgageCalculatorNoEmailPage() {
             Here is what most people don&apos;t realize. Bankrate&apos;s mortgage calculator is not a calculator. It is a lead generation machine. Every time you type in a home price and down payment, Bankrate captures that data. When you click &quot;Get My Rate&quot; or even just scroll past a certain point, they sell your information to lenders. Bankrate earns $150 to $500 per lead. NerdWallet does the same thing. LendingTree is even worse — their entire business is selling your mortgage application to multiple lenders simultaneously. Your phone rings within minutes.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-8">
-            I built Truly Free Mortgage Calculator for one reason: mortgage math should be free and private. You should not have to trade your email address for a simple monthly payment estimate. You should not get phone calls from loan officers for the next three weeks. My calculator runs on AdSense — I show ads on the page, you see them, I make a few cents. No lead selling. No lender network. No email capture. Just honest mortgage math. Try it once. Your phone will not ring.
+            I built Truly Free Mortgage Calculator for one reason: mortgage math should be free and private. You should not have to trade your email address for a simple monthly payment estimate. You should not get phone calls from loan officers for the next three weeks. My calculator is ad-supported — I show display ads on the page, you see them, I make a few cents. No lead selling. No lender network. No email capture. Just honest mortgage math. Try it once. Your phone will not ring.
           </p>
 
           <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">How to Calculate Your Monthly Mortgage Payment (The Real Math)</h2>
@@ -133,7 +150,7 @@ export default function FreeMortgageCalculatorNoEmailPage() {
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
-          <h2 className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
