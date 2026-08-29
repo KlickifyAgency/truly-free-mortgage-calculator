@@ -1,8 +1,6 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { JsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Conventional Loans: The Complete Guide for 2026',
@@ -23,8 +21,11 @@ const articleJsonLd = {
   author: {
     '@type': 'Person',
     name: 'George Smith',
+    url: 'https://www.linkedin.com/in/george-smith-832113217/',
+    sameAs: ['https://www.linkedin.com/in/george-smith-832113217/'],
   },
   datePublished: '2026-08-29',
+  dateModified: '2026-08-29',
   publisher: {
     '@type': 'Organization',
     name: 'Truly Free Mortgage',
@@ -40,11 +41,30 @@ const articleJsonLd = {
   },
 };
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Can I refinance a conventional loan into an FHA or VA loan?', acceptedAnswer: { '@type': 'Answer', text: "Yes, you can refinance into a government‑backed loan if you become eligible (e.g., you join the military or purchase a qualifying rural property). Keep in mind that you'll incur an upfront funding fee and new closing costs, which must be weighed against the potential rate reduction." } },
+    { '@type': 'Question', name: 'How does PMI cancel automatically?', acceptedAnswer: { '@type': 'Answer', text: 'Most lenders automatically terminate PMI once your LTV reaches 78% based on the original amortization schedule, provided you are current on payments. You can also request early cancellation at 80% LTV by submitting a written request and an appraisal.' } },
+    { '@type': 'Question', name: 'Are conventional loans still available for first‑time buyers?', acceptedAnswer: { '@type': 'Answer', text: "Absolutely. First‑time buyers can qualify with as little as 3% down, though they'll need to meet the DTI and reserve requirements. Many lenders offer special first‑time buyer programs that lower the required credit score to 640." } },
+    { '@type': 'Question', name: 'What happens if my loan amount exceeds the conforming limit?', acceptedAnswer: { '@type': 'Answer', text: "You'll be placed in the jumbo category. Jumbo loans typically have slightly higher rates (often +0.25% to +0.50%) and stricter documentation. However, many jumbo products now accept 10% down with competitive pricing." } },
+  ],
+};
+
+const speakableJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['#faq'],
+};
+
 export default function Page() {
   return (
     <article className="font-sans text-gray-800 dark:text-gray-200 antialiased">
       {/* JSON‑LD */}
-      <JsonLd data={articleJsonLd} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }} />
 
       {/* Header */}
       <header className="bg-[#0b1b34] text-white py-16 sm:py-24">
@@ -62,12 +82,7 @@ export default function Page() {
 
       {/* Author Box */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12">
-        <AuthorBox
-          name="George Smith"
-          title="Senior Mortgage Analyst"
-          avatarUrl="/authors/george-smith.jpg"
-          bio="George translates complex mortgage math into clear, actionable advice. He’s helped over 3,000 families secure the right loan for their situation."
-        />
+        <AuthorBox />
       </section>
 
       {/* Content */}
@@ -357,7 +372,7 @@ export default function Page() {
         </section>
 
         {/* FAQ */}
-        <section>
+        <section id="faq">
           <h2 className="text-2xl font-semibold text-[#0b1b34] mb-6">
             Frequently Asked Questions
           </h2>
