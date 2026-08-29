@@ -12,7 +12,7 @@ const faqs = [
   { q: 'Is it better to make extra payments monthly or one lump sum per year?', a: 'Monthly is slightly better because interest accrues monthly. A $1,200 lump sum at the end of the year saves less interest than $100 per month for 12 months. The difference is small (about $50 over 30 years on a $300,000 loan). The key is consistency. Choose whichever fits your budget.' },
   { q: 'Should I pay extra on my mortgage or invest in retirement?', a: 'This is the most common question. At 6.8% mortgage rate, paying extra is a guaranteed 6.8% return. The stock market historically returns 7-10% but with risk. If you have high-interest debt (credit cards at 20%), pay that first. Then max out your 401(k) match (that is a 100% return). Then compare. I recommend splitting the difference: put half your extra cash toward mortgage, half into index funds.' },
   { q: 'How does an extra $100 per month affect a 15-year mortgage?', a: 'Less dramatic because the term is shorter. On a $300,000 loan at 6.2% over 15 years, base payment is $2,566. Extra $100 per month cuts the term by about 1.5 years and saves about $15,000 in interest. The 30-year loan benefits more from extra payments because you have more time for compounding.' },
-  { q: 'Does making biweekly payments instead of monthly count as extra payments?', a: 'Yes. Biweekly means you make half a payment every 2 weeks. That results in 26 half-payments per year, or 13 full payments. The extra full payment goes to principal. On a $300,000 loan at 6.8%, biweekly payments cut the term from 30 years to about 25 years and save $60,000 in interest. Our calculator has a biweekly option.' },
+  { q: 'Does making biweekly payments instead of monthly count as extra payments?', a: 'Yes. Biweekly means you make half a payment every 2 weeks. That results in 26 half-payments per year, or 13 full payments. The extra full payment goes to principal. On a $300,000 loan at 6.8%, biweekly payments cut the term from 30 years to about 25 years and save $60,000 in interest. Our calculator does not have a dedicated biweekly toggle — model the equivalent effect by dividing one extra monthly payment by 12 and entering that amount in the Extra Monthly Payment field.' },
   { q: 'Can I make extra payments on an FHA or VA loan?', a: 'Yes, there is no penalty for extra payments on any standard mortgage. FHA, VA, USDA, and conventional loans all allow prepayment without penalty. However, FHA loans have MIP that cannot be canceled early unless you refinance. So the benefit of extra payments is slightly less because you still pay MIP until you refinance.' },
   { q: 'How much will I save by rounding up my payment to the nearest $100?', a: 'If your payment is $1,956, rounding up to $2,000 adds $44 per month. Over 30 years, that $44 per month saves about $16,000 in interest and cuts 2.5 years off the loan. Small amounts add up.' },
 ];
@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select Extra Payment Calculator', 'You will find it under "Mortgage Calculators." No login required.'],
-  ['2. Enter your current loan balance', 'For a new mortgage, this is the amount you borrowed. If you have had the loan for a while, enter the current outstanding balance. You can find this on your monthly statement.'],
-  ['3. Enter your interest rate', 'Use the rate on your loan note. For new loans, 6.8% is a good baseline. For older loans, use your actual rate.'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator', 'That is the free calculator. No login, no email.'],
+  ['2. Enter your loan balance as the home price with $0 down (or your current payoff balance)', 'If you have had the loan a while, enter your current outstanding balance as the home price and set down payment to $0 so the loan amount matches your real balance.'],
+  ['3. Enter your interest rate', 'Use the rate on your loan note. For new loans, use your quoted rate. For older loans, use your actual rate.'],
   ['4. Enter your remaining term in years', 'If you just started a 30-year, enter 30. If you are 5 years in, enter 25.'],
-  ['5. Enter your current monthly payment (principal + interest only)', 'Do not include taxes and insurance. The calculator will usually compute this for you based on the loan details.'],
-  ['6. Enter the extra amount you are considering per month', 'Start with $100, $200, $500, or any number. The calculator will show the new monthly payment (current + extra).'],
-  ['7. Click "Calculate Extra Payment Impact"', 'The calculator will show: new payoff date (month and year), total interest saved, total time saved, and a comparison table of original vs new.'],
-  ['8. View the amortization comparison', 'The tool will show you side-by-side amortization schedules. You will see how much faster the principal balance drops. You will also see the month when your loan balance reaches zero.'],
+  ['5. Scroll to "Payoff Acceleration" and enter your extra monthly payment', 'Start with $100, $200, $500, or any number. This field applies straight to principal on top of your regular payment.'],
+  ['6. Read the results as you type', 'There is no separate calculate button — the "Payoff Impact of Your Extra Payment" panel updates instantly and shows your new payoff time, time saved, and total interest saved.'],
+  ['7. Compare against $0 extra', 'Set the extra payment field back to $0 to see your original payoff time and interest, then re-enter your test amount to see the difference side by side.'],
+  ['8. Open "Full Amortization Schedule"', 'This shows the month-by-month balance with your extra payment applied, so you can see exactly when the loan reaches zero.'],
 ];
 
 const howToSchema = {

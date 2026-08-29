@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select FHA vs Conventional Calculator', 'The tool is under "Loan Type Comparison."'],
-  ['2. Enter the home price and down payment amount', 'Use the same numbers for both loan types. Example: $400,000 home with $20,000 down.'],
-  ['3. Enter your credit score', 'The calculator will use different PMI/MIP rates based on your score. Higher scores get cheaper conventional PMI.'],
-  ['4. Enter the loan term (30 years is standard)', 'Both loans will be compared over the same term.'],
-  ['5. The calculator will show interest rates', 'FHA rates are typically 0.25% to 0.5% lower than conventional. The tool uses market averages, but you can override them if you have actual quotes.'],
-  ['6. Click "Compare"', 'The calculator will show side-by-side: monthly payment (P&I), monthly MI/PMI, upfront costs (FHA upfront MIP), total MI/PMI paid over time, and break-even analysis.'],
-  ['7. Review the "total cost" at year 5, 10, 15, and 30', 'You will see that FHA is cheaper in early years, but conventional catches up after year 10-12.'],
-  ['8. Use the refinance toggle', 'If you plan to refinance out of FHA after a few years, the calculator can show you how that affects the comparison.'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator', 'There is no dedicated FHA-vs-conventional mode — run each loan type separately in the standard calculator and compare the results.'],
+  ['2. Run the conventional numbers first', 'Enter the home price and down payment, then turn on the PMI toggle under "Additional Costs." The calculator applies a flat national-average PMI rate (about 0.8% of the loan amount per year).'],
+  ['3. Run the FHA numbers separately', 'The PMI toggle models conventional PMI, not FHA MIP — it does not have an FHA-specific rate. Manually add FHA\'s upfront MIP (1.75% of the loan amount) and annual MIP (about 0.85%/year) using the figures in our FHA Mortgage Calculator guide, since the tool will not add these for you.'],
+  ['4. Use the same loan term for both runs', '30 years is standard for both loan types, so the comparison is apples to apples.'],
+  ['5. Enter your own quoted rate for each', 'The calculator has no credit-score field and does not estimate rates for you — real conventional PMI and rates do vary by credit score, so use your lender\'s actual quotes rather than a single default.'],
+  ['6. Compare the two "Total Monthly" figures side by side', 'Since the tool runs one loan at a time, write down or screenshot each total before switching numbers to the other loan type.'],
+  ['7. Compare total cost further out by opening "Full Amortization Schedule" on each run', 'Note the cumulative interest at year 5, 10, and 15 for both loan types — FHA is often cheaper early on but conventional tends to catch up once PMI would have dropped off.'],
+  ['8. Re-run the conventional numbers at a new rate to model refinancing out of FHA', 'There is no built-in refinance toggle — simply repeat step 2 with your expected post-refinance rate.'],
 ];
 
 const howToSchema = {

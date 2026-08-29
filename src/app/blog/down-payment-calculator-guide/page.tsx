@@ -12,7 +12,7 @@ const faqs = [
   { q: 'What is the minimum down payment for a conventional loan in 2026?', a: 'For first-time home buyers, 3% down. For repeat buyers, 5% down. However, 3% down loans have stricter income limits and require the borrower to complete a homeownership education course.' },
   { q: 'How much down payment do I need for a $500,000 home with an FHA loan?', a: 'FHA requires 3.5% down, which is $17,500. But FHA loan limits vary by county. In most counties, the limit is over $500,000, so you are fine. Check HUD\'s website for your county.' },
   { q: 'Is it worth putting 20% down to avoid PMI if it empties my savings?', a: 'No. You should have an emergency fund of 3-6 months of expenses after closing. If putting 20% down leaves you with no cash reserves, put less down and accept PMI. The cost of PMI is temporary. The cost of being broke after a job loss is permanent.' },
-  { q: 'How does down payment size affect my interest rate?', a: 'Larger down payments (20%+) typically get the best rates. Smaller down payments (5-10%) add 0.25-0.5% to the rate. Our calculator adjusts the rate automatically based on down payment and credit score.' },
+  { q: 'How does down payment size affect my interest rate?', a: 'Larger down payments (20%+) typically get the best rates. Smaller down payments (5-10%) add 0.25-0.5% to the rate. Enter your lender-quoted rate directly into the calculator to see the exact payment at your own numbers — it does not auto-adjust the rate for you.' },
   { q: 'Can I use gift money for my down payment?', a: 'Yes. For conventional loans, gift money is allowed for down payment as long as the donor provides a gift letter. For FHA, gift money is allowed even for the entire down payment. The donor cannot be the seller or real estate agent.' },
   { q: 'Should I put extra money toward down payment or keep it for repairs?', a: 'Keep at least 1-2% of the home price for immediate repairs and maintenance. On a $400,000 home, that is $4,000 to $8,000. After that, put any extra toward down payment. A larger down payment reduces your monthly payment permanently.' },
 ];
@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select Down Payment Calculator', 'It is on the main page under "Advanced Options."'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator', 'That is the free calculator. No sign-up, no email.'],
   ['2. Enter the home price', 'Use the price range you are shopping in. Example: $420,000.'],
-  ['3. Enter your down payment amount', 'Start with what you have saved. Example: $50,000. The calculator will show the down payment percentage (12%).'],
-  ['4. Enter your interest rate', 'Current 30-year fixed is 6.8%. But your rate may be slightly higher with a lower down payment. Our calculator adjusts the rate automatically based on down payment (lower down = slightly higher rate). You can override.'],
-  ['5. Enter your credit score range', 'This affects PMI rates. Higher scores get lower PMI.'],
-  ['6. Click "Calculate"', 'The tool will show your monthly payment, including PMI. It will also show the total PMI paid over time.'],
-  ['7. Use the slider to see different down payment amounts', 'Slide from 3% to 20%. Watch the monthly payment change. Notice how PMI disappears at 20%.'],
-  ['8. Click the "See Amortization" button', 'This shows how quickly you build equity with different down payments. With 20% down, you start with $80,000 equity. With 3% down, you start with $12,000 equity. If home prices drop 10%, you are underwater with 3% down.'],
+  ['3. Enter your down payment amount', 'Start with what you have saved. Example: $50,000. The calculator shows the down payment percentage automatically (12%) and updates a slider you can drag to test other amounts.'],
+  ['4. Enter your interest rate', 'Current 30-year fixed rates are widely published; use your own quote or a current market rate. The calculator does not guess or auto-adjust this for you — type in the number you want to test.'],
+  ['5. Turn on Property Tax, Insurance, PMI, and HOA under "Additional Costs"', 'Each is a toggle. Turning PMI on shows what you pay below 20% down; turning it off isolates principal and interest only.'],
+  ['6. Watch the numbers update as you type', 'There is no "Calculate" button — the payment recalculates live in your browser as you change any input.'],
+  ['7. Drag the down payment slider to compare amounts', 'Slide from 3% to 20%. Watch the monthly payment change and PMI disappear at 20% down.'],
+  ['8. Open "Full Amortization Schedule"', 'This expands the month-by-month payment breakdown so you can see how quickly you build equity at different down payment levels.'],
 ];
 
 const howToSchema = {

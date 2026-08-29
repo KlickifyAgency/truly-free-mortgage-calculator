@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select Closing Cost Calculator', 'Found under "Mortgage Tools." No account needed.'],
-  ['2. Enter the home purchase price', 'Use the actual sale price. Example: $400,000.'],
-  ['3. Enter your loan amount', 'This is home price minus down payment. Example: $360,000.'],
-  ['4. Enter your location (zip code)', 'Some fees vary by state (transfer taxes, recording fees). The calculator uses a database of averages by state.'],
-  ['5. Enter your down payment percentage', 'This affects the loan amount and some fees (e.g., origination percentage).'],
-  ['6. The calculator will show a detailed breakdown', 'You will see each fee category with a typical range. Adjust the sliders if you have actual quotes from your lender.'],
-  ['7. Note the "cash to close" total', 'This is down payment plus closing costs minus any seller credits or earnest money deposit.'],
-  ['8. Use the "seller credit" option', 'If the seller has agreed to pay a portion of closing costs, enter that amount. The calculator will subtract it from your cash to close.'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator for the loan math, and use the worksheet below for fees', 'Our calculator does not have a dedicated closing-cost or zip-code fee database — it handles the loan payment side; closing costs need to be estimated by hand using the ranges in this guide.'],
+  ['2. Enter the home purchase price and down payment in the calculator', 'Example: $400,000 home with $40,000 down. This gives you the correct loan amount ($360,000) to base percentage-of-loan fees on.'],
+  ['3. Get a real Loan Estimate from your lender for exact fees', 'Fees like transfer taxes and recording fees vary by state and county — there is no built-in database for this, so your lender\'s Loan Estimate is the authoritative source.'],
+  ['4. Add up percentage-of-loan-amount fees using your loan amount from step 2', 'Origination and similar fees are typically quoted as a percentage of the loan amount — multiply that percentage by your loan amount from the calculator.'],
+  ['5. Total the fee categories in the breakdown below by hand', 'There is no automatic breakdown tool on this site — use the typical ranges in this guide alongside your Loan Estimate.'],
+  ['6. Calculate your "cash to close" manually', 'This is down payment plus total closing costs, minus any seller credits or earnest money already deposited.'],
+  ['7. Subtract any seller credit from your total', 'If the seller has agreed to cover part of your closing costs, subtract that amount from your cash-to-close total — there is no seller-credit field to do this automatically.'],
+  ['8. Re-run the calculator with the final loan amount if it changed', 'If financing part of the closing costs changes your loan amount, plug the updated number back into the standard calculator to see the effect on your monthly payment.'],
 ];
 
 const howToSchema = {

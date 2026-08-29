@@ -159,6 +159,30 @@ export default function BlogPage() {
       title: 'Interest-Only Mortgage Calculator: Payments, Risks, and Real Costs',
       description: 'How interest-only loans work, payment shock when amortization begins, and who should — and should not — use them.',
     },
+    {
+      slug: 'how-to-get-a-mortgage-as-a-selfemployed-borrower',
+      tag: 'Qualification',
+      title: 'How to Get a Mortgage as a Self-Employed Borrower',
+      description: 'A comprehensive guide for self-employed individuals to navigate the mortgage process and secure the best loan terms.',
+    },
+    {
+      slug: 'down-payment-assistance-programs-by-state',
+      tag: 'Down Payment',
+      title: 'Down Payment Assistance Programs by State',
+      description: 'Explore down payment assistance programs available in each state, including grants, loans, and tax credits.',
+    },
+    {
+      slug: 'conventional-loans-the-complete-guide-for-2026',
+      tag: 'Loan Types',
+      title: 'Conventional Loans: The Complete Guide for 2026',
+      description: 'Everything you need to know about conventional mortgages in 2026 – rates, qualification, down-payment strategies, and how they compare to other loan types.',
+    },
+    {
+      slug: 'how-mortgage-amortization-really-works-with-a-real-example',
+      tag: 'Amortization',
+      title: 'How Mortgage Amortization Really Works with a Real Example',
+      description: 'Learn how mortgage amortization works with a real example and understand the impact on your mortgage payments.',
+    },
   ];;
 
   const tagColors: Record<string, string> = {
@@ -183,6 +207,8 @@ export default function BlogPage() {
     'Calculator Comparison': 'text-slate-600 bg-slate-50',
     'Discount Points': 'text-fuchsia-600 bg-fuchsia-50',
     'Mortgage Types': 'text-indigo-600 bg-indigo-50',
+    'Qualification': 'text-sky-600 bg-sky-50',
+    'Loan Types': 'text-purple-600 bg-purple-50',
   };
 
   return (
@@ -204,7 +230,7 @@ export default function BlogPage() {
         <div className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-600 mb-3">Mortgage Education</div>
         <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-3">Mortgage Guides</h1>
         <p className="text-[16px] text-gray-500 leading-relaxed mb-10">
-          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 25 articles.
+          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 29 articles.
         </p>
 
         <div className="space-y-4">

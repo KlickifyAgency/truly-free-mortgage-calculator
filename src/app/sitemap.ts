@@ -40,6 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-calculate-mortgage-payment-by-hand",
     "mortgage-points-calculator",
     "interest-only-mortgage-calculator",
+    "how-to-get-a-mortgage-as-a-selfemployed-borrower",
+    "down-payment-assistance-programs-by-state",
+    "conventional-loans-the-complete-guide-for-2026",
+    "how-mortgage-amortization-really-works-with-a-real-example",
   ];
 
   return [

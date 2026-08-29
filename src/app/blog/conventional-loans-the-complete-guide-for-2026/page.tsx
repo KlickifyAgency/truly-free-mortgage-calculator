@@ -101,8 +101,8 @@ export default function Page() {
             <li>
               <strong>Conforming:</strong> Meets the loan‑limit set by the
               Federal Housing Finance Agency (FHFA). For most of the
-              continental U.S., the 2026 limit is $726,200; higher in
-              high‑cost areas (up to $1,089,300 in San Francisco, New York,
+              continental U.S., the 2026 limit is $832,750; higher in
+              high‑cost areas (up to $1,249,125 in San Francisco, New York,
               etc.).
             </li>
             <li>
@@ -257,7 +257,8 @@ export default function Page() {
             The table below highlights the key differences that matter to a
             borrower in 2026.
           </p>
-          <table className="w-full table-auto border-collapse mb-6">
+          <div className="overflow-x-auto mb-6">
+          <table className="w-full table-auto border-collapse">
             <thead>
               <tr className="bg-gray-100 dark:bg-gray-800">
                 <th className="border p-2 text-left">Feature</th>
@@ -306,6 +307,7 @@ export default function Page() {
               </tr>
             </tbody>
           </table>
+          </div>
           <p>
             If you qualify for VA or USDA and meet the location/servicing
             criteria, those programs can be cheaper because they eliminate

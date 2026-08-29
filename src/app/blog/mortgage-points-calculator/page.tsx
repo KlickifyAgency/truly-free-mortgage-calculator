@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select Points Calculator', 'Found under "Advanced Mortgage Tools."'],
-  ['2. Enter your loan amount', 'Example: $300,000.'],
-  ['3. Enter the base interest rate (without points)', 'Example: 6.8%.'],
-  ['4. Enter the number of points you are considering (1, 2, or fractional)', 'Example: 1 point.'],
-  ['5. Enter the interest rate after buying points', 'Your lender should tell you the new rate. Example: 6.55%. The calculator can also estimate the rate reduction (typically 0.25% per point).'],
-  ['6. Enter the cost per point (usually 1% of loan amount)', 'For $300,000, one point costs $3,000.'],
-  ['7. Click "Calculate"', 'The calculator will show your monthly savings, total point cost, break-even in months and years, and total interest saved over 30 years.'],
-  ['8. Adjust the "years you plan to stay" slider', 'If you plan to stay only 3 years, the calculator will show that buying points loses money. If you plan to stay 10 years, it saves money.'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator and open the Compare tab', 'There is no dedicated points calculator — the Scenario Comparison view is the closest tool, comparing two rates side by side.'],
+  ['2. In Scenario A, enter your loan amount and base interest rate (without points)', 'Example: $300,000 at 6.8%.'],
+  ['3. In Scenario B, enter the same loan amount with your rate after buying points', 'Ask your lender for the exact post-point rate. Example: 6.55% for 1 point. The calculator does not estimate the rate reduction for you — a point typically buys about 0.25% off the rate, but get your lender\'s real number.'],
+  ['4. Compare the two monthly payments shown', 'The difference between Scenario A and B is your monthly savings from buying the point.'],
+  ['5. Calculate the point cost by hand', 'One point usually costs 1% of the loan amount. On $300,000, that is $3,000. The calculator does not have a points-cost field.'],
+  ['6. Divide the point cost by your monthly savings to get the break-even', 'That is the number of months you need to keep the loan before the point pays for itself. This math happens outside the calculator.'],
+  ['7. Watch both scenarios update live', 'There is no "Calculate" button — each scenario recalculates as soon as you change its rate or loan amount.'],
+  ['8. Weigh the break-even against how long you plan to stay', 'If you plan to move or refinance before the break-even month, buying points loses money. If you will hold the loan well past it, points typically pay off.'],
 ];
 
 const howToSchema = {

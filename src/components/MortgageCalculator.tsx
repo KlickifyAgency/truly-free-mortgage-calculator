@@ -70,32 +70,33 @@ function calcMonthlyPI(principal: number, annualRate: number, years: number): nu
   return (principal * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
 }
 
-function buildAmort(principal: number, annualRate: number, years: number): AmortRow[] {
+function buildAmort(principal: number, annualRate: number, years: number, extraPayment = 0): AmortRow[] {
   const r = annualRate / 100 / 12;
   const n = years * 12;
   const payment = calcMonthlyPI(principal, annualRate, years);
   let balance = principal;
   const rows: AmortRow[] = [];
-  for (let month = 1; month <= n; month++) {
+  for (let month = 1; month <= n && balance > 0; month++) {
     const interest = balance * r;
-    const princ = payment - interest;
+    let princ = payment - interest + extraPayment;
+    if (princ > balance) princ = balance;
     balance = Math.max(0, balance - princ);
-    rows.push({ month, payment, principal: princ, interest, balance });
+    rows.push({ month, payment: interest + princ, principal: princ, interest, balance });
   }
   return rows;
 }
 
-function runCalc(inputs: LoanInputs, toggles: PluginToggles): CalcResult | null {
+function runCalc(inputs: LoanInputs, toggles: PluginToggles, extraPayment = 0): CalcResult | null {
   const { homePrice, downPayment, interestRate, termYears } = inputs;
   const loanAmount = Math.max(0, homePrice - downPayment);
   const dpPercent = homePrice > 0 ? (downPayment / homePrice) * 100 : 0;
   if (loanAmount <= 0 || interestRate <= 0) return null;
   const pi = calcMonthlyPI(loanAmount, interestRate, termYears);
   const plugins = calcPlugins(loanAmount, homePrice, dpPercent, toggles);
-  const totalMonthly = pi + plugins.tax + plugins.insurance + plugins.pmi + plugins.hoa;
-  const totalInterest = pi * termYears * 12 - loanAmount;
+  const totalMonthly = pi + plugins.tax + plugins.insurance + plugins.pmi + plugins.hoa + extraPayment;
+  const amortSchedule = buildAmort(loanAmount, interestRate, termYears, extraPayment);
+  const totalInterest = amortSchedule.reduce((sum, row) => sum + row.interest, 0);
   const totalCost = loanAmount + totalInterest;
-  const amortSchedule = buildAmort(loanAmount, interestRate, termYears);
   return { pi, loanAmount, totalInterest, totalCost, plugins, totalMonthly, amortSchedule, dpPercent };
 }
 
@@ -268,8 +269,12 @@ export default function MortgageCalculator() {
   const [amortOpen, setAmortOpen] = useState(false);
   const [inputs, setInputs] = useState<LoanInputs>({ homePrice: 350000, downPayment: 70000, interestRate: 6.75, termYears: 30 });
   const [toggles, setToggles] = useState<PluginToggles>({ tax: false, insurance: false, pmi: false, hoa: false });
+  const [extraPayment, setExtraPayment] = useState<number>(0);
   const dpPercent = inputs.homePrice > 0 ? Math.round((inputs.downPayment / inputs.homePrice) * 100) : 0;
-  const result = useMemo(() => runCalc(inputs, toggles), [inputs, toggles]);
+  const result = useMemo(() => runCalc(inputs, toggles, extraPayment), [inputs, toggles, extraPayment]);
+  const baseline = useMemo(() => runCalc(inputs, toggles, 0), [inputs, toggles]);
+  const payoffMonthsSaved = extraPayment > 0 && result ? inputs.termYears * 12 - result.amortSchedule.length : 0;
+  const interestSavedByExtra = extraPayment > 0 && result && baseline ? Math.max(0, baseline.totalInterest - result.totalInterest) : 0;
   const setInput = useCallback(<K extends keyof LoanInputs>(key: K, raw: string) => {
     const val = key === 'termYears' ? parseInt(raw) : parseFloat(raw);
     setInputs((prev) => ({ ...prev, [key]: isNaN(val) ? 0 : val }));
@@ -342,6 +347,12 @@ export default function MortgageCalculator() {
                   <Toggle label="PMI" hint="(if less than 20% down)" checked={toggles.pmi} onChange={(v) => setToggles((p) => ({ ...p, pmi: v }))} />
                   <Toggle label="HOA Fees" hint="(est. $150/mo)" checked={toggles.hoa} onChange={(v) => setToggles((p) => ({ ...p, hoa: v }))} />
                 </div>
+                <div className="pt-4 mt-4 border-t border-gray-100">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Payoff Acceleration</p>
+                  <label className="block text-xs font-medium text-gray-500 mb-1">Extra Monthly Payment <span className="text-gray-400">(optional)</span></label>
+                  <div className="relative"><span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none">$</span><input type="number" value={extraPayment} step={25} min={0} onChange={(e) => { const v = parseFloat(e.target.value); setExtraPayment(isNaN(v) ? 0 : Math.max(0, v)); }} className="w-full pl-6 pr-3 py-2 border border-gray-200 rounded-lg text-sm text-gray-900 bg-white outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-colors" style={{ fontVariantNumeric: 'tabular-nums' }} /></div>
+                  <p className="text-xs text-gray-400 mt-1">Applied to principal every month, on top of your regular payment.</p>
+                </div>
               </div>
               <div className="space-y-4">
                 <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden">
@@ -364,12 +375,21 @@ export default function MortgageCalculator() {
                   <BarRow label="Insurance" value={result?.plugins.insurance ?? 0} total={result?.totalMonthly ?? 1} color="#8B5CF6" visible={!!(result && result.plugins.insurance > 0)} />
                   <BarRow label="PMI" value={result?.plugins.pmi ?? 0} total={result?.totalMonthly ?? 1} color="#F59E0B" visible={!!(result && result.plugins.pmi > 0)} />
                   <BarRow label="HOA" value={result?.plugins.hoa ?? 0} total={result?.totalMonthly ?? 1} color="#10B981" visible={!!(result && result.plugins.hoa > 0)} />
+                  <BarRow label="Extra Payment" value={extraPayment} total={result?.totalMonthly ?? 1} color="#DB2777" visible={!!(result && extraPayment > 0)} />
                   {!result && <p className="text-sm text-gray-400 text-center py-4">Enter loan details to see breakdown</p>}
                 </div>
+                {extraPayment > 0 && result && (
+                  <div className="bg-pink-50 rounded-lg p-4">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Payoff Impact of Your Extra Payment</p>
+                    <div className="flex justify-between text-xs py-1.5 border-b border-pink-100"><span className="text-gray-500">New Payoff Time</span><span className="font-semibold tabular-nums">{Math.floor(result.amortSchedule.length / 12)} yr {result.amortSchedule.length % 12} mo</span></div>
+                    <div className="flex justify-between text-xs py-1.5 border-b border-pink-100"><span className="text-gray-500">Time Saved</span><span className="font-semibold tabular-nums">{Math.floor(payoffMonthsSaved / 12)} yr {payoffMonthsSaved % 12} mo</span></div>
+                    <div className="flex justify-between text-sm font-bold text-gray-900 pt-2 mt-1"><span>Interest Saved</span><span className="tabular-nums">{fmtCurrency(interestSavedByExtra)}</span></div>
+                  </div>
+                )}
                 {hasPlugins && result && (
                   <div className="bg-blue-50 rounded-lg p-4">
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Full Monthly Cost</p>
-                    {([['Principal and Interest', result.pi], result.plugins.tax > 0 ? ['Property Tax', result.plugins.tax] : null, result.plugins.insurance > 0 ? ['Insurance', result.plugins.insurance] : null, result.plugins.pmi > 0 ? ['PMI', result.plugins.pmi] : null, result.plugins.hoa > 0 ? ['HOA', result.plugins.hoa] : null] as ([string,number]|null)[]).filter((x): x is [string,number] => x !== null).map((row) => (
+                    {([['Principal and Interest', result.pi], result.plugins.tax > 0 ? ['Property Tax', result.plugins.tax] : null, result.plugins.insurance > 0 ? ['Insurance', result.plugins.insurance] : null, result.plugins.pmi > 0 ? ['PMI', result.plugins.pmi] : null, result.plugins.hoa > 0 ? ['HOA', result.plugins.hoa] : null, extraPayment > 0 ? ['Extra Payment', extraPayment] : null] as ([string,number]|null)[]).filter((x): x is [string,number] => x !== null).map((row) => (
                       <div key={row[0]} className="flex justify-between text-xs py-1.5 border-b border-blue-100 last:border-0"><span className="text-gray-500">{row[0]}</span><span className="font-semibold tabular-nums">{fmtCurrency(row[1])}</span></div>
                     ))}
                     <div className="flex justify-between text-sm font-bold text-gray-900 pt-2 mt-1"><span>Total</span><span className="tabular-nums">{fmtCurrency(result.totalMonthly)}</span></div>
@@ -441,7 +461,7 @@ export default function MortgageCalculator() {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">How Mortgage Amortization Works</h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Here's the thing most lenders don't explain clearly: in the first year of a 30-year mortgage, roughly 80% of each payment goes to interest. You're paying $1,946 per month on a $300,000 loan at 6.75%, but only about $270 of that first payment reduces your balance. The remaining $1,676 goes straight to the lender as interest.
+                Here's the thing most lenders don't explain clearly: in the first year of a 30-year mortgage, roughly 80% of each payment goes to interest. You're paying $1,946 per month on a $300,000 loan at 6.75%, but only about $258 of that first payment reduces your balance. The remaining $1,688 goes straight to the lender as interest.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 This front-loading of interest is baked into the amortization formula. Every month your balance drops slightly, so the interest portion shrinks and the principal portion grows — but slowly. By year 10 of a 30-year loan, you've paid about 30% of total interest but reduced your principal by only about 15%. The math is not intuitive, which is exactly why this calculator includes a full amortization schedule.

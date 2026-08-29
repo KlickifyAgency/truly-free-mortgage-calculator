@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select the Refinance Calculator', 'You will find it under "Mortgage Tools." No account needed.'],
-  ['2. Enter your current loan balance', 'Look at your latest mortgage statement. For a home purchased with 10% down, it might be around $378,000 after a few years.'],
-  ['3. Enter your current interest rate', 'This is on your loan note. Example: 7.5%.'],
-  ['4. Enter your remaining loan term in years', 'If you are 3 years into a 30-year, remaining term is 27 years.'],
-  ['5. Enter the new interest rate you are considering', 'Use the rate you have been quoted or the national average. As of mid-2026, 6.8% is typical.'],
-  ['6. Enter estimated closing costs', 'Ask your lender for a Loan Estimate. Typical range is $5,000 to $15,000. If you do not know, use 2.5% of the loan balance as an estimate. For $378,000, that is $9,450.'],
-  ['7. Click "Calculate Refinance"', 'The calculator will show your current monthly payment, new monthly payment, monthly savings, total closing costs, and break-even point in months.'],
-  ['8. Decide whether to roll closing costs into the loan', 'Toggle the option to see how the break-even changes. Rolling costs in reduces monthly savings but lowers upfront cash needed. The calculator will show both scenarios.'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator and open the Compare tab', 'This is our Scenario Comparison view — two loan setups side by side. No account needed.'],
+  ['2. In Scenario A, enter your current loan balance as the home price with $0 down', 'Look at your latest mortgage statement for the balance. For a home purchased with 10% down, it might be around $378,000 after a few years.'],
+  ['3. In Scenario A, enter your current interest rate and remaining term', 'Example: 7.5% rate. If you are 3 years into a 30-year, remaining term is 27 years.'],
+  ['4. In Scenario B, enter the same balance with the new interest rate you are considering', 'Use the rate you have been quoted or the national average. As of mid-2026, 6.8% is typical.'],
+  ['5. Compare the two monthly payments shown', 'The tool displays both P&I payments side by side along with total interest and total cost for each — that is your monthly savings from refinancing.'],
+  ['6. Estimate closing costs and break-even by hand', 'Ask your lender for a Loan Estimate — typical range is $5,000 to $15,000, or use 2.5% of the loan balance as a rough estimate. Divide that number by your monthly savings from step 5 to get the break-even month. The tool does not calculate this for you.'],
+  ['7. Watch both scenarios update as you type', 'There is no separate "Calculate" button — each scenario recalculates instantly as you change its inputs.'],
+  ['8. Model rolling closing costs into the loan manually', 'Add your closing costs to Scenario B\'s balance and re-check the new payment — that shows the higher-payment, lower-cash-needed version so you can compare it against paying costs out of pocket.'],
 ];
 
 const howToSchema = {

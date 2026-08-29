@@ -42,14 +42,14 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com and select the PMI Calculator', 'You will find it under the "Mortgage Tools" menu. No account needed.'],
+  ['1. Go to trulyfreemortgage.com/mortgage-calculator', 'That is the free calculator. No account, no email.'],
   ['2. Enter your home purchase price', 'Use the actual price you paid or are considering. Example: $400,000.'],
-  ['3. Enter your down payment amount', 'Either dollar amount or percentage. For 5% down on $400,000, enter $20,000 or 5%. The calculator will show your loan amount ($380,000).'],
-  ['4. Enter your credit score range', 'PMI rates vary by credit score. Use the dropdown: Excellent (760+), Good (700-759), Fair (640-699), Poor (below 640). For a good score (720), select Good. The calculator will apply a typical PMI rate (0.8% for Good with 5% down).'],
-  ['5. Enter your interest rate', 'Use the current 30-year fixed rate, about 6.8%. This is needed to calculate how fast you pay down principal.'],
-  ['6. Check the "Include home appreciation" box (optional)', 'If you want to see how home value increases affect PMI cancellation, turn this on. You can enter an annual appreciation rate. Historically, US homes appreciate 3-4% annually on average. But some markets are higher.'],
-  ['7. Click "Calculate PMI"', 'The calculator will show your monthly PMI cost, total PMI paid over the life of the loan if you never cancel, and the month and year when you will reach 80% LTV based on scheduled payments. It will also show when you will reach 78% LTV for automatic termination.'],
-  ['8. Run a "What If" scenario', 'Change the down payment to 10% ($40,000). See how PMI drops. On $400,000 with 10% down, loan is $360,000. PMI rate might drop to 0.5% annually, or $150 per month. Total PMI paid is lower, and you reach 80% LTV faster because you start closer.'],
+  ['3. Enter your down payment amount', 'Type a dollar amount or drag the slider — the percentage updates automatically. For 5% down on $400,000, that is $20,000, and the calculator shows your loan amount ($380,000).'],
+  ['4. Turn on the PMI toggle under "Additional Costs"', 'The calculator applies a flat, national-average PMI rate (about 0.8% of your loan amount per year) rather than a credit-score-based tier — it does not ask for or use your credit score.'],
+  ['5. Enter your interest rate', 'Use your own lender quote or a current market rate. This is needed to calculate how fast you pay down principal.'],
+  ['6. Open "Full Amortization Schedule" to see your balance drop over time', 'The calculator does not project home appreciation or compute a PMI cancellation date automatically. Compare the declining loan balance in the schedule against your own estimate of current home value to see roughly when you would cross 20% equity.'],
+  ['7. Watch your total monthly payment update live', 'There is no separate "Calculate" step — PMI and every other cost recalculates instantly in your browser as you change an input.'],
+  ['8. Change the down payment to test other scenarios', 'Raise it to 10% ($40,000 on a $400,000 home) and watch the PMI line and total monthly payment update immediately, since the loan amount and PMI base both shrink.'],
 ];
 
 const howToSchema = {
