@@ -70,11 +70,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-        <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-        <script dangerouslySetInnerHTML={{ __html: `window.ezstandalone = window.ezstandalone || {}; ezstandalone.cmd = ezstandalone.cmd || [];` }} />
-        <script src="//ezoicanalytics.com/analytics.js"></script>
       </head>
       <body style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: siteSchemas }} />
