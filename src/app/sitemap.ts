@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "down-payment-assistance-programs-by-state",
     "conventional-loans-the-complete-guide-for-2026",
     "how-mortgage-amortization-really-works-with-a-real-example",
+    "how-to-buy-a-house-with-bad-credit",
   ];
 
   return [

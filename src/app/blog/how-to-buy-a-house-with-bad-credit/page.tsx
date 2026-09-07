@@ -63,12 +63,7 @@ export default function Page() {
       {/* Author Box */}
       <section className="bg-gray-100 dark:bg-gray-800 py-8">
         <div className="container mx-auto px-4 max-w-4xl">
-          <AuthorBox
-            name="George Smith"
-            title="Senior Mortgage Analyst"
-            bio="George has spent 12 years helping high‑risk borrowers secure affordable financing. He relies on hard data, not hype."
-            avatar="/images/authors/george-smith.jpg"
-          />
+          <AuthorBox />
         </div>
       </section>
 
@@ -197,7 +192,7 @@ export default function Page() {
                 <li>Loan term: 30 years</li>
                 <li>Property tax: 1.2 % of purchase price</li>
                 <li>Homeowners insurance: $1,200 / yr</li>
-                <li>PMI (if < 20 % down): 0.55 % of loan amount / yr</li>
+                <li>PMI (if &lt; 20 % down): 0.55 % of loan amount / yr</li>
               </ul>
             </div>
             <div>
@@ -277,7 +272,7 @@ export default function Page() {
             <li>
               <strong>State or local assistance.</strong> Programs in many
               states (e.g., CA’s CalHFA) offer up to $15,000 in grant‑type help for
-              first‑time buyers with credit < 620.
+              first‑time buyers with credit &lt; 620.
             </li>
             <li>
               <strong>Roll some costs into the loan.</strong> For FHA, you can

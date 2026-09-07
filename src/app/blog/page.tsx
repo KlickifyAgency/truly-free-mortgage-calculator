@@ -183,6 +183,12 @@ export default function BlogPage() {
       title: 'How Mortgage Amortization Really Works with a Real Example',
       description: 'Learn how mortgage amortization works with a real example and understand the impact on your mortgage payments.',
     },
+    {
+      slug: 'how-to-buy-a-house-with-bad-credit',
+      tag: 'Credit',
+      title: 'How to Buy a House with Bad Credit',
+      description: 'Step-by-step guide for borrowers with low credit scores. Financing options, down-payment strategies, and realistic budgeting to secure a home.',
+    },
   ];;
 
   const tagColors: Record<string, string> = {
