@@ -84,7 +84,7 @@ export default function Page() {
             </li>
             <li>
               <strong>Average APR for sub‑prime 30‑year fixed:</strong> 7.2 %
-              (vs. 5.5 % for prime borrowers).
+              (vs. about 6.7 % for prime borrowers).
             </li>
             <li>
               <strong>Maximum LTV most lenders allow:</strong> 80 % for
@@ -140,7 +140,7 @@ export default function Page() {
               <tbody className="bg-white dark:bg-gray-800">
                 <tr className="border-t border-gray-300 dark:border-gray-600">
                   <td className="px-4 py-2">FHA</td>
-                  <td className="px-4 py-2">580 (with 10 % down) or 500 (with 3.5 % down)</td>
+                  <td className="px-4 py-2">580 or higher (with 3.5 % down); 500 – 579 (with 10 % down)</td>
                   <td className="px-4 py-2">3.5 % – 10 %</td>
                   <td className="px-4 py-2">96.5 %</td>
                   <td className="px-4 py-2">6.8 %</td>
@@ -156,7 +156,7 @@ export default function Page() {
                   <td className="px-4 py-2">Conventional (non‑prime)</td>
                   <td className="px-4 py-2">620</td>
                   <td className="px-4 py-2">5 % – 10 %</td>
-                  <td className="px-4 py-2">80 %</td>
+                  <td className="px-4 py-2">95 %</td>
                   <td className="px-4 py-2">7.2 %</td>
                 </tr>
                 <tr className="border-t border-gray-300 dark:border-gray-600">
@@ -164,14 +164,19 @@ export default function Page() {
                   <td className="px-4 py-2">640 (some lenders 620)</td>
                   <td className="px-4 py-2">0 % (if eligible)</td>
                   <td className="px-4 py-2">100 %</td>
-                  <td className="px-4 py-2">6.9 %</td>
+                  <td className="px-4 py-2">6.2 %</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            *Rates shown are averages for September 2026 on a $250,000 loan with a
-            30‑year fixed term.
+            *Indicative APRs as of September 7, 2026, for a 30‑year fixed term on a
+            $250,000 loan. The conventional benchmark is Freddie Mac&rsquo;s Primary
+            Mortgage Market Survey (6.71 % on September 3, 2026); the VA and USDA
+            figures are national lender averages. No published average exists for
+            non‑prime conventional lending, so that figure is an estimate, not a
+            benchmark. Rates move daily and depend on your credit, down payment and
+            lender &mdash; check a live rate source before relying on any number here.
           </p>
         </section>
 
