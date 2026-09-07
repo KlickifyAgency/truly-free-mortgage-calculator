@@ -1,4 +1,11 @@
 'use client';
+import AdSlot from '@/components/ads/AdSlot'
+
+// PENDIENTE: estos dos slot ids NO existen todavia. Hay que crearlos en la
+// cuenta de AdSense (pub-8680464039127093) y pegar los reales aca ANTES de
+// poner ADSENSE_ENABLED en true, o los bloques no van a servir nada.
+const AD_SLOT_TOP = 'REEMPLAZAR-slot-leaderboard'
+const AD_SLOT_SIDE = 'REEMPLAZAR-slot-rectangle'
 
 import { useState, useMemo, useCallback } from 'react';
 import Image from 'next/image';
@@ -311,7 +318,7 @@ export default function MortgageCalculator() {
           <span className="text-xs text-gray-500">No registration. No email. No limits. Your data never leaves your browser.</span>
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-12">
-          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-6 no-print" style={{ minHeight: 80 }}>Advertisement</div>
+          <div className="mb-6"><AdSlot slot={AD_SLOT_TOP} format="leaderboard" /></div>
           <div className="mb-6">
             <h1 className="text-xl font-semibold text-gray-900 tracking-tight">Truly Free Mortgage Calculator</h1>
             <p className="text-sm text-gray-500 mt-1 flex items-center gap-2">
@@ -416,7 +423,7 @@ export default function MortgageCalculator() {
                     </div>
                   )}
                 </div>
-                <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium no-print" style={{ minHeight: 80 }}>Advertisement</div>
+                <AdSlot slot={AD_SLOT_SIDE} format="rectangle" />
               </div>
             </div>
           )}
