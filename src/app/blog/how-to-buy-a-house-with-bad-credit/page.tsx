@@ -87,8 +87,8 @@ export default function Page() {
               (vs. about 6.7 % for prime borrowers).
             </li>
             <li>
-              <strong>Maximum LTV most lenders allow:</strong> 80 % for
-              conventional loans, 85 % for FHA, 90 % for some VA loans.
+              <strong>Maximum LTV most lenders allow:</strong> 97 % for conventional loans (conforming), 96.5 % for FHA, and 100 % for
+              VA loans with full entitlement.
             </li>
           </ul>
         </section>
