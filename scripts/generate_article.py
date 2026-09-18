@@ -310,9 +310,9 @@ def register(title, description, read_time):
         m = re.search(r"(const\s+posts\s*=\s*\[)", b)
         a = re.search(r"const\s+articles\s*=\s*\[", b)
         if a and not m:
-            # trulyfreemortgage: articles = [{slug, tag, title, description}],
-            # lo nuevo al final
-            entry = (f"\n    {{\n      slug: '{SLUG}',\n"
+            # trulyfreemortgage: articles = [{slug, date, tag, title,
+            # description}]; la pagina ordena por date, asi que va al final
+            entry = (f"\n    {{\n      slug: '{SLUG}',\n      date: '{TODAY}',\n"
                      f"      tag: {json.dumps(d.get('category', 'Guide').title())},\n"
                      f"      title: {json.dumps(title)},\n"
                      f"      description: {json.dumps(description)},\n    }},")

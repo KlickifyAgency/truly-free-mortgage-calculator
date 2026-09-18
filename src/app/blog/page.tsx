@@ -10,66 +10,77 @@ export default function BlogPage() {
   const articles = [
     {
       slug: 'fha-mortgage-calculator',
+      date: '2026-05-09',
       tag: 'FHA Loans',
       title: 'FHA Mortgage Calculator: Calculate Your Payment Including MIP',
       description: 'The true cost of FHA loans including upfront and annual MIP. Down payment requirements by credit score. No email required.',
     },
     {
       slug: 'mortgage-refinance-calculator',
+      date: '2026-05-09',
       tag: 'Refinance',
       title: 'Mortgage Refinance Calculator: How to Calculate Your Break-Even Point',
       description: 'The exact formula lenders use to calculate refinance break-even. When refinancing makes sense and when it costs you money.',
     },
     {
       slug: 'amortization-schedule-generator',
+      date: '2026-05-07',
       tag: 'Amortization',
       title: 'Amortization Schedule Generator: How to Read Your Payment Breakdown',
       description: 'How principal and interest shift every month over the life of your loan. Generate a full schedule instantly, no sign-up required.',
     },
     {
       slug: 'va-loan-calculator',
+      date: '2026-05-07',
       tag: 'VA Loans',
       title: 'VA Loan Calculator: How to Calculate Your Monthly Payment with Zero Down',
       description: 'No PMI, no down payment, competitive rates. Everything veterans need to calculate their VA loan payment accurately.',
     },
     {
       slug: 'usda-rural-home-loan-calculator',
+      date: '2026-05-07',
       tag: 'USDA Loans',
       title: 'USDA Rural Home Loan Calculator: Zero Down Payment for Eligible Areas',
       description: 'The most overlooked zero-down mortgage in America. Eligibility map, income limits, guarantee fees, and payment calculation.',
     },
     {
       slug: 'jumbo-loan-calculator',
+      date: '2026-05-07',
       tag: 'Jumbo Loans',
       title: 'Jumbo Loan Calculator: How to Calculate Payments on High-Balance Mortgages',
       description: 'Conforming limits, rate premiums, reserve requirements, and payment calculations for loans above $806,500.',
     },
     {
       slug: 'investment-property-calculator',
+      date: '2026-05-07',
       tag: 'Investment',
       title: 'Investment Property Calculator: Mortgage, Cash Flow, and Returns Explained',
       description: 'Down payment requirements, rate premiums, cash flow analysis, cap rate, and cash-on-cash return for investment properties.',
     },
     {
       slug: 'arm-vs-fixed-rate',
+      date: '2026-05-07',
       tag: 'Loan Comparison',
       title: 'ARM vs Fixed Rate Mortgage: How to Calculate Which Saves You More',
       description: 'Cap structures, worst-case payment scenarios, break-even horizon, and when an adjustable-rate mortgage makes financial sense.',
     },
     {
       slug: 'mortgage-payoff-calculator',
+      date: '2026-05-07',
       tag: 'Payoff Strategy',
       title: 'Mortgage Payoff Calculator: How Extra Payments Eliminate Years and Save Thousands',
       description: 'Biweekly payments, lump-sum strategy, invest vs pay off analysis, and how to ensure your lender applies payments correctly.',
     },
     {
       slug: 'calculadora-hipoteca-fha',
+      date: '2026-05-07',
       tag: 'En Español',
       title: 'Calculadora de Hipoteca FHA: Cómo Calcular Tu Pago Incluyendo el Seguro MIP',
       description: 'Requisitos de pago inicial, seguro MIP explicado, límites 2026 y comparación FHA vs convencional. Sin registro requerido.',
     },
     {
       slug: 'calculadora-amortizacion',
+      date: '2026-05-07',
       tag: 'En Español',
       title: 'Calculadora de Amortización: Cómo Leer Tu Tabla de Pagos Hipotecarios',
       description: 'Por qué los primeros años son casi todo interés, cómo los pagos extra transforman tu préstamo, y comparativa 15 vs 30 años.',
@@ -77,120 +88,140 @@ export default function BlogPage() {
 
     {
       slug: 'free-mortgage-calculator-no-email',
+      date: '2026-06-10',
       tag: 'Mortgage Tools',
       title: 'Free Mortgage Calculator — No Email, No Sign-Up, No Ads',
       description: 'A truly free mortgage calculator that requires no email address, no registration, and displays no targeted ads. Just the math.',
     },
     {
       slug: 'how-much-house-can-i-afford-2026',
+      date: '2026-06-10',
       tag: 'Affordability',
       title: 'How Much House Can I Afford in 2026?',
       description: 'Income-based affordability rules, DTI limits, down payment impact, and stress-testing your budget against rate increases.',
     },
     {
       slug: '30-year-vs-15-year-mortgage-guide',
+      date: '2026-06-10',
       tag: 'Loan Comparison',
       title: '30-Year vs 15-Year Mortgage: Total Cost Analysis for 2026',
       description: 'Complete cost breakdown including total interest, monthly payment difference, and opportunity cost of capital for both loan terms.',
     },
     {
       slug: 'mortgage-amortization-schedule-explained',
+      date: '2026-06-10',
       tag: 'Mortgage Education',
       title: 'Mortgage Amortization Schedule Explained',
       description: 'How principal and interest shift over the life of your loan, why early payments are mostly interest, and how extra payments accelerate payoff.',
     },
     {
       slug: 'pmi-calculator-guide',
+      date: '2026-06-10',
       tag: 'PMI & Insurance',
       title: 'PMI Calculator: How to Calculate Private Mortgage Insurance',
       description: 'PMI rates by LTV, how lenders calculate it, when it cancels automatically, and how to eliminate it faster.',
     },
     {
       slug: 'extra-mortgage-payment-calculator',
+      date: '2026-06-10',
       tag: 'Payment Strategy',
       title: 'Extra Mortgage Payment Calculator: How Much Can You Save?',
       description: 'Exact interest savings and years removed from your loan for every extra payment strategy — monthly, annual, or lump sum.',
     },
     {
       slug: 'should-i-refinance-mortgage-2026',
+      date: '2026-06-10',
       tag: 'Refinancing',
       title: 'Should I Refinance My Mortgage in 2026?',
       description: 'Break-even calculation, rate difference thresholds, cash-out vs rate-term analysis, and when refinancing destroys equity.',
     },
     {
       slug: 'fha-vs-conventional-loan-2026',
+      date: '2026-06-10',
       tag: 'Loan Comparison',
       title: 'FHA vs Conventional Loan 2026: Which Costs Less?',
       description: 'Side-by-side cost comparison including MIP, PMI, down payment requirements, and break-even crossover point.',
     },
     {
       slug: 'down-payment-calculator-guide',
+      date: '2026-06-10',
       tag: 'Down Payment',
       title: 'Down Payment Calculator: How Much Do You Actually Need?',
       description: 'Minimum requirements by loan type, PMI thresholds, how down payment size affects your rate, and assistance programs.',
     },
     {
       slug: 'mortgage-closing-costs-explained',
+      date: '2026-06-10',
       tag: 'Closing Costs',
       title: 'Mortgage Closing Costs Explained: What You Actually Pay',
       description: 'Complete breakdown of every closing cost line item, which are negotiable, and how to calculate your true cash-to-close.',
     },
     {
       slug: 'bankrate-mortgage-calculator-review',
+      date: '2026-06-10',
       tag: 'Calculator Comparison',
       title: "Bankrate Mortgage Calculator Review: Accuracy, Ads, and Alternatives",
       description: "How Bankrate's calculator compares to no-ad alternatives on accuracy, required inputs, and hidden upsells.",
     },
     {
       slug: 'how-to-calculate-mortgage-payment-by-hand',
+      date: '2026-06-10',
       tag: 'Mortgage Education',
       title: 'How to Calculate Mortgage Payment by Hand',
       description: 'The exact amortization formula with step-by-step worked examples for any loan amount, rate, and term.',
     },
     {
       slug: 'mortgage-points-calculator',
+      date: '2026-06-10',
       tag: 'Discount Points',
       title: 'Mortgage Points Calculator: Are Discount Points Worth It?',
       description: 'Break-even analysis for buying points, how much each point reduces your rate, and when points make financial sense.',
     },
     {
       slug: 'interest-only-mortgage-calculator',
+      date: '2026-06-10',
       tag: 'Mortgage Types',
       title: 'Interest-Only Mortgage Calculator: Payments, Risks, and Real Costs',
       description: 'How interest-only loans work, payment shock when amortization begins, and who should — and should not — use them.',
     },
     {
       slug: 'how-to-get-a-mortgage-as-a-selfemployed-borrower',
+      date: '2026-08-07',
       tag: 'Qualification',
       title: 'How to Get a Mortgage as a Self-Employed Borrower',
       description: 'A comprehensive guide for self-employed individuals to navigate the mortgage process and secure the best loan terms.',
     },
     {
       slug: 'down-payment-assistance-programs-by-state',
+      date: '2026-07-31',
       tag: 'Down Payment',
       title: 'Down Payment Assistance Programs by State',
       description: 'Explore down payment assistance programs available in each state, including grants, loans, and tax credits.',
     },
     {
       slug: 'conventional-loans-the-complete-guide-for-2026',
+      date: '2026-08-29',
       tag: 'Loan Types',
       title: 'Conventional Loans: The Complete Guide for 2026',
       description: 'Everything you need to know about conventional mortgages in 2026 – rates, qualification, down-payment strategies, and how they compare to other loan types.',
     },
     {
       slug: 'how-mortgage-amortization-really-works-with-a-real-example',
+      date: '2026-07-24',
       tag: 'Amortization',
       title: 'How Mortgage Amortization Really Works with a Real Example',
       description: 'Learn how mortgage amortization works with a real example and understand the impact on your mortgage payments.',
     },
     {
       slug: 'how-to-buy-a-house-with-bad-credit',
+      date: '2026-09-04',
       tag: 'Credit',
       title: 'How to Buy a House with Bad Credit',
       description: 'Step-by-step guide for borrowers with low credit scores. Financing options, down-payment strategies, and realistic budgeting to secure a home.',
     },
     {
       slug: 'home-inspection-vs-appraisal-what-buyers-need-to-know',
+      date: '2026-09-18',
       tag: "Mortgage Guide",
       title: "Home inspection vs appraisal: what buyers need to know",
       description: "A practical guide for home buyers on the differences between a home inspection and an appraisal, step-by-step instructions, timing, costs, and what to do when the two reports don\u2019t match.",
@@ -242,13 +273,14 @@ export default function BlogPage() {
         <div className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-600 mb-3">Mortgage Education</div>
         <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-3">Mortgage Guides</h1>
         <p className="text-[16px] text-gray-500 leading-relaxed mb-10">
-          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 29 articles.
+          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. {articles.length} articles.
         </p>
 
         <div className="space-y-4">
-          {articles.map(({ slug, tag, title, description }) => (
+          {[...articles].sort((a, b) => b.date.localeCompare(a.date)).map(({ slug, tag, title, description, date }) => (
             <a key={slug} href={'/blog/' + slug} className="block bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] hover:shadow-[0_6px_12px_-2px_rgb(0_0_0/0.12)] transition-shadow">
               <div className={"inline-block text-[10px] font-semibold tracking-[0.08em] uppercase px-2.5 py-1 rounded mb-3 " + (tagColors[tag] || 'text-blue-600 bg-blue-50')}>{tag}</div>
+              <span className="text-[12px] text-gray-400 ml-3">{new Date(date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</span>
               <h2 className="text-[17px] font-bold text-gray-900 mb-2 leading-snug">{title}</h2>
               <p className="text-[14px] text-gray-500 leading-relaxed">{description}</p>
               <p className="text-[13px] text-blue-600 font-semibold mt-3">Read article →</p>
