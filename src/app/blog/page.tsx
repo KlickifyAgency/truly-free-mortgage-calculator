@@ -189,6 +189,12 @@ export default function BlogPage() {
       title: 'How to Buy a House with Bad Credit',
       description: 'Step-by-step guide for borrowers with low credit scores. Financing options, down-payment strategies, and realistic budgeting to secure a home.',
     },
+    {
+      slug: 'home-inspection-vs-appraisal-what-buyers-need-to-know',
+      tag: "Mortgage Guide",
+      title: "Home inspection vs appraisal: what buyers need to know",
+      description: "A practical guide for home buyers on the differences between a home inspection and an appraisal, step-by-step instructions, timing, costs, and what to do when the two reports don\u2019t match.",
+    },
   ];;
 
   const tagColors: Record<string, string> = {
