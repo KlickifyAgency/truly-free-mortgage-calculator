@@ -226,6 +226,13 @@ export default function BlogPage() {
       title: "Home inspection vs appraisal: what buyers need to know",
       description: "A practical guide for home buyers on the differences between a home inspection and an appraisal, step-by-step instructions, timing, costs, and what to do when the two reports don\u2019t match.",
     },
+    {
+      slug: 'how-to-avoid-overpaying-for-a-house-in-a-hot-market',
+      date: '2026-09-25',
+      tag: "Mortgage Guide",
+      title: "How to Avoid Overpaying for a House in a Hot Market",
+      description: "Set a payment ceiling and a value ceiling before you tour, read the comps yourself, and write offers that can survive a low appraisal.",
+    },
   ];;
 
   const tagColors: Record<string, string> = {

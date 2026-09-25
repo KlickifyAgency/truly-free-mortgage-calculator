@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-mortgage-amortization-really-works-with-a-real-example",
     "how-to-buy-a-house-with-bad-credit",
     "home-inspection-vs-appraisal-what-buyers-need-to-know",
+    "how-to-avoid-overpaying-for-a-house-in-a-hot-market",
   ];
 
   return [
