@@ -18,7 +18,7 @@ const jsonLd = {
       'description': 'A complete comparison of adjustable-rate and fixed-rate mortgages including initial savings, rate cap structures, worst-case payment scenarios, and break-even analysis.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-20',
-      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/arm-vs-fixed-rate',
     },
@@ -115,7 +115,7 @@ export default function ARMvsFixedRatePage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            Lower rate upfront, real risk after year five. That&apos;s the deal an ARM offers — and whether it&apos;s worth it depends entirely on your timeline, the size of today&apos;s rate spread, and whether you could stomach a worst-case payment jump without selling. I&apos;ve run these numbers for a lot of people. Here&apos;s how to do it yourself so you&apos;re not guessing.
+            Lower rate upfront, real risk after year five. That&apos;s the deal an ARM offers — and whether it&apos;s worth it depends entirely on your timeline, the size of today&apos;s rate spread, and whether you could stomach a worst-case payment jump without selling. Here&apos;s how to run the numbers yourself so you&apos;re not guessing.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -194,7 +194,7 @@ export default function ARMvsFixedRatePage() {
             Example: $500,000 loan. 30-year fixed at 6.75% gives a monthly P&I of $3,243. 5/1 ARM at 5.875% gives a monthly P&I of $2,958. Monthly savings is $285. Over 60 months the total savings is $17,100 before considering the time value of money.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Additionally the ARM borrower builds equity faster during the fixed period because more of each payment goes to principal at the lower rate. After 60 months the ARM borrower owes approximately $1,800 less in principal than the fixed borrower on the same purchase.
+            Additionally the ARM borrower builds equity faster during the fixed period because more of each payment goes to principal at the lower rate. After 60 months the ARM borrower owes somewhat less in principal than the fixed borrower on the same purchase.
           </p>
 
           <h2 id="worst-case" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Modeling the Worst-Case Scenario</h2>
@@ -202,7 +202,7 @@ export default function ARMvsFixedRatePage() {
             The most important calculation when evaluating an ARM is the worst-case payment. To calculate it: determine your remaining balance at the end of the fixed period, apply the maximum rate allowed by the lifetime cap, and run the amortization formula for the remaining term.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            On the $500,000 example above, after 60 payments at 5.875% the remaining balance is approximately $463,000. The maximum rate with a 5% lifetime cap is 10.875%. Running $463,000 at 10.875% over 25 years gives a worst-case monthly payment of $4,593 — a $1,635 increase over the initial ARM payment and $1,350 more than the fixed rate alternative.
+            On the $500,000 example above, after 60 payments at 5.875% the remaining balance is approximately $463,000. The maximum rate with a 5% lifetime cap is 10.875%. Running $463,000 at 10.875% over 25 years gives a worst-case monthly payment of roughly $4,500 — about $1,540 more than the initial ARM payment and around $1,250 more than the fixed rate alternative.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             The question to ask yourself is not whether this scenario is likely — it probably is not. The question is whether you can absorb this payment if it happens. If the answer is no, the fixed rate is the appropriate choice regardless of the initial savings.

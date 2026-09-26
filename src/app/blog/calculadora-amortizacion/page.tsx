@@ -177,7 +177,7 @@ export default function CalculadoraAmortizacionPage() {
 
           <h2 id="interes-inicial" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Por Qué Tu Préstamo Empieza Cargado de Interés</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Este es el dato que más sorprende a los propietarios cuando ven su tabla de amortización por primera vez. Después de cinco años de pagos puntuales en una hipoteca a 30 años, has pagado aproximadamente el 16% del interés total que pagarás en toda la vida del préstamo — pero solo has reducido tu saldo de capital en un 8%. Llevas cinco años pagando y aún debes casi el 93% del monto original.
+            Este es el dato que más sorprende a los propietarios cuando ven su tabla de amortización por primera vez. Después de cinco años de pagos puntuales en una hipoteca a 30 años, has pagado aproximadamente una cuarta parte del interés total que pagarás en toda la vida del préstamo — pero solo has reducido tu saldo de capital alrededor de un 6%. Llevas cinco años pagando y aún debes cerca del 94% del monto original.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Esto no es un truco ni una característica predatoria. Es la consecuencia matemática de cobrar interés sobre el saldo pendiente. El prestamista te entregó $400,000 el primer día y tiene derecho a interés sobre cada dólar de ese saldo hasta que sea pagado. Como el saldo es máximo al inicio, también lo es el cargo de interés.
@@ -191,7 +191,7 @@ export default function CalculadoraAmortizacionPage() {
             Cuando realizas un pago superior a tu cuota mensual requerida, el exceso se aplica directamente al capital — siempre que así lo especifiques a tu prestamista por escrito. Esa reducción inmediata del capital se propaga por todos los pagos futuros.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            En ese mismo préstamo de $400,000 al 6.5% a 30 años, agregar solo $200 por mes recorta el préstamo a aproximadamente 24 años y ahorra cerca de $84,000 en interés total. Agregar $500 por mes lo reduce a unos 20 años y ahorra más de $140,000. El ahorro es compuesto porque cada dólar de capital eliminado previene todo el interés futuro que se habría acumulado sobre él.
+            En ese mismo préstamo de $400,000 al 6.5% a 30 años, agregar solo $200 por mes recorta el préstamo a aproximadamente 24 años y ahorra más de $100,000 en interés total. Agregar $500 por mes lo reduce a unos 20 años y ahorra más de $200,000. El ahorro es compuesto porque cada dólar de capital eliminado previene todo el interés futuro que se habría acumulado sobre él.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             La clave operativa: siempre indica por escrito que el pago extra debe aplicarse a capital únicamente. Sin instrucciones claras, muchos administradores de préstamos aplican el exceso a pagos futuros programados en lugar del capital actual, eliminando completamente el beneficio.
@@ -232,10 +232,10 @@ export default function CalculadoraAmortizacionPage() {
 
           <h2 id="genera" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Genera Tu Tabla Gratis</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            La mayoría de las calculadoras de amortización en internet son formularios de captación de leads diseñados para obtener tu información de contacto y venderla a prestamistas. Ingresas tus datos del préstamo y a cambio de la tabla aceptas ser contactado por brokers hipotecarios.
+            Muchas calculadoras de amortización en internet te piden un correo electrónico o número de teléfono antes de mostrarte la tabla.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Truly Free Mortgage funciona diferente. Ingresa los parámetros de tu préstamo y la tabla de amortización completa se genera instantáneamente en tu navegador. Cada fila de cada mes, desde el pago uno hasta el pago final. Exporta en formato CSV para tus registros. Sin correo electrónico, sin número de teléfono, sin crear cuenta.
+            Truly Free Mortgage funciona diferente. Ingresa los parámetros de tu préstamo y la tabla de amortización completa se genera instantáneamente en tu navegador. Cada fila de cada mes, desde el pago uno hasta el pago final, e imprimible para tus registros. Sin correo electrónico, sin número de teléfono, sin crear cuenta.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             El motor de cálculo corre completamente en el lado del cliente. Tus datos financieros nunca llegan a un servidor. No hay backend que los reciba. Gratis para siempre, no gratis por 14 días.
@@ -269,7 +269,7 @@ export default function CalculadoraAmortizacionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 ['/blog/calculadora-hipoteca-fha', 'Calculadora de Hipoteca FHA', 'Seguro MIP, pago inicial por puntaje, FHA vs convencional en español.'],
-                ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'Tabla de amortización completa en inglés con exportación CSV.'],
+                ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'Tabla de amortización completa en inglés, imprimible.'],
                 ['/blog/30-year-vs-15-year-mortgage-guide', '30-Year vs 15-Year Mortgage', '$237,000 de diferencia en interés total en un préstamo de $300k.'],
                 ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'Cómo los pagos extra eliminan años de tu préstamo.'],
               ].map(([href, title, desc]) => (

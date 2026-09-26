@@ -173,7 +173,7 @@ export default function AmortizationScheduleGeneratorPage() {
 
           <h2 id="front-loaded" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Why Your Loan Is Front-Loaded with Interest</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            After five years of payments on a 30-year mortgage you have paid roughly 16% of the total interest you will ever pay, but you have only reduced your principal balance by about 8%. You have been making payments for five years and still owe nearly 93% of the original loan amount.
+            After five years of payments on a 30-year mortgage you have paid roughly a quarter of the total interest you will ever pay, but you have only reduced your principal balance by about 6%. You have been making payments for five years and still owe about 94% of the original loan amount.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             This is the mathematical consequence of charging interest on the outstanding balance. The lender fronts you $400,000 on day one and they are entitled to interest on every dollar of that balance until it is repaid. Since the balance is highest at the beginning, so is the interest charge.
@@ -187,7 +187,7 @@ export default function AmortizationScheduleGeneratorPage() {
             When you make a payment beyond your required monthly amount, the entire overage is applied directly to principal. That immediate reduction ripples through every future payment.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            On a $400,000 loan at 6.5% over 30 years, adding just $200 per month cuts the loan to approximately 24 years and saves roughly $84,000 in total interest. Adding $500 per month drops it to about 20 years and saves over $140,000. The savings compound because every dollar of eliminated principal prevents all future interest that would have accrued on it.
+            On a $400,000 loan at 6.5% over 30 years, adding just $200 per month cuts the loan to approximately 24 years and saves roughly $112,000 in total interest. Adding $500 per month drops it to about 20 years and saves roughly $205,000. The savings compound because every dollar of eliminated principal prevents all future interest that would have accrued on it.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             The key is ensuring your lender applies the excess to principal and not to a future scheduled payment. Always specify this in writing.
@@ -223,15 +223,15 @@ export default function AmortizationScheduleGeneratorPage() {
             The 15-year borrower pays $848 more per month but saves over $300,000 in interest. The question is not whether the 15-year is mathematically superior — it clearly is. The question is whether the higher monthly payment is sustainable given income, expenses, and emergency reserves.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            A strategy many financial planners recommend: take the 30-year loan for payment flexibility, but make extra principal payments consistently as if you had the 15-year. If cash flow tightens you can always fall back to the required payment. The 15-year gives you no such flexibility.
+            A common strategy: take the 30-year loan for payment flexibility, but make extra principal payments consistently as if you had the 15-year. If cash flow tightens you can always fall back to the required payment. The 15-year gives you no such flexibility.
           </p>
 
           <h2 id="generate" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Generate Your Schedule for Free</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Most amortization tools on the internet are lead-generation forms designed to capture your contact information and sell it to lenders. You fill out your loan details and in exchange you agree to be contacted by mortgage brokers.
+            Some mortgage tools ask for your email address or phone number before they will show you a full schedule.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Truly Free Mortgage works differently. Enter your loan parameters and the full amortization schedule generates instantly in your browser. Every row of every month from payment one to the final payment. Export it as a CSV file. No email address, no phone number, no account creation.
+            Truly Free Mortgage works differently. Enter your loan parameters and the full amortization schedule generates instantly in your browser. Every row of every month from payment one to the final payment. Print it or save it as a PDF straight from your browser. No email address, no phone number, no account creation.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             The calculation engine runs entirely client-side. Your financial data never reaches a server. There is no backend to receive it.

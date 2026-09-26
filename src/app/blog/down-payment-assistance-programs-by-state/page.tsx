@@ -56,13 +56,13 @@ export default function Page() {
           Purchasing a home can be a significant financial undertaking, and for many, the biggest hurdle is saving for a down payment. Fortunately, there are numerous down payment assistance programs available across the United States, designed to help make homeownership more accessible.
         </p>
         <p className="text-lg mt-4">
-          These programs vary by state and can include grants, loans, and tax credits. In this article, we will delve into the specifics of down payment assistance programs by state, highlighting the benefits and eligibility criteria for each.
+          These programs vary by state and can include grants, loans, and tax credits. Here&apos;s a breakdown of what&apos;s available by state, along with the benefits and eligibility criteria for each.
         </p>
       </section>
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">National Programs</h2>
         <p className="text-lg">
-          Before exploring state-specific programs, it&apos;s essential to understand the national down payment assistance programs available. These include:
+          Before exploring state-specific programs, it&apos;s essential to understand the national loan programs that can reduce or eliminate the down payment. These are loan programs rather than assistance grants, and they include:
         </p>
         <ul className="list-disc pl-8 mt-4">
           <li className="mb-2">FHA Loans: Offer down payments as low as 3.5%</li>
@@ -88,21 +88,21 @@ export default function Page() {
           <tbody>
             <tr>
               <td className="py-2 border border-gray-300">California</td>
-              <td className="py-2 border border-gray-300">California Homebuyer&apos;s Downpayment Assistance Program (CHDAP)</td>
-              <td className="py-2 border border-gray-300">Grant</td>
-              <td className="py-2 border border-gray-300">Up to 3% of the home&apos;s purchase price</td>
+              <td className="py-2 border border-gray-300">California Housing Finance Agency (CalHFA)</td>
+              <td className="py-2 border border-gray-300">Grant or loan (varies by program)</td>
+              <td className="py-2 border border-gray-300">Varies &mdash; confirm with the agency</td>
             </tr>
             <tr>
               <td className="py-2 border border-gray-300">Florida</td>
-              <td className="py-2 border border-gray-300">Florida Housing Finance Corporation (FHFC) Down Payment Assistance Program</td>
-              <td className="py-2 border border-gray-300">Loan</td>
-              <td className="py-2 border border-gray-300">Up to $7,500</td>
+              <td className="py-2 border border-gray-300">Florida Housing Finance Corporation (FHFC)</td>
+              <td className="py-2 border border-gray-300">Grant or loan (varies by program)</td>
+              <td className="py-2 border border-gray-300">Varies &mdash; confirm with the agency</td>
             </tr>
             <tr>
               <td className="py-2 border border-gray-300">Texas</td>
-              <td className="py-2 border border-gray-300">Texas Department of Housing and Community Affairs (TDHCA) Down Payment Assistance Program</td>
-              <td className="py-2 border border-gray-300">Grant</td>
-              <td className="py-2 border border-gray-300">Up to 4% of the home&apos;s purchase price</td>
+              <td className="py-2 border border-gray-300">Texas Department of Housing and Community Affairs (TDHCA)</td>
+              <td className="py-2 border border-gray-300">Grant or loan (varies by program)</td>
+              <td className="py-2 border border-gray-300">Varies &mdash; confirm with the agency</td>
             </tr>
           </tbody>
         </table>
@@ -133,7 +133,7 @@ export default function Page() {
           <Link href="/mortgage-calculator" className="text-blue-600 hover:text-blue-800">
             mortgage calculator
           </Link>{' '}
-          to estimate your mortgage payments and see how much you can afford.
+          to estimate your monthly mortgage payment at different down payment amounts.
         </p>
       </section>
       <AuthorBox />
