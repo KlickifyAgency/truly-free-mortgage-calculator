@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // One 37 KB stylesheet was the only render-blocking request on mobile
+  // (Lighthouse: ~300 ms of LCP). Inline it into each page instead.
+  experimental: { inlineCss: true },
   async redirects() {
     return [
       {
