@@ -129,6 +129,7 @@ export default function Page() {
             conventional loan sits at <strong>6.75 %</strong>. Rates vary
             based on loan‑to‑value (LTV) and credit profile:
           </p>
+          <div className="overflow-x-auto">
           <table className="w-full table-auto border-collapse mb-6">
             <thead>
               <tr className="bg-gray-100 dark:bg-gray-800">
@@ -159,6 +160,7 @@ export default function Page() {
               </tr>
             </tbody>
           </table>
+          </div>
           <p>
             The spread between a 20 % down payment and a 5 % down payment can
             be as much as 0.75 percentage points, translating to roughly
@@ -206,6 +208,7 @@ export default function Page() {
             with a 6.75 % interest rate and a 30‑year term. Numbers are
             rounded for clarity.
           </p>
+          <div className="overflow-x-auto">
           <table className="w-full table-auto border-collapse mb-6">
             <thead>
               <tr className="bg-gray-100 dark:bg-gray-800">
@@ -240,6 +243,7 @@ export default function Page() {
               </tr>
             </tbody>
           </table>
+          </div>
           <p>
             If you can put 20 % down, the PMI line disappears and the total
             monthly payment drops to roughly $2,344, a $125 saving each month
@@ -258,6 +262,7 @@ export default function Page() {
             borrower in 2026.
           </p>
           <div className="overflow-x-auto mb-6">
+          <div className="overflow-x-auto">
           <table className="w-full table-auto border-collapse">
             <thead>
               <tr className="bg-gray-100 dark:bg-gray-800">
@@ -307,6 +312,7 @@ export default function Page() {
               </tr>
             </tbody>
           </table>
+          </div>
           </div>
           <p>
             If you qualify for VA or USDA and meet the location/servicing

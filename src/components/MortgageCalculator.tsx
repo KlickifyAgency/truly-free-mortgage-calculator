@@ -9,6 +9,7 @@ const AD_SLOT_SIDE = 'REEMPLAZAR-slot-rectangle'
 
 import { useState, useMemo, useCallback } from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 
 interface LoanInputs {
   homePrice: number;
@@ -302,12 +303,12 @@ export default function MortgageCalculator() {
         }
       `}</style>
       <div className="min-h-screen bg-gray-50">
-        <nav className="bg-white px-6 h-20 flex items-center justify-between no-print shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <Image src="/logo.png" alt="Truly Free Mortgage Calculator" width={115} height={60} style={{ height: '60px', width: 'auto', objectFit: 'contain', objectPosition: 'left center' }} />
-          <div className="flex gap-6">
+        <nav className="bg-white px-4 sm:px-6 h-20 flex items-center justify-between no-print shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
+          <Image src="/logo.png" alt="Truly Free Mortgage Calculator" width={115} height={60} className="h-11 sm:h-[60px]" style={{ width: 'auto', objectFit: 'contain', objectPosition: 'left center' }} />
+          <div className="flex gap-4 sm:gap-6">
             {['Calculator','Compare','Blog'].map((l) => (
               l === 'Blog'
-                ? <a key={l} href="/blog" className="text-sm text-gray-500 hover:text-gray-700">{l}</a>
+                ? <Link key={l} href="/blog" className="text-sm text-gray-500 hover:text-gray-700">{l}</Link>
                 : <button key={l} onClick={() => l === 'Compare' ? setMode('scenario') : setMode('standard')}
                     className={"text-sm transition-colors " + ((l === 'Calculator' && mode === 'standard') || (l === 'Compare' && mode === 'scenario') ? 'text-blue-600 font-medium' : 'text-gray-500 hover:text-gray-700')}>{l}</button>
             ))}
@@ -452,15 +453,15 @@ export default function MortgageCalculator() {
 
             {/* What's in a mortgage payment */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">What's Actually in Your Monthly Payment</h2>
+              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">What&apos;s Actually in Your Monthly Payment</h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Most people focus on the principal and interest number, but your real monthly obligation is higher. Lenders use the acronym PITI — Principal, Interest, Taxes, and Insurance — to describe the full payment. When you add PMI and HOA, the gap between your P&I payment and your actual monthly cost can be $400 to $700 on a median-priced home.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Property taxes are collected monthly into an escrow account by your servicer and paid to the county annually. In high-tax states like New Jersey, Illinois, or Connecticut, property taxes alone can add $600 to $900 per month to a $400,000 home. That's not a small number. This calculator uses a 1.2% annual rate as the national average estimate — toggle it on and see what it adds to your payment.
+                Property taxes are collected monthly into an escrow account by your servicer and paid to the county annually. In high-tax states like New Jersey, Illinois, or Connecticut, property taxes alone can add $600 to $900 per month to a $400,000 home. That&apos;s not a small number. This calculator uses a 1.2% annual rate as the national average estimate — toggle it on and see what it adds to your payment.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                PMI disappears once you reach 20% equity, but until then it's a real cost. On a $350,000 loan with 5% down, PMI at 0.85% annually adds $248 per month — that's $2,976 per year for coverage that protects your lender, not you. Putting 20% down eliminates it entirely. If you can't hit 20%, aim to reach it as fast as possible through extra principal payments.
+                PMI disappears once you reach 20% equity, but until then it&apos;s a real cost. On a $350,000 loan with 5% down, PMI at 0.85% annually adds $248 per month — that&apos;s $2,976 per year for coverage that protects your lender, not you. Putting 20% down eliminates it entirely. If you can&apos;t hit 20%, aim to reach it as fast as possible through extra principal payments.
               </p>
             </div>
 
@@ -468,13 +469,13 @@ export default function MortgageCalculator() {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">How Mortgage Amortization Works</h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Here's the thing most lenders don't explain clearly: in the first year of a 30-year mortgage, roughly 80% of each payment goes to interest. You're paying $1,946 per month on a $300,000 loan at 6.75%, but only about $258 of that first payment reduces your balance. The remaining $1,688 goes straight to the lender as interest.
+                Here&apos;s the thing most lenders don&apos;t explain clearly: in the first year of a 30-year mortgage, roughly 80% of each payment goes to interest. You&apos;re paying $1,946 per month on a $300,000 loan at 6.75%, but only about $258 of that first payment reduces your balance. The remaining $1,688 goes straight to the lender as interest.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                This front-loading of interest is baked into the amortization formula. Every month your balance drops slightly, so the interest portion shrinks and the principal portion grows — but slowly. By year 10 of a 30-year loan, you've paid about 30% of total interest but reduced your principal by only about 15%. The math is not intuitive, which is exactly why this calculator includes a full amortization schedule.
+                This front-loading of interest is baked into the amortization formula. Every month your balance drops slightly, so the interest portion shrinks and the principal portion grows — but slowly. By year 10 of a 30-year loan, you&apos;ve paid about 30% of total interest but reduced your principal by only about 15%. The math is not intuitive, which is exactly why this calculator includes a full amortization schedule.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Click "Full Amortization Schedule" above to see every payment, month by month. Scroll to any point in the loan to see exactly how much you'd still owe. Pay attention to what happens when you make even one extra principal payment early — it ripples through every subsequent row, shaving months off the loan and hundreds of dollars off total interest.
+                Click &quot;Full Amortization Schedule&quot; above to see every payment, month by month. Scroll to any point in the loan to see exactly how much you&apos;d still owe. Pay attention to what happens when you make even one extra principal payment early — it ripples through every subsequent row, shaving months off the loan and hundreds of dollars off total interest.
               </p>
             </div>
 

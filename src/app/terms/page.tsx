@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Truly Free Mortgage Calculator",
@@ -11,12 +12,12 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       <nav className="bg-white shadow-[0_1px_3px_0_rgb(0_0_0/0.08)] px-6 h-20 flex items-center justify-between">
-        <a href="/mortgage-calculator">
+        <Link href="/mortgage-calculator">
           <Image src="/logo.png" alt="Truly Free Mortgage Calculator" width={115} height={60} style={{ height: "60px", width: "auto", objectFit: "contain" }} />
-        </a>
+        </Link>
         <div className="flex gap-6">
-          <a href="/mortgage-calculator" className="text-sm text-[#4a5568] hover:text-[#181c1e]">Calculator</a>
-          <a href="/blog" className="text-sm text-[#4a5568] hover:text-[#181c1e]">Blog</a>
+          <Link href="/mortgage-calculator" className="text-sm text-[#4a5568] hover:text-[#181c1e]">Calculator</Link>
+          <Link href="/blog" className="text-sm text-[#4a5568] hover:text-[#181c1e]">Blog</Link>
         </div>
       </nav>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 pb-24">

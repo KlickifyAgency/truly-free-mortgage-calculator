@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Mortgage Payoff Calculator — Free, No Sign-Up | Truly Free Mortgage',
@@ -87,15 +88,15 @@ export default function MortgagePayoffCalculatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -114,7 +115,7 @@ export default function MortgagePayoffCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            You're paying more in interest than you think. On a $400k loan at 6.5%, your first payment sends $2,167 to the bank and only $361 toward what you actually owe. Every extra dollar you put toward principal breaks that cycle — and the impact compounds. The results aren't marginal; they're dramatic. Here's exactly how accelerated payoff works, what it's worth in real numbers, and how to make sure your lender doesn't quietly waste your extra payment.
+            You&apos;re paying more in interest than you think. On a $400k loan at 6.5%, your first payment sends $2,167 to the bank and only $361 toward what you actually owe. Every extra dollar you put toward principal breaks that cycle — and the impact compounds. The results aren&apos;t marginal; they&apos;re dramatic. Here&apos;s exactly how accelerated payoff works, what it&apos;s worth in real numbers, and how to make sure your lender doesn&apos;t quietly waste your extra payment.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -144,7 +145,7 @@ export default function MortgagePayoffCalculatorPage() {
             The impact is highest in the early years of the loan when the remaining term is longest. A $1,000 extra payment in year one of a 30-year mortgage at 6.5% saves approximately $3,800 in interest. The same $1,000 payment in year 25 saves only about $180. This is why front-loading extra payments delivers the greatest return.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            The mechanism is simple: every dollar of principal eliminated reduces the balance on which next month's interest is calculated. Lower interest means more of the next regular payment attacks the principal. This cascading effect shortens the loan and reduces total interest paid by a multiple of the original extra payment.
+            The mechanism is simple: every dollar of principal eliminated reduces the balance on which next month&apos;s interest is calculated. Lower interest means more of the next regular payment attacks the principal. This cascading effect shortens the loan and reduces total interest paid by a multiple of the original extra payment.
           </p>
 
           <h2 id="strategies" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Three Accelerated Payoff Strategies</h2>
@@ -227,9 +228,9 @@ export default function MortgagePayoffCalculatorPage() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your Payoff Acceleration Free
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 

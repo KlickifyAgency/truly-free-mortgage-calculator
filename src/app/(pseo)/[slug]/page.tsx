@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 interface StateData {
   name: string;
@@ -311,15 +312,15 @@ export default async function StateCalculatorPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
 
       <nav style={{ background: '#ffffff', boxShadow: '0px 1px 3px rgba(24,28,30,0.06)', padding: '0 24px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
           <div style={{ width: '32px', height: '32px', borderRadius: '6px', background: 'linear-gradient(135deg,#0058c3,#0070f3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white" /></svg>
           </div>
           <span style={{ fontSize: '15px', fontWeight: 700, letterSpacing: '-0.02em', color: '#181c1e' }}>Truly <span style={{ color: '#0058c3' }}>Free</span> Mortgage</span>
-        </a>
+        </Link>
         <div style={{ display: 'flex', gap: '24px' }}>
-          <a href="/mortgage-calculator" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Calculator</a>
-          <a href="/blog" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Blog</a>
+          <Link href="/mortgage-calculator" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Calculator</Link>
+          <Link href="/blog" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Blog</Link>
         </div>
       </nav>
 
@@ -360,9 +361,9 @@ export default async function StateCalculatorPage({ params }: Props) {
               </div>
             ))}
           </div>
-          <a href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '13px 30px', borderRadius: '6px', textDecoration: 'none' }}>
+          <Link href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '13px 30px', borderRadius: '6px', textDecoration: 'none' }}>
             Open Free Calculator
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -375,9 +376,9 @@ export default async function StateCalculatorPage({ params }: Props) {
             <p key={i} style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '18px' }}>{para}</p>
           ))}
           <div style={{ marginTop: '32px', textAlign: 'center' }}>
-            <a href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '13px 30px', borderRadius: '6px', textDecoration: 'none' }}>
+            <Link href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '13px 30px', borderRadius: '6px', textDecoration: 'none' }}>
               Run Your Numbers
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -404,9 +405,9 @@ export default async function StateCalculatorPage({ params }: Props) {
           <p style={{ fontSize: '15px', color: '#718096', marginBottom: '20px', letterSpacing: '-0.01em' }}>
             Ready to run your own {state.name} mortgage calculation?
           </p>
-          <a href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '13px 30px', borderRadius: '6px', textDecoration: 'none' }}>
+          <Link href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '13px 30px', borderRadius: '6px', textDecoration: 'none' }}>
             Open Free {state.name} Mortgage Calculator
-          </a>
+          </Link>
         </div>
       </div>
     </>

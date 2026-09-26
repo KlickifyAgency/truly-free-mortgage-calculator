@@ -1,5 +1,6 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Down Payment Assistance Programs by State',
@@ -61,7 +62,7 @@ export default function Page() {
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">National Programs</h2>
         <p className="text-lg">
-          Before exploring state-specific programs, it's essential to understand the national down payment assistance programs available. These include:
+          Before exploring state-specific programs, it&apos;s essential to understand the national down payment assistance programs available. These include:
         </p>
         <ul className="list-disc pl-8 mt-4">
           <li className="mb-2">FHA Loans: Offer down payments as low as 3.5%</li>
@@ -74,6 +75,7 @@ export default function Page() {
         <p className="text-lg">
           Each state has its unique set of down payment assistance programs, designed to cater to the specific needs of its residents. Some examples include:
         </p>
+        <div className="overflow-x-auto">
         <table className="w-full table-auto border-collapse border border-gray-300 mb-8">
           <thead className="bg-gray-100">
             <tr>
@@ -86,9 +88,9 @@ export default function Page() {
           <tbody>
             <tr>
               <td className="py-2 border border-gray-300">California</td>
-              <td className="py-2 border border-gray-300">California Homebuyer's Downpayment Assistance Program (CHDAP)</td>
+              <td className="py-2 border border-gray-300">California Homebuyer&apos;s Downpayment Assistance Program (CHDAP)</td>
               <td className="py-2 border border-gray-300">Grant</td>
-              <td className="py-2 border border-gray-300">Up to 3% of the home's purchase price</td>
+              <td className="py-2 border border-gray-300">Up to 3% of the home&apos;s purchase price</td>
             </tr>
             <tr>
               <td className="py-2 border border-gray-300">Florida</td>
@@ -100,10 +102,11 @@ export default function Page() {
               <td className="py-2 border border-gray-300">Texas</td>
               <td className="py-2 border border-gray-300">Texas Department of Housing and Community Affairs (TDHCA) Down Payment Assistance Program</td>
               <td className="py-2 border border-gray-300">Grant</td>
-              <td className="py-2 border border-gray-300">Up to 4% of the home's purchase price</td>
+              <td className="py-2 border border-gray-300">Up to 4% of the home&apos;s purchase price</td>
             </tr>
           </tbody>
         </table>
+        </div>
       </section>
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Eligibility Criteria</h2>
@@ -127,9 +130,9 @@ export default function Page() {
         <h2 className="text-2xl font-bold mb-4">Call to Action</h2>
         <p className="text-lg">
           Ready to explore your down payment options? Use our{' '}
-          <a href="/mortgage-calculator" className="text-blue-600 hover:text-blue-800">
+          <Link href="/mortgage-calculator" className="text-blue-600 hover:text-blue-800">
             mortgage calculator
-          </a>{' '}
+          </Link>{' '}
           to estimate your mortgage payments and see how much you can afford.
         </p>
       </section>

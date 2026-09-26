@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Calculadora de Hipoteca FHA — Gratis, Sin Registro | Truly Free Mortgage',
@@ -91,15 +92,15 @@ export default function CalculadoraHipotecaFHAPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculadora</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculadora</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -255,9 +256,9 @@ export default function CalculadoraHipotecaFHAPage() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calcular Mi Pago FHA Gratis
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">Sin cuenta. Sin correo. Corre en tu navegador.</p>
           </div>
 

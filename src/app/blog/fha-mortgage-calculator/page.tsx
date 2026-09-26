@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'FHA Mortgage Calculator — Free, No Registration | Truly Free',
@@ -67,15 +68,15 @@ export default function FHAMortgageCalculator() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <div className="min-h-screen bg-gray-50">
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 pb-16">
@@ -97,18 +98,18 @@ export default function FHAMortgageCalculator() {
             The FHA loan is the most misunderstood mortgage product in the United States. Lenders market its low 3.5% down payment prominently while burying the true cost of Mortgage Insurance Premium (MIP) in footnotes. This guide gives you the technical formula to calculate your exact FHA payment — including both upfront and annual MIP — with zero data collection on our end.
           </p>
 
-          <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
+          <Link href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
             <p className="text-lg font-bold">Calculate your FHA payment now — no email required</p>
             <p className="text-sm opacity-75 mt-1">Enable PMI toggle to include mortgage insurance in your calculation</p>
-          </a>
+          </Link>
 
           <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 40 }}>
             <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
               FHA MIP costs 1.75% upfront plus 0.85% a year on most 30-year loans.
             </h2>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
-              On a $338,000 loan (3.5% down on a $350,000 home), upfront MIP adds $5,915 to your loan balance at closing, and the 0.85% annual MIP adds about $238 to every monthly payment. Both figures come directly from HUD's own mortgage insurance premium schedule.
+              On a $338,000 loan (3.5% down on a $350,000 home), upfront MIP adds $5,915 to your loan balance at closing, and the 0.85% annual MIP adds about $238 to every monthly payment. Both figures come directly from HUD&apos;s own mortgage insurance premium schedule.
             </p>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
               With less than 10% down, that annual MIP does not cancel — it runs for the life of the loan, unlike conventional PMI which drops off at 20% equity. That is the single biggest reason FHA borrowers refinance into a conventional loan once they qualify.
@@ -117,7 +118,7 @@ export default function FHAMortgageCalculator() {
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">What Is an FHA Loan?</h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
-            An FHA loan is a mortgage insured by the Federal Housing Administration, a division of the U.S. Department of Housing and Urban Development (HUD). Because the federal government backstops these loans against default, approved lenders can offer them with more flexible qualification standards than conventional mortgages, as <a href="https://www.hud.gov/hud-partners/housing-mip" target="_blank" rel="noopener noreferrer">HUD's own mortgage insurance premium documentation</a> lays out. The tradeoff is mandatory mortgage insurance that protects the lender — not you — in the event of default.
+            An FHA loan is a mortgage insured by the Federal Housing Administration, a division of the U.S. Department of Housing and Urban Development (HUD). Because the federal government backstops these loans against default, approved lenders can offer them with more flexible qualification standards than conventional mortgages, as <a href="https://www.hud.gov/hud-partners/housing-mip" target="_blank" rel="noopener noreferrer">HUD&apos;s own mortgage insurance premium documentation</a> lays out. The tradeoff is mandatory mortgage insurance that protects the lender — not you — in the event of default.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             FHA loans are particularly relevant for first-time buyers, borrowers rebuilding credit, and those with limited savings for a down payment. The program has been operational since 1934 and has insured over 50 million mortgages since inception.

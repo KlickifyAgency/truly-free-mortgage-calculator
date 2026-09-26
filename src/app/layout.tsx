@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Truly Free Mortgage Calculator — No Registration Required",
@@ -9,26 +10,26 @@ export const metadata: Metadata = {
 function Footer() {
   return (
     <footer style={{ background: "#ffffff", borderTop: "none", boxShadow: "0 -1px 3px 0 rgb(0 0 0 / 0.06)", marginTop: "auto" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "48px 24px 32px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "32px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "48px 24px 32px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "32px" }}>
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#718096", marginBottom: "16px" }}>Company</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <a href="/about" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>About Us</a>
-            <a href="/blog" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Blog</a>
-            <a href="/contact" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Feedback</a>
+            <Link href="/about" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>About Us</Link>
+            <Link href="/blog" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Blog</Link>
+            <Link href="/contact" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Feedback</Link>
           </div>
         </div>
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#718096", marginBottom: "16px" }}>Legal</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <a href="/privacy" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Privacy Policy</a>
-            <a href="/terms" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Terms of Service</a>
+            <Link href="/privacy" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Terms of Service</Link>
           </div>
         </div>
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#718096", marginBottom: "16px" }}>Support</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <a href="/contact" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Contact</a>
+            <Link href="/contact" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Contact</Link>
             <a href="mailto:info@klickifyagency.com" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>info@klickifyagency.com</a>
           </div>
         </div>

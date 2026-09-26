@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Mortgage Refinance Calculator — Break-Even Analysis | Truly Free',
@@ -47,15 +48,15 @@ export default function RefinanceCalculator() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: speakableJsonLd }} />
       <div className="min-h-screen bg-gray-50">
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 pb-16">
@@ -71,12 +72,12 @@ export default function RefinanceCalculator() {
               <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
             </div>
           </div>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">Refinancing without calculating your break-even point is a financial error. Lenders benefit from every refinance regardless of whether it helps you — they collect new origination fees and reset your amortization schedule. This guide gives you the exact formula to determine whether refinancing produces a net financial gain in your specific situation, the same question the <a href="https://files.consumerfinance.gov/f/documents/cfpb_should_i_refinance_handout.pdf" target="_blank" rel="noopener noreferrer">CFPB's own &quot;Should I refinance?&quot; guide</a> walks borrowers through.</p>
-          <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">Refinancing without calculating your break-even point is a financial error. Lenders benefit from every refinance regardless of whether it helps you — they collect new origination fees and reset your amortization schedule. This guide gives you the exact formula to determine whether refinancing produces a net financial gain in your specific situation, the same question the <a href="https://files.consumerfinance.gov/f/documents/cfpb_should_i_refinance_handout.pdf" target="_blank" rel="noopener noreferrer">CFPB&apos;s own &quot;Should I refinance?&quot; guide</a> walks borrowers through.</p>
+          <Link href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
             <p className="text-lg font-bold">Model your refinance scenario — no email required</p>
             <p className="text-sm opacity-75 mt-1">Use Scenario Comparison to compare your current loan vs new terms</p>
-          </a>
+          </Link>
 
           <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 40 }}>
             <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>

@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Jumbo Loan Calculator — Free, No Sign-Up | Truly Free Mortgage',
@@ -87,15 +88,15 @@ export default function JumboLoanCalculatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -114,7 +115,7 @@ export default function JumboLoanCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            Cross the conforming limit by a single dollar and you're in a completely different mortgage market. No Fannie or Freddie backing, stricter underwriting, reserve requirements that catch most borrowers off guard, and rates that don't always behave the way you'd expect. If you're financing above $806,500, here's what's actually different — and how to calculate your payment before lender conversations start.
+            Cross the conforming limit by a single dollar and you&apos;re in a completely different mortgage market. No Fannie or Freddie backing, stricter underwriting, reserve requirements that catch most borrowers off guard, and rates that don&apos;t always behave the way you&apos;d expect. If you&apos;re financing above $806,500, here&apos;s what&apos;s actually different — and how to calculate your payment before lender conversations start.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -227,9 +228,9 @@ export default function JumboLoanCalculatorPage() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your Jumbo Loan Payment Free
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 

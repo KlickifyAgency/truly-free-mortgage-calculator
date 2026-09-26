@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'PMI Calculator: When You Need It and When to Drop It | Truly Free Mortgage',
@@ -71,15 +72,15 @@ export default function PMICalculatorGuidePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -115,7 +116,7 @@ export default function PMICalculatorGuidePage() {
             Now, when can you cancel PMI? Two ways. First, when your loan-to-value (LTV) ratio reaches 80%. That means your outstanding loan balance is 80% or less of the home&apos;s current value. For a $400,000 home, 80% LTV is a $320,000 loan balance. You started at $380,000. You need to pay down $60,000 in principal. How long does that take? On a 30-year loan at 6.8%, your monthly principal payment in the first year is about $250. It increases slowly. It would take about 11 years to pay down $60,000 through scheduled payments alone. But your home might also appreciate.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Second, you can request PMI cancellation when you reach 80% LTV based on the original value. By federal law — the Homeowners Protection Act, summarized in the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-1953/" target="_blank" rel="noopener noreferrer">CFPB's guide to private mortgage insurance</a> — your servicer must automatically terminate PMI when you reach 78% LTV based on the original amortization schedule. That happens around year 11 as well. But if your home appreciates, you can get an appraisal and request cancellation earlier. If your $400,000 home appreciates to $450,000 in 3 years, your loan balance is about $365,000. LTV = 365,000 / 450,000 = 81%. That is close. An appraisal might get you there.
+            Second, you can request PMI cancellation when you reach 80% LTV based on the original value. By federal law — the Homeowners Protection Act, summarized in the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-1953/" target="_blank" rel="noopener noreferrer">CFPB&apos;s guide to private mortgage insurance</a> — your servicer must automatically terminate PMI when you reach 78% LTV based on the original amortization schedule. That happens around year 11 as well. But if your home appreciates, you can get an appraisal and request cancellation earlier. If your $400,000 home appreciates to $450,000 in 3 years, your loan balance is about $365,000. LTV = 365,000 / 450,000 = 81%. That is close. An appraisal might get you there.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             The key takeaway: PMI is temporary. On a $380,000 loan at 0.8%, total PMI paid over 11 years is about $33,400. That is a real cost. But if waiting to save 20% down would take you 3 more years, during which home prices might rise 10%, you could be worse off. The math is not simple.
@@ -147,9 +148,9 @@ export default function PMICalculatorGuidePage() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your PMI Free
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 

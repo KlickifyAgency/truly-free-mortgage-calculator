@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Truly Free Mortgage Calculator — No Email, No Registration',
@@ -94,15 +95,15 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: orgJsonLd }} />
 
       <nav style={{ background: '#ffffff', boxShadow: '0px 1px 3px rgba(24,28,30,0.06)', padding: '0 24px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
           <div style={{ width: '32px', height: '32px', borderRadius: '6px', background: 'linear-gradient(135deg,#0058c3,#0070f3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white" /></svg>
           </div>
           <span style={{ fontSize: '15px', fontWeight: 700, letterSpacing: '-0.02em', color: '#181c1e' }}>Truly <span style={{ color: '#0058c3' }}>Free</span> Mortgage</span>
-        </a>
+        </Link>
         <div style={{ display: 'flex', gap: '24px' }}>
-          <a href="/mortgage-calculator" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Calculator</a>
-          <a href="/blog" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Blog</a>
+          <Link href="/mortgage-calculator" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Calculator</Link>
+          <Link href="/blog" style={{ fontSize: '14px', color: '#4a5568', textDecoration: 'none', letterSpacing: '-0.01em' }}>Blog</Link>
         </div>
       </nav>
 
@@ -110,14 +111,14 @@ export default function HomePage() {
         <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0058c3', marginBottom: '20px' }}>No Registration Required</div>
           <h1 style={{ fontSize: '42px', fontWeight: 800, letterSpacing: '-0.03em', color: '#181c1e', lineHeight: 1.15, marginBottom: '20px', margin: '0 0 20px' }}>
-            The Mortgage Calculator That Doesn't Ask for Your Email
+            The Mortgage Calculator That Doesn&apos;t Ask for Your Email
           </h1>
           <p style={{ fontSize: '18px', color: '#4a5568', lineHeight: 1.7, marginBottom: '36px' }}>
             Full amortization. PMI, taxes, HOA. Scenario comparison. 100% client-side — your numbers never leave your browser.
           </p>
-          <a href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '16px', fontWeight: 700, letterSpacing: '-0.01em', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', marginBottom: '40px' }}>
+          <Link href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '16px', fontWeight: 700, letterSpacing: '-0.01em', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', marginBottom: '40px' }}>
             Open Calculator
-          </a>
+          </Link>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
             {['No Email Required', 'No Daily Limit', 'Data Stays in Browser', 'No Credit Card'].map((label) => (
               <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#ffffff', borderRadius: '4px', padding: '8px 14px', boxShadow: '0px 2px 8px rgba(24,28,30,0.06)' }}>
@@ -131,19 +132,19 @@ export default function HomePage() {
 
       <div style={{ background: '#ffffff', padding: '72px 24px' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '20px', lineHeight: 1.2 }}>Why Every Mortgage Calculator Asks for Your Email (And Why This One Doesn't)</h2>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>Here's the thing most people don't realize: the major mortgage calculators aren't tools. They're lead funnels. Bankrate, LendingTree, Zillow — you enter your home price and income, and within minutes a loan officer is calling you. Your "free" calculation cost you your contact information, which was sold to four or five lenders simultaneously.</p>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>That model works fine for lenders. It's terrible for borrowers who just want to run numbers before they're ready to talk to anyone. Which is exactly why this calculator asks for nothing. No email. No phone number. No account. You get the same calculation the lenders' systems use, without giving up your contact information to get it.</p>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75 }}>The tool is ad-supported — display advertising, not lead generation. That's the entire business model. It costs nothing and collects nothing.</p>
+          <h2 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '20px', lineHeight: 1.2 }}>Why Every Mortgage Calculator Asks for Your Email (And Why This One Doesn&apos;t)</h2>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>Here&apos;s the thing most people don&apos;t realize: the major mortgage calculators aren&apos;t tools. They&apos;re lead funnels. Bankrate, LendingTree, Zillow — you enter your home price and income, and within minutes a loan officer is calling you. Your &quot;free&quot; calculation cost you your contact information, which was sold to four or five lenders simultaneously.</p>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>That model works fine for lenders. It&apos;s terrible for borrowers who just want to run numbers before they&apos;re ready to talk to anyone. Which is exactly why this calculator asks for nothing. No email. No phone number. No account. You get the same calculation the lenders&apos; systems use, without giving up your contact information to get it.</p>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75 }}>The tool is ad-supported — display advertising, not lead generation. That&apos;s the entire business model. It costs nothing and collects nothing.</p>
         </div>
       </div>
 
       <div style={{ background: '#f7fafc', padding: '72px 24px' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.03em', color: '#181c1e', marginBottom: '20px', lineHeight: 1.2 }}>What This Calculator Actually Includes</h2>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>A lot of mortgage calculators show you principal and interest and call it a day. The real number you need is PITI plus PMI — Principal, Interest, Taxes, Insurance, and Private Mortgage Insurance if your down payment is under 20%. That's what your lender will actually qualify you on, and it's often $400–700/month higher than the P&amp;I figure alone.</p>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>This calculator lets you toggle each component independently. Add HOA if you're looking at a condo or planned community. See exactly what drops off when your equity crosses 20% and PMI goes away. Run a 15-year and a 30-year scenario in the same session and see the total interest difference — on a $400,000 loan at 7%, that gap is $246,000.</p>
-          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75 }}>The full amortization schedule is there too. Every single payment, broken down by principal and interest, from month one to the final payoff. It's the same data your lender has. You should have it too.</p>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>A lot of mortgage calculators show you principal and interest and call it a day. The real number you need is PITI plus PMI — Principal, Interest, Taxes, Insurance, and Private Mortgage Insurance if your down payment is under 20%. That&apos;s what your lender will actually qualify you on, and it&apos;s often $400–700/month higher than the P&amp;I figure alone.</p>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75, marginBottom: '20px' }}>This calculator lets you toggle each component independently. Add HOA if you&apos;re looking at a condo or planned community. See exactly what drops off when your equity crosses 20% and PMI goes away. Run a 15-year and a 30-year scenario in the same session and see the total interest difference — on a $400,000 loan at 7%, that gap is $246,000.</p>
+          <p style={{ fontSize: '16px', color: '#4a5568', lineHeight: 1.75 }}>The full amortization schedule is there too. Every single payment, broken down by principal and interest, from month one to the final payoff. It&apos;s the same data your lender has. You should have it too.</p>
         </div>
       </div>
 
@@ -157,7 +158,7 @@ export default function HomePage() {
               Most calculators quote principal and interest only, which understates your real monthly cost by $400–700 on a typical loan once taxes, insurance, and PMI are added. This calculator computes full PITI, runs entirely in your browser, and never asks for an email or phone number to see the result.
             </p>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
-              On a $400,000 loan at 7%, choosing a 15-year term over a 30-year term saves $246,000 in total interest — a real example computed with the standard amortization formula, viewable side by side in the calculator's Scenario Comparison tab.
+              On a $400,000 loan at 7%, choosing a 15-year term over a 30-year term saves $246,000 in total interest — a real example computed with the standard amortization formula, viewable side by side in the calculator&apos;s Scenario Comparison tab.
             </p>
           </div>
         </div>
@@ -176,9 +177,9 @@ export default function HomePage() {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <a href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '12px 30px', borderRadius: '6px', textDecoration: 'none' }}>
+            <Link href="/mortgage-calculator" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#0058c3,#0070f3)', color: '#ffffff', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em', padding: '12px 30px', borderRadius: '6px', textDecoration: 'none' }}>
               Open Calculator
-            </a>
+            </Link>
           </div>
         </div>
       </div>

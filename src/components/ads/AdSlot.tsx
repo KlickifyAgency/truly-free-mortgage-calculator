@@ -14,12 +14,12 @@ const dimensions: Record<AdSlotProps["format"], { width: number; height: number 
 }
 
 export default function AdSlot({ slot, format }: AdSlotProps) {
-  const { width, height } = dimensions[format]
+  const { width } = dimensions[format]
 
   useEffect(() => {
     if (!ADSENSE_ENABLED) return
     try {
-      const adsbygoogle = (window as any).adsbygoogle
+      const adsbygoogle = (window as Window & { adsbygoogle?: object[] }).adsbygoogle
       if (adsbygoogle) adsbygoogle.push({})
     } catch {}
   }, [])

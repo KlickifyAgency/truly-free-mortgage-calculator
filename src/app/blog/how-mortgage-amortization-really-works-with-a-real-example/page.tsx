@@ -1,5 +1,6 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -66,6 +67,7 @@ export default function Page() {
 
       <section className="mb-6">
         <h2 className="text-2xl lg:text-4xl font-bold mb-2">Amortization Schedule Breakdown</h2>
+        <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse border border-gray-300">
           <thead className="bg-gray-100">
             <tr>
@@ -114,6 +116,7 @@ export default function Page() {
             </tr>
           </tbody>
         </table>
+        </div>
       </section>
 
       <section className="mb-6">
@@ -135,7 +138,7 @@ export default function Page() {
       <section className="mb-6">
         <h2 className="text-2xl lg:text-4xl font-bold mb-2">Conclusion and Next Steps</h2>
         <p className="text-lg lg:text-xl mb-4">
-          By understanding how mortgage amortization works and using the right tools, you can take control of your mortgage payments and make informed decisions about your financial future. Ready to start exploring your options? Visit our <a href="/mortgage-calculator" className="text-blue-600 hover:text-blue-800">mortgage calculator</a> to get started.
+          By understanding how mortgage amortization works and using the right tools, you can take control of your mortgage payments and make informed decisions about your financial future. Ready to start exploring your options? Visit our <Link href="/mortgage-calculator" className="text-blue-600 hover:text-blue-800">mortgage calculator</Link> to get started.
         </p>
       </section>
 

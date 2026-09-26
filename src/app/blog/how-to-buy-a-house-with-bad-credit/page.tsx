@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'How to Buy a House with Bad Credit – Truly Free Mortgage',
@@ -202,6 +203,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-semibold mb-2">Payment Scenarios</h3>
+              <div className="overflow-x-auto">
               <table className="min-w-full text-sm">
                 <thead className="bg-gray-200 dark:bg-gray-700">
                   <tr>
@@ -236,6 +238,7 @@ export default function Page() {
                   </tr>
                 </tbody>
               </table>
+              </div>
             </div>
           </div>
 
@@ -316,12 +319,12 @@ export default function Page() {
               Our free mortgage calculator lets you model different down‑payment
               amounts, credit‑score scenarios, and loan programs in real time.
             </p>
-            <a
+            <Link
               href="/mortgage-calculator"
               className="inline-block bg-white text-[#0a2740] font-medium py-3 px-6 rounded hover:bg-gray-200 transition"
             >
               Go to the Mortgage Calculator
-            </a>
+            </Link>
           </div>
         </section>
 

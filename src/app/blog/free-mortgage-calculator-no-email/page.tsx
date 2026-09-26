@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Free Mortgage Calculator — No Email, No Lead Capture | Truly Free Mortgage',
@@ -71,15 +72,15 @@ export default function FreeMortgageCalculatorNoEmailPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -112,7 +113,7 @@ export default function FreeMortgageCalculatorNoEmailPage() {
             Before we walk through the calculator, you need to understand what goes into a monthly payment. Most people think the payment is just principal and interest. It&apos;s not. You have property taxes, homeowners insurance, and possibly private mortgage insurance (PMI) if you put down less than 20%. All of these together are called PITI — Principal, Interest, Taxes, Insurance.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Let me give you a real example. You buy a home for $420,000 (the 2026 median US home price). You put 20% down — that&apos;s $84,000. Your loan amount is $336,000. At the current average 30-year fixed rate of 6.8% — tracked weekly by <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer">Freddie Mac's Primary Mortgage Market Survey</a> — your monthly principal and interest payment is $2,191. Add property taxes. Nationwide average property tax rate is about 1.1% of home value annually. On $420,000, that&apos;s $4,620 per year or $385 per month. Add homeowners insurance — average $1,200 per year or $100 per month. Total monthly PITI: $2,191 + $385 + $100 = $2,676.
+            Let me give you a real example. You buy a home for $420,000 (the 2026 median US home price). You put 20% down — that&apos;s $84,000. Your loan amount is $336,000. At the current average 30-year fixed rate of 6.8% — tracked weekly by <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer">Freddie Mac&apos;s Primary Mortgage Market Survey</a> — your monthly principal and interest payment is $2,191. Add property taxes. Nationwide average property tax rate is about 1.1% of home value annually. On $420,000, that&apos;s $4,620 per year or $385 per month. Add homeowners insurance — average $1,200 per year or $100 per month. Total monthly PITI: $2,191 + $385 + $100 = $2,676.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             That&apos;s your actual housing payment. But lenders also look at your debt-to-income ratio (DTI). They want your total monthly debts (including this mortgage payment) to be below 43% to 50% of your gross monthly income. If you make $8,000 a month gross, a $2,676 payment leaves room for other debts like car loans or student loans. This is the math lenders use. It&apos;s not magic. It&apos;s just multiplication and division.
@@ -144,9 +145,9 @@ export default function FreeMortgageCalculatorNoEmailPage() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your Mortgage Payment Free
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 

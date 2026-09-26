@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Mortgage Guides — Free Education | Truly Free Mortgage',
@@ -264,15 +265,15 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
       <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-        <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+        <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
             <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
           </div>
           <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-        </a>
+        </Link>
         <div className="ml-auto flex gap-6">
-          <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-          <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+          <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+          <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
         </div>
       </nav>
 

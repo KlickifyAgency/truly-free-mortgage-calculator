@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Down Payment Calculator: How Much Do You Really Need? | Truly Free Mortgage',
@@ -71,15 +72,15 @@ export default function DownPaymentCalculatorGuidePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -101,7 +102,7 @@ export default function DownPaymentCalculatorGuidePage() {
             You have $50,000 saved for a home purchase. You think that is a lot. Then you look at home prices. A decent house in your area costs $420,000. You realize $50,000 is only 12% down. You start researching: do you need 20% down? Can you put 5%? What about 3%? Every website gives a different answer.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            The truth is that the minimum down payment depends on the loan type. Conventional loans go as low as 3% for first-time buyers. FHA loans go to 3.5%. VA and USDA loans can be 0% down. But lower down payments come with higher monthly costs (PMI or MIP) and higher interest rates — the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-1953/" target="_blank" rel="noopener noreferrer">CFPB's guide to private mortgage insurance</a> breaks down how that trade-off works. Your $50,000 might be enough for a $420,000 home with 10% down ($42,000) and leave $8,000 for closing costs. Or you could put 5% down ($21,000) and keep $29,000 in savings for emergencies.
+            The truth is that the minimum down payment depends on the loan type. Conventional loans go as low as 3% for first-time buyers. FHA loans go to 3.5%. VA and USDA loans can be 0% down. But lower down payments come with higher monthly costs (PMI or MIP) and higher interest rates — the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-1953/" target="_blank" rel="noopener noreferrer">CFPB&apos;s guide to private mortgage insurance</a> breaks down how that trade-off works. Your $50,000 might be enough for a $420,000 home with 10% down ($42,000) and leave $8,000 for closing costs. Or you could put 5% down ($21,000) and keep $29,000 in savings for emergencies.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-8">
             Most down payment calculators are lead generation tools. Bankrate will ask for your email to &quot;save your results.&quot; NerdWallet&apos;s calculator is hidden behind a &quot;get personalized advice&quot; button. LendingTree does not have a calculator — they just want you to apply. Truly Free Mortgage Calculator has a down payment tool that shows you the monthly cost for every down payment level. No email. No phone number.
@@ -153,9 +154,9 @@ export default function DownPaymentCalculatorGuidePage() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your Down Payment Options Free
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 

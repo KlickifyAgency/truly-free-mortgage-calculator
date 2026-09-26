@@ -1,6 +1,7 @@
 import AuthorBox from '@/components/blog/AuthorBox';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'How Much House Can I Afford? (2026 Calculator) | Truly Free Mortgage',
@@ -71,15 +72,15 @@ export default function HowMuchHouseCanIAfford2026Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
         <nav className="bg-white px-6 h-16 flex items-center shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
-          <a href="/mortgage-calculator" className="flex items-center gap-2.5">
+          <Link href="/mortgage-calculator" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z" fill="white"/></svg>
             </div>
             <span className="font-bold text-[15px] tracking-tight text-gray-900">Truly <span className="text-blue-600">Free</span> Mortgage</span>
-          </a>
+          </Link>
           <div className="ml-auto flex gap-6">
-            <a href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</a>
-            <a href="/blog" className="text-sm text-blue-600 font-medium">Blog</a>
+            <Link href="/mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-800">Calculator</Link>
+            <Link href="/blog" className="text-sm text-blue-600 font-medium">Blog</Link>
           </div>
         </nav>
 
@@ -109,10 +110,10 @@ export default function HowMuchHouseCanIAfford2026Page() {
 
           <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 32 }}>
             <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
-              Keep housing payments under 28% of gross income, total debt under 36% — the CFPB's own DTI benchmark.
+              Keep housing payments under 28% of gross income, total debt under 36% — the CFPB&apos;s own DTI benchmark.
             </h2>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
-              On a $100,000 salary ($8,333/month gross), that caps your housing payment at $2,333 and total debt at $3,000. At 6.8% with 20% down, that supports roughly a $450,000 home — often well below what a lender's pre-approval letter offers, because pre-approval maximizes what they can lend, not what fits your budget.
+              On a $100,000 salary ($8,333/month gross), that caps your housing payment at $2,333 and total debt at $3,000. At 6.8% with 20% down, that supports roughly a $450,000 home — often well below what a lender&apos;s pre-approval letter offers, because pre-approval maximizes what they can lend, not what fits your budget.
             </p>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
               Drop to 10% down and PMI changes the math fast: a $450,000 home with 10% down runs about $3,475/month once PMI, taxes, and insurance are added — $1,142 over the 28% line on that same $100,000 salary.
@@ -159,9 +160,9 @@ export default function HowMuchHouseCanIAfford2026Page() {
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
-            <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
+            <Link href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Check What You Can Afford — Free
-            </a>
+            </Link>
             <p className="text-center text-[12px] text-gray-400 mt-3">No account. No email. Runs in your browser.</p>
           </div>
 
