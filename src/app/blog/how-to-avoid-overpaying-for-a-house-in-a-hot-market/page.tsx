@@ -130,8 +130,8 @@ export default function Page() {
           </p>
           <ol className={`${list} list-decimal`}>
             <li><strong>Get a real rate quote.</strong> Ask a lender, or two, for a quote based on your credit and your down payment. Don’t plug in a rate you saw in a headline.</li>
-            <li><strong>Run the numbers.</strong> Enter the price, down payment, rate, property taxes and HOA dues in our <Link href="/mortgage-calculator" className={link}>free mortgage calculator</Link>. You’ll see the monthly payment, PMI when it applies, and the full amortization schedule.</li>
-            <li><strong>Add what the calculator doesn’t cover.</strong> Homeowners insurance, utilities and a maintenance budget aren’t in that payment. Get an insurance quote for the actual ZIP code, because premiums can vary a lot from one area to the next.</li>
+            <li><strong>Run the numbers.</strong> Enter the price, down payment, rate and term in our <Link href="/mortgage-calculator" className={link}>free mortgage calculator</Link>, then switch on property tax, homeowners insurance, PMI and HOA. You’ll see a fuller monthly cost and the full amortization schedule.</li>
+            <li><strong>Swap the estimates for real numbers.</strong> Those toggles use rough national estimates, and your actual tax bill and insurance premium can be very different. Check the county’s property tax rate and get an insurance quote for the actual ZIP code. Then budget for utilities and maintenance, which aren’t part of the payment at all.</li>
             <li><strong>Work backward to a price.</strong> Try a few prices until the total monthly cost lands where you’re comfortable. That price is your ceiling, even if your pre-approval letter says more.</li>
           </ol>
           <p className={p}>

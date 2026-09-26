@@ -1,5 +1,6 @@
 import MortgageCalculator from '@/components/MortgageCalculator';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Free Mortgage Calculator — No Registration | Truly Free',
@@ -32,7 +33,7 @@ const sections = [
   },
   {
     heading: 'Private Mortgage Insurance (PMI)',
-    body: 'PMI is required by most lenders when your down payment is below 20% of the purchase price. It protects the lender — not you — against default risk. The national average PMI rate is approximately 0.8% of the loan amount annually, or roughly $267/month on a $400,000 loan. PMI cancels once your equity crosses 20% of the original appraised value. The amortization schedule in this calculator shows you the exact month when PMI drops off based on your payment schedule.',
+    body: 'PMI is required by most lenders when your down payment is below 20% of the purchase price. It protects the lender — not you — against default risk. The cost depends on your credit and down payment; this calculator uses a rough estimate of 0.8% of the loan amount per year, or about $267/month on a $400,000 loan. Under the federal Homeowners Protection Act you can generally ask your servicer to cancel PMI once your balance is scheduled to reach 80% of the home’s original value, and it generally ends automatically at 78%. The amortization schedule shows your balance month by month, so you can see roughly when you cross those points.',
   },
   {
     heading: 'Property Tax Estimates',
@@ -74,7 +75,7 @@ export default function Page() {
               PMI adds about $267/month on a $400,000 loan with under 20% down.
             </h3>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
-              PMI runs roughly 0.8% of the loan amount per year — about $267/month on a $400,000 loan — and drops off automatically once your equity reaches 20% of the original appraised value. This calculator shows the exact month PMI cancels based on your own payment schedule, not a generic estimate.
+              This calculator estimates PMI at roughly 0.8% of the loan amount per year — about $267/month on a $400,000 loan. Your real rate depends on your credit and down payment. You can generally ask to cancel PMI once your balance is scheduled to reach 80% of the home’s original value, and it generally ends automatically at 78%; the amortization schedule shows your balance month by month, so you can spot roughly when that happens.
             </p>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
               A 0.5-point rate difference matters more than most buyers expect: on a $400,000 loan, moving from 6.5% to 7.0% adds $132/month and $47,520 in total interest over 30 years. Run both rates in the Scenario Comparison tab to see the exact gap for your numbers.
@@ -115,9 +116,9 @@ export default function Page() {
           </div>
 
           <div style={{ marginTop: '32px', textAlign: 'center' }}>
-            <a href="/about" style={{ fontSize: '14px', color: '#0058c3', fontWeight: 600, textDecoration: 'none', letterSpacing: '-0.01em' }}>
+            <Link href="/about" style={{ fontSize: '14px', color: '#0058c3', fontWeight: 600, textDecoration: 'none', letterSpacing: '-0.01em' }}>
               Learn more about who built this and why →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
