@@ -2,7 +2,7 @@ name: Publish Friday Article
 
 on:
   schedule:
-    - cron: '0 14 * * 5'  # Every Friday 2pm UTC (9am CDT)
+    - cron: '30 14 * * 5'  # Friday 14:30 UTC. Tools :00, QR :15, this :30 - they share one Groq key (TPM limit)
   workflow_dispatch:
 
 permissions:
@@ -35,35 +35,24 @@ jobs:
           WEEK=$(date +%V | sed 's/^0*//')
 
           TOPICS=(
-            "How to pay off your mortgage 10 years early with extra payments"
             "Understanding escrow: what it is and why your payment includes it"
             "Mortgage pre-approval vs pre-qualification: the real difference"
             "Should I rent or buy in 2026? A financial decision framework"
             "How to calculate your debt-to-income ratio for mortgage approval"
-            "What is PMI and how to get rid of it faster"
-            "Adjustable rate mortgages (ARM): when they make sense and when to avoid them"
             "How mortgage interest deductions work in 2026"
             "First-time homebuyer programs: which ones actually help"
             "How to compare mortgage offers: APR vs interest rate explained"
-            "Jumbo loans: what qualifies and how rates differ"
-            "How much house can you actually afford on your salary"
-            "VA loans: the complete guide for veterans and military families"
-            "FHA loans vs conventional loans: when each makes more sense"
             "What happens at closing: a step-by-step walkthrough"
             "How to negotiate a lower mortgage rate"
             "Cash-out refinancing: when it makes sense and when it is a trap"
             "HELOC vs home equity loan: choosing the right option"
             "How property taxes are calculated and how to appeal them"
-            "Mortgage points: should you buy down your interest rate"
             "How to read your mortgage statement"
             "What credit score do you need to buy a house in 2026"
             "The hidden costs of buying a home beyond the mortgage payment"
-            "How to refinance a mortgage: step-by-step guide"
-            "Interest-only mortgages: who they work for and who they hurt"
             "How inflation affects mortgage rates"
             "Biweekly mortgage payments: do they actually save money"
             "How to handle mortgage payments during financial hardship"
-            "Investment property mortgages: rates, requirements, and rules"
             "How mortgage amortization really works with a real example"
             "Down payment assistance programs by state"
             "How to get a mortgage as a self-employed borrower"
@@ -76,7 +65,6 @@ jobs:
             "How to avoid overpaying for a house in a hot market"
             "Construction loans: how they work and what to watch out for"
             "Reverse mortgages explained: who they help and who they hurt"
-            "How to calculate break-even on mortgage refinancing"
             "Mobile home mortgages: financing options and what to expect"
             "How mortgage forbearance works and when to request it"
             "Multi-family property mortgages: house hacking explained"
@@ -84,14 +72,28 @@ jobs:
             "How to protect yourself from mortgage fraud"
             "Condo mortgages: how they differ from single-family loans"
             "What is a mortgage contingency and should you waive it"
-            "Rural home loans: USDA loans explained"
             "How to calculate equity and net worth from your home"
             "Portfolio loans: when banks hold your mortgage instead of selling it"
           )
 
-          IDX=$(( ($WEEK - 1) % ${#TOPICS[@]} ))
-          TOPIC="${TOPICS[$IDX]}"
-          SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | cut -c1-60)
+          # Start at this week's slot and take the first topic not published yet.
+          # A topic the fact-check gate rejects is not retried the next week (the
+          # slot moves on), and a published one is skipped instead of losing the week.
+          N=${#TOPICS[@]}
+          IDX=$(( ($WEEK - 1) % N ))
+          TOPIC=""
+          for i in $(seq 0 $((N - 1))); do
+            CAND="${TOPICS[$(( (IDX + i) % N ))]}"
+            CSLUG=$(echo "$CAND" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | cut -c1-60)
+            if [ ! -f "src/app/blog/$CSLUG/page.tsx" ]; then
+              TOPIC="$CAND"; SLUG="$CSLUG"; break
+            fi
+          done
+          if [ -z "$TOPIC" ]; then
+            echo "::warning::every topic in TOPICS is already published; add new topics"
+            echo "source=none" >> $GITHUB_OUTPUT
+            exit 0
+          fi
 
           echo "topic=$TOPIC" >> $GITHUB_OUTPUT
           echo "slug=$SLUG" >> $GITHUB_OUTPUT
@@ -121,7 +123,7 @@ jobs:
       # Groq inventa datos todas las semanas (credenciales del autor, casos con
       # porcentajes, limites de competidores, funciones que el sitio no tiene).
       # Claude Code revisa el borrador contra scripts/site_facts.md y lo corrige;
-      # si despues de 3 pasadas sigue habiendo problemas, falla y NO se publica.
+      # si despues de 4 pasadas sigue habiendo problemas, falla y NO se publica.
       # Usa la suscripcion Claude (token de `claude setup-token`), NUNCA la API
       # paga de Anthropic: por eso no hay ANTHROPIC_API_KEY en este paso.
       - name: Fact-check gate
