@@ -234,6 +234,13 @@ export default function BlogPage() {
       title: "How to Avoid Overpaying for a House in a Hot Market",
       description: "Set a payment ceiling and a value ceiling before you tour, read the comps yourself, and write offers that can survive a low appraisal.",
     },
+    {
+      slug: 'understanding-escrow-what-it-is-and-why-your-payment-include',
+      date: '2026-10-02',
+      tag: "Mortgage Guide",
+      title: "Understanding escrow: what it is and why your payment includes it",
+      description: "Learn how escrow works in a mortgage payment, why it is required, and how to manage it.",
+    },
   ];;
 
   const tagColors: Record<string, string> = {

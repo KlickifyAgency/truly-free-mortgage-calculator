@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-buy-a-house-with-bad-credit",
     "home-inspection-vs-appraisal-what-buyers-need-to-know",
     "how-to-avoid-overpaying-for-a-house-in-a-hot-market",
+    "understanding-escrow-what-it-is-and-why-your-payment-include",
   ];
 
   return [
