@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "home-inspection-vs-appraisal-what-buyers-need-to-know",
     "how-to-avoid-overpaying-for-a-house-in-a-hot-market",
     "understanding-escrow-what-it-is-and-why-your-payment-include",
+    "mortgage-preapproval-vs-prequalification-the-real-difference",
   ];
 
   return [

@@ -241,6 +241,13 @@ export default function BlogPage() {
       title: "Understanding escrow: what it is and why your payment includes it",
       description: "Learn how escrow works in a mortgage payment, why it is required, and how to manage it.",
     },
+    {
+      slug: 'mortgage-preapproval-vs-prequalification-the-real-difference',
+      date: '2026-10-09',
+      tag: "Mortgage Guide",
+      title: "Mortgage pre-approval vs pre-qualification: the real difference",
+      description: "A clear, step-by-step guide that shows borrowers exactly how pre-qualification and pre-approval differ, and how each step can help you find the right loan faster.",
+    },
   ];;
 
   const tagColors: Record<string, string> = {
