@@ -248,6 +248,13 @@ export default function BlogPage() {
       title: "Mortgage pre-approval vs pre-qualification: the real difference",
       description: "A clear, step-by-step guide that shows borrowers exactly how pre-qualification and pre-approval differ, and how each step can help you find the right loan faster.",
     },
+    {
+      slug: 'how-to-calculate-your-debttoincome-ratio-for-mortgage-approv',
+      date: '2026-10-24',
+      tag: "Mortgage Guide",
+      title: "How to Calculate Your Debt-to-Income Ratio for Mortgage Approval",
+      description: "Step-by-step guide to compute your debt-to-income ratio, a key metric lenders use to decide mortgage approval.",
+    },
   ];;
 
   const tagColors: Record<string, string> = {

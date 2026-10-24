@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-avoid-overpaying-for-a-house-in-a-hot-market",
     "understanding-escrow-what-it-is-and-why-your-payment-include",
     "mortgage-preapproval-vs-prequalification-the-real-difference",
+    "how-to-calculate-your-debttoincome-ratio-for-mortgage-approv",
   ];
 
   return [
