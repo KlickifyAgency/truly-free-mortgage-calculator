@@ -255,6 +255,13 @@ export default function BlogPage() {
       title: "How to Calculate Your Debt-to-Income Ratio for Mortgage Approval",
       description: "Step-by-step guide to compute your debt-to-income ratio, a key metric lenders use to decide mortgage approval.",
     },
+    {
+      slug: 'how-mortgage-interest-deductions-work-in-2026',
+      date: '2026-10-30',
+      tag: "Mortgage Guide",
+      title: "How Mortgage Interest Deductions Work in 2026",
+      description: "Step-by-step guide to understanding and maximizing mortgage interest deductions in 2026.",
+    },
   ];;
 
   const tagColors: Record<string, string> = {

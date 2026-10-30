@@ -50,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "understanding-escrow-what-it-is-and-why-your-payment-include",
     "mortgage-preapproval-vs-prequalification-the-real-difference",
     "how-to-calculate-your-debttoincome-ratio-for-mortgage-approv",
+    "how-mortgage-interest-deductions-work-in-2026",
   ];
 
   return [
