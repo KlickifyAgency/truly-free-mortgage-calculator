@@ -18,7 +18,7 @@ const jsonLd = JSON.stringify({
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
   url: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator',
   datePublished: '2026-05-09',
-  dateModified: '2026-08-29',
+  dateModified: '2026-11-06',
   mainEntityOfPage: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator',
 });
 
@@ -34,7 +34,7 @@ const faqJsonLd = JSON.stringify({
     {
       '@type': 'Question',
       name: 'What is FHA MIP and how is it calculated?',
-      acceptedAnswer: { '@type': 'Answer', text: 'FHA Mortgage Insurance Premium (MIP) has two components: an upfront MIP of 1.75% of the loan amount paid at closing, and an annual MIP ranging from 0.45% to 1.05% depending on loan term, loan amount, and LTV ratio. For a 30-year loan with less than 10% down, the annual MIP is 0.85%.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'FHA Mortgage Insurance Premium (MIP) has two components: an upfront MIP of 1.75% of the loan amount paid at closing, and an annual MIP ranging from 0.15% to 0.75% depending on loan term, loan amount, and LTV ratio. For a 30-year loan up to $726,200, the annual MIP is 0.55% with less than 5% down and 0.50% with 5% or more down.' },
     },
     {
       '@type': 'Question',
@@ -106,10 +106,10 @@ export default function FHAMortgageCalculator() {
 
           <div style={{ background: '#f0f4ff', borderLeft: '4px solid #2563eb', borderRadius: 8, padding: '28px 32px', marginBottom: 40 }}>
             <h2 style={{ fontSize: 18, fontWeight: 700, color: '#181c1e', letterSpacing: '-0.02em', marginBottom: 12 }}>
-              FHA MIP costs 1.75% upfront plus 0.85% a year on most 30-year loans.
+              FHA MIP costs 1.75% upfront plus 0.50% to 0.55% a year on most 30-year loans.
             </h2>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', marginBottom: 12 }}>
-              On a $338,000 loan (3.5% down on a $350,000 home), upfront MIP adds $5,915 to your loan balance at closing, and the 0.85% annual MIP adds about $238 to every monthly payment. Both figures come directly from HUD&apos;s own mortgage insurance premium schedule.
+              On a $338,000 loan (3.5% down on a $350,000 home), upfront MIP adds $5,915 to your loan balance at closing, and the 0.55% annual MIP adds about $155 to every monthly payment. Both figures come directly from HUD&apos;s own mortgage insurance premium schedule.
             </p>
             <p style={{ fontSize: 15, color: '#4a5568', lineHeight: 1.7, letterSpacing: '-0.01em', margin: 0 }}>
               With less than 10% down, that annual MIP does not cancel — it runs for the life of the loan, unlike conventional PMI which drops off at 20% equity. That is the single biggest reason FHA borrowers refinance into a conventional loan once they qualify.
@@ -161,7 +161,7 @@ export default function FHAMortgageCalculator() {
             </div>
             <div>
               <p className="text-sm font-bold text-gray-900 mb-1">2. Annual MIP</p>
-              <p className="text-sm text-gray-600">Rate: 0.55% to 1.05% depending on loan term, loan amount, and LTV. For most 30-year loans with less than 10% down on amounts under $726,200: 0.85% annually, divided by 12 and added to each monthly payment. On a $338,000 loan: $238/month added to your P&I payment every month.</p>
+              <p className="text-sm text-gray-600">Rate: 0.15% to 0.75% depending on loan term, loan amount, and LTV. For 30-year loans of up to $726,200: 0.55% annually with less than 5% down or 0.50% with 5% or more down, divided by 12 and added to each monthly payment. On a $338,000 loan with 3.5% down: $155/month added to your P&I payment every month.</p>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ export default function FHAMortgageCalculator() {
                 ['UFMIP (1.75% rolled in)', '$5,915'],
                 ['Total Loan Amount', '$343,915'],
                 ['Principal and Interest', '$2,230'],
-                ['Annual MIP (0.85%/12)', '$238'],
+                ['Annual MIP (0.55%/12)', '$155'],
                 ['Property Tax (est.)', '$338'],
                 ['Homeowners Insurance (est.)', '$146'],
               ].map(([k, v]) => (
@@ -185,7 +185,7 @@ export default function FHAMortgageCalculator() {
               ))}
               <div className="flex justify-between text-sm font-bold text-gray-900 pt-2">
                 <span>Total Monthly Payment</span>
-                <span className="tabular-nums">$2,952</span>
+                <span className="tabular-nums">$2,869</span>
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function FHAMortgageCalculator() {
           <div className="space-y-5">
             {[
               ['Why does this FHA calculator not ask for my email?', 'Because we do not sell leads. Every major mortgage calculator collects your contact information and sells it to lenders who will call you repeatedly. Our tool runs entirely in your browser. No data is transmitted to any server.'],
-              ['What is FHA MIP and how is it calculated?', 'FHA Mortgage Insurance Premium has two components: an upfront MIP of 1.75% of the loan amount paid at closing, and an annual MIP ranging from 0.55% to 1.05% depending on loan term, loan amount, and LTV ratio. For a 30-year loan with less than 10% down under the conforming loan limit, the annual MIP is 0.85%.'],
+              ['What is FHA MIP and how is it calculated?', 'FHA Mortgage Insurance Premium has two components: an upfront MIP of 1.75% of the loan amount paid at closing, and an annual MIP ranging from 0.15% to 0.75% depending on loan term, loan amount, and LTV ratio. For a 30-year loan up to $726,200, the annual MIP is 0.55% with less than 5% down and 0.50% with 5% or more down.'],
               ['What is the minimum down payment for an FHA loan?', 'The minimum down payment for an FHA loan is 3.5% of the purchase price for borrowers with a credit score of 580 or higher. Borrowers with credit scores between 500 and 579 are required to put down at least 10%.'],
               ['Does FHA MIP ever go away?', 'For FHA loans originated after June 3, 2013 with a down payment below 10%, annual MIP remains for the life of the loan. With a down payment of 10% or more, MIP is removed after 11 years. This is why many borrowers refinance into a conventional loan once they reach 20% equity.'],
               ['How does an FHA loan differ from a conventional loan?', 'FHA loans are government-backed, allowing credit scores as low as 580 and down payments of 3.5%. Conventional loans require stronger credit (typically 620 minimum) but PMI is removable at 20% equity. FHA MIP at below 10% down is permanent, making conventional financing cheaper long-term for qualified borrowers.'],

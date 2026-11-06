@@ -20,7 +20,7 @@ const jsonLd = {
       'headline': 'Calculadora de Hipoteca FHA: Cómo Calcular Tu Pago Incluyendo el Seguro MIP',
       'description': 'Guía completa sobre los préstamos FHA: requisitos de pago inicial, seguro hipotecario MIP, límites de préstamo 2026 y cómo calcular tu pago mensual exacto.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-20',
+      'dateModified': '2026-11-06',
       'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/calculadora-hipoteca-fha',
@@ -37,12 +37,12 @@ const jsonLd = {
         {
           '@type': 'Question',
           'name': '¿Qué es el MIP en un préstamo FHA?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'El MIP o Mortgage Insurance Premium es el seguro hipotecario que cobra la FHA. Tiene dos componentes: un cargo inicial (UFMIP) del 1.75% del monto del préstamo que se puede financiar, y un cargo anual del 0.55% dividido en pagos mensuales. A diferencia del PMI convencional, el MIP anual dura toda la vida del préstamo si el pago inicial fue menor al 10%.' },
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'El MIP o Mortgage Insurance Premium es el seguro hipotecario que cobra la FHA. Tiene dos componentes: un cargo inicial (UFMIP) del 1.75% del monto del préstamo que se puede financiar, y un cargo anual que en la mayoría de los préstamos a 30 años es del 0.50% o 0.55%, dividido en pagos mensuales. A diferencia del PMI convencional, el MIP anual dura toda la vida del préstamo si el pago inicial fue menor al 10%.' },
         },
         {
           '@type': 'Question',
           'name': '¿Cuál es el límite de préstamo FHA en 2026?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'En 2026 el límite FHA para áreas de costo estándar es $524,225 para una vivienda unifamiliar. En áreas de alto costo el límite llega hasta $1,209,750. Los límites varían por condado y se actualizan anualmente.' },
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'En 2026 el límite FHA para áreas de costo estándar es $541,287 para una vivienda unifamiliar. En áreas de alto costo el límite llega hasta $1,249,125. Los límites varían por condado y se actualizan anualmente.' },
         },
         {
           '@type': 'Question',
@@ -71,11 +71,11 @@ export default function CalculadoraHipotecaFHAPage() {
     },
     {
       q: '¿Qué es el MIP en un préstamo FHA?',
-      a: 'El MIP o Mortgage Insurance Premium es el seguro hipotecario que cobra la FHA. Tiene dos componentes: un cargo inicial del 1.75% del monto del préstamo que se puede financiar, y un cargo anual del 0.55% dividido en pagos mensuales. A diferencia del PMI convencional, el MIP anual dura toda la vida del préstamo si el pago inicial fue menor al 10%.',
+      a: 'El MIP o Mortgage Insurance Premium es el seguro hipotecario que cobra la FHA. Tiene dos componentes: un cargo inicial del 1.75% del monto del préstamo que se puede financiar, y un cargo anual que en la mayoría de los préstamos a 30 años es del 0.50% o 0.55%, dividido en pagos mensuales. A diferencia del PMI convencional, el MIP anual dura toda la vida del préstamo si el pago inicial fue menor al 10%.',
     },
     {
       q: '¿Cuál es el límite de préstamo FHA en 2026?',
-      a: 'En 2026 el límite FHA para áreas de costo estándar es $524,225 para una vivienda unifamiliar. En áreas de alto costo el límite llega hasta $1,209,750. Los límites varían por condado y se actualizan anualmente.',
+      a: 'En 2026 el límite FHA para áreas de costo estándar es $541,287 para una vivienda unifamiliar. En áreas de alto costo el límite llega hasta $1,249,125. Los límites varían por condado y se actualizan anualmente.',
     },
     {
       q: '¿Se puede eliminar el seguro MIP de un préstamo FHA?',
@@ -160,7 +160,7 @@ export default function CalculadoraHipotecaFHAPage() {
             La relación deuda-ingreso máxima es generalmente del 43%, aunque algunos prestamistas aprueban hasta el 50% con factores compensatorios como reservas de efectivo o historial de empleo estable. El préstamo debe ser para la residencia principal del prestatario — no se permiten propiedades de inversión ni casas vacacionales.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Los límites de préstamo en 2026 son $524,225 para áreas de costo estándar y hasta $1,209,750 en condados de alto costo como partes de California, Nueva York y Hawaii. La propiedad debe ser inspeccionada y cumplir con los estándares mínimos de la FHA en cuanto a condición y seguridad.
+            Los límites de préstamo en 2026 son $541,287 para áreas de costo estándar y hasta $1,249,125 en condados de alto costo como partes de California y Nueva York. La propiedad debe ser inspeccionada y cumplir con los estándares mínimos de la FHA en cuanto a condición y seguridad.
           </p>
 
           <h2 id="mip" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">El Seguro MIP Explicado</h2>
@@ -168,7 +168,7 @@ export default function CalculadoraHipotecaFHAPage() {
             El MIP tiene dos componentes que debes calcular por separado, tal como los define <a href="https://www.hud.gov/hud-partners/housing-upfront-mip" target="_blank" rel="noopener noreferrer">la página oficial de HUD sobre el MIP inicial</a>. El MIP inicial, conocido como UFMIP, es el 1.75% del monto del préstamo y se cobra al momento del cierre. En la mayoría de los casos se financia directamente en el préstamo, lo que significa que no necesitas pagarlo de tu bolsillo pero aumenta tu balance.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            El MIP anual es actualmente el 0.55% del balance del préstamo para la mayoría de los préstamos FHA a 30 años con menos del 10% de pago inicial. Este cargo se divide entre 12 y se añade a cada pago mensual. En un préstamo de $350,000 el MIP anual inicial es $1,925, o $160 por mes.
+            El MIP anual es actualmente el 0.55% del balance del préstamo en préstamos FHA a 30 años de hasta $726,200 con menos del 5% de pago inicial, y el 0.50% con 5% o más. Este cargo se divide entre 12 y se añade a cada pago mensual. En un préstamo de $350,000 con menos del 5% de pago inicial, el MIP anual inicial es $1,925, o $160 por mes.
           </p>
 
           <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">

@@ -17,7 +17,7 @@ const jsonLd = {
       'headline': 'Jumbo Loan Calculator: How to Calculate Payments on High-Balance Mortgages',
       'description': 'A complete guide to jumbo loan limits, qualification requirements, rate premiums, and how to calculate your monthly payment on loans above the conforming limit.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-20',
+      'dateModified': '2026-11-06',
       'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/jumbo-loan-calculator',
@@ -28,7 +28,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           'name': 'What is the jumbo loan limit in 2026?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'In 2026 the conforming loan limit set by the FHFA is $806,500 for single-family homes in most U.S. counties. In high-cost areas such as parts of California, New York, and Hawaii the limit is up to $1,209,750. Any loan above these thresholds is classified as a jumbo loan.' },
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'In 2026 the conforming loan limit set by the FHFA is $832,750 for single-family homes in most U.S. counties. In high-cost areas such as parts of California, New York, and Hawaii the limit is up to $1,249,125. Any loan above these thresholds is classified as a jumbo loan.' },
         },
         {
           '@type': 'Question',
@@ -63,7 +63,7 @@ export default function JumboLoanCalculatorPage() {
   const faqs = [
     {
       q: 'What is the jumbo loan limit in 2026?',
-      a: 'In 2026 the conforming loan limit set by the FHFA is $806,500 for single-family homes in most U.S. counties. In high-cost areas such as parts of California, New York, and Hawaii the limit is up to $1,209,750. Any loan above these thresholds is classified as a jumbo loan.',
+      a: 'In 2026 the conforming loan limit set by the FHFA is $832,750 for single-family homes in most U.S. counties. In high-cost areas such as parts of California, New York, and Hawaii the limit is up to $1,249,125. Any loan above these thresholds is classified as a jumbo loan.',
     },
     {
       q: 'Do jumbo loans have higher interest rates?',
@@ -115,7 +115,7 @@ export default function JumboLoanCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            Cross the conforming limit by a single dollar and you&apos;re in a completely different mortgage market. No Fannie or Freddie backing, stricter underwriting, reserve requirements that catch most borrowers off guard, and rates that don&apos;t always behave the way you&apos;d expect. If you&apos;re financing above $806,500, here&apos;s what&apos;s actually different — and how to calculate your payment before lender conversations start.
+            Cross the conforming limit by a single dollar and you&apos;re in a completely different mortgage market. No Fannie or Freddie backing, stricter underwriting, reserve requirements that catch most borrowers off guard, and rates that don&apos;t always behave the way you&apos;d expect. If you&apos;re financing above $832,750, here&apos;s what&apos;s actually different — and how to calculate your payment before lender conversations start.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -139,13 +139,13 @@ export default function JumboLoanCalculatorPage() {
 
           <h2 id="limits" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Conforming vs. Jumbo Loan Limits in 2026</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            The <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-jumbo-loan-en-127/" target="_blank" rel="noopener noreferrer">conforming loan limit, as the CFPB defines it</a>, is the maximum loan amount that Fannie Mae and Freddie Mac will purchase from lenders. In 2026 this limit is $806,500 for a single-family home in most U.S. counties. In designated high-cost areas — primarily coastal metro markets — the limit extends up to $1,209,750.
+            The <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-jumbo-loan-en-127/" target="_blank" rel="noopener noreferrer">conforming loan limit, as the CFPB defines it</a>, is the maximum loan amount that Fannie Mae and Freddie Mac will purchase from lenders. In 2026 this limit is $832,750 for a single-family home in most U.S. counties. In designated high-cost areas — primarily coastal metro markets — the limit extends up to $1,249,125.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             Any loan that exceeds these thresholds cannot be sold to Fannie or Freddie and must be held on the lender&apos;s balance sheet or sold to private investors. This changes the economics for lenders and results in different underwriting standards, reserve requirements, and rate structures.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            The practical implication: a borrower financing $810,000 in a standard-cost county is in jumbo territory even though they are only $3,500 above the conforming limit. The qualification process and rate they receive will differ materially from a borrower at $800,000.
+            The practical implication: a borrower financing $840,000 in a standard-cost county is in jumbo territory even though they are only $7,250 above the conforming limit. The qualification process and rate they receive will differ materially from a borrower at $825,000.
           </p>
 
           <h2 id="qualification" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Jumbo Loan Qualification Standards</h2>
@@ -181,10 +181,10 @@ export default function JumboLoanCalculatorPage() {
               </thead>
               <tbody>
                 {[
-                  ['$750,000', 'Conforming', '6.50%', '$4,743'],
-                  ['$810,000', 'Jumbo', '6.625%', '$5,188'],
+                  ['$750,000', 'Conforming', '6.50%', '$4,741'],
+                  ['$840,000', 'Jumbo', '6.625%', '$5,379'],
                   ['$1,200,000', 'Jumbo', '6.75%', '$7,783'],
-                  ['$2,000,000', 'Jumbo', '6.875%', '$13,142'],
+                  ['$2,000,000', 'Jumbo', '6.875%', '$13,139'],
                 ].map((row, i) => (
                   <tr key={row[0]} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F8F9FA]'}>
                     <td className="px-4 py-3 font-medium text-gray-800">{row[0]}</td>
@@ -213,7 +213,7 @@ export default function JumboLoanCalculatorPage() {
             The payment calculation for a jumbo loan uses the same amortization formula as any fixed-rate mortgage. The key differences are the rate input, which may carry a small premium over conforming rates, and the absence of PMI even at lower down payment percentages on most products.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Example: You purchase a $1,000,000 home with 20% down. Your loan amount is $800,000. This is just below the conforming limit in most counties so you may still be in conforming territory. At $810,000 you cross into jumbo. At a 6.625% jumbo rate over 30 years your monthly principal and interest is $5,188. Add property taxes at roughly $1,000 per month and insurance at $150 for a total payment of approximately $6,338.
+            Example: You purchase a $1,050,000 home with 20% down. Your loan amount is $840,000. This is above the $832,750 baseline conforming limit, so in most counties it is a jumbo loan. At a 6.625% jumbo rate over 30 years your monthly principal and interest is $5,379. Add property taxes at roughly $1,050 per month and insurance at $150 for a total payment of approximately $6,579.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             For a $2,000,000 purchase with 20% down the loan is $1,600,000. At 6.75% over 30 years the P&I is $10,379. Taxes and insurance on a home of this value might add $2,000 per month, bringing total monthly cost to over $12,000.

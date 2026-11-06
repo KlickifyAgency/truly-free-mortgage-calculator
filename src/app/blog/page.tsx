@@ -49,7 +49,7 @@ export default function BlogPage() {
       date: '2026-05-07',
       tag: 'Jumbo Loans',
       title: 'Jumbo Loan Calculator: How to Calculate Payments on High-Balance Mortgages',
-      description: 'Conforming limits, rate premiums, reserve requirements, and payment calculations for loans above $806,500.',
+      description: 'Conforming limits, rate premiums, reserve requirements, and payment calculations for loans above $832,750.',
     },
     {
       slug: 'investment-property-calculator',

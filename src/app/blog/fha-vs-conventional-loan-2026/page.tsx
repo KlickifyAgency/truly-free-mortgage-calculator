@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: 'Which loan is better for a first-time buyer with 3.5% down and a 640 credit score?', a: 'FHA. With a 640 score, conventional PMI would be very expensive (1.5%+ annually) or you might not qualify at all. FHA\'s MIP rate for 3.5% down is 0.85% annually, which is cheaper. Also, FHA allows down payment gifts from family; conventional requires the 3% to come from your own funds.' },
+  { q: 'Which loan is better for a first-time buyer with 3.5% down and a 640 credit score?', a: 'FHA. With a 640 score, conventional PMI would be very expensive (1.5%+ annually) or you might not qualify at all. FHA\'s MIP rate for 3.5% down is 0.55% annually on most 30-year loans, which is cheaper. Also, FHA allows down payment gifts from family; conventional requires the 3% to come from your own funds.' },
   { q: 'Can I remove FHA MIP without refinancing?', a: 'Only if you put at least 10% down. For loans with 10% down, MIP drops off after 11 years. For loans with less than 10% down, MIP is for life. You must refinance to a conventional loan to remove it. That refinance will require you to have 20% equity and good credit.' },
   { q: 'What are the upfront costs difference?', a: 'FHA has an upfront MIP of 1.75% of the loan. On $380,000, that is $6,650 added to your loan. Conventional has no upfront PMI, but you may need to pay origination fees (0.5-1%) and appraisal fees. The net difference is smaller than it seems.' },
   { q: 'Do FHA loans have lower interest rates than conventional?', a: 'Yes, typically 0.25-0.5% lower because FHA loans are backed by the government, making them less risky for lenders. However, the higher MIP costs often offset the rate advantage. You have to compare the total monthly payment, not just the rate.' },
@@ -26,7 +26,7 @@ const jsonLd = {
       'headline': 'FHA vs Conventional Loan: Which Costs Less in 2026?',
       'description': 'Real cost comparison on a $400,000 home with 5% down: monthly payments, mortgage insurance, upfront costs, and the 30-year crossover point.',
       'datePublished': '2026-06-10',
-      'dateModified': '2026-06-10',
+      'dateModified': '2026-11-06',
       'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/fha-vs-conventional-loan-2026',
@@ -45,7 +45,7 @@ const jsonLd = {
 const steps = [
   ['1. Go to trulyfreemortgage.com/mortgage-calculator', 'There is no dedicated FHA-vs-conventional mode — run each loan type separately in the standard calculator and compare the results.'],
   ['2. Run the conventional numbers first', 'Enter the home price and down payment, then turn on the PMI toggle under "Additional Costs." The calculator applies a flat national-average PMI rate (about 0.8% of the loan amount per year).'],
-  ['3. Run the FHA numbers separately', 'The PMI toggle models conventional PMI, not FHA MIP — it does not have an FHA-specific rate. Manually add FHA\'s upfront MIP (1.75% of the loan amount) and annual MIP (about 0.85%/year) using the figures in our FHA Mortgage Calculator guide, since the tool will not add these for you.'],
+  ['3. Run the FHA numbers separately', 'The PMI toggle models conventional PMI, not FHA MIP — it does not have an FHA-specific rate. Manually add FHA\'s upfront MIP (1.75% of the loan amount) and annual MIP (about 0.55%/year on most 30-year loans) using the figures in our FHA Mortgage Calculator guide, since the tool will not add these for you.'],
   ['4. Use the same loan term for both runs', '30 years is standard for both loan types, so the comparison is apples to apples.'],
   ['5. Enter your own quoted rate for each', 'The calculator has no credit-score field and does not estimate rates for you — real conventional PMI and rates do vary by credit score, so use your lender\'s actual quotes rather than a single default.'],
   ['6. Compare the two "Total Monthly" figures side by side', 'Since the tool runs one loan at a time, write down or screenshot each total before switching numbers to the other loan type.'],
@@ -102,7 +102,7 @@ export default function FHAvsConventionalLoan2026Page() {
             You have $20,000 saved for a down payment. You want to buy a $400,000 home. That is 5% down. A mortgage broker offers you two options: an FHA loan or a conventional loan. You have no idea which is cheaper. The broker says, &quot;FHA is easier to qualify for.&quot; But they do not explain the costs.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Here is the truth. FHA loans are designed for borrowers with lower credit scores (580+). Conventional loans are for borrowers with good credit (620+). But FHA loans come with two forms of mortgage insurance: an upfront premium (1.75% of the loan) and an annual premium (0.55% to 1.05% depending on down payment and term), rates <a href="https://www.hud.gov/hud-partners/housing-mip" target="_blank" rel="noopener noreferrer">set and published by HUD</a>. Conventional loans have PMI, which can be cheaper for borrowers with good credit.
+            Here is the truth. FHA loans are designed for borrowers with lower credit scores (580+). Conventional loans are for borrowers with good credit (620+). But FHA loans come with two forms of mortgage insurance: an upfront premium (1.75% of the loan) and an annual premium (0.15% to 0.75% depending on loan amount, down payment and term; 0.50% to 0.55% on most 30-year loans), rates <a href="https://www.hud.gov/hud-partners/housing-mip" target="_blank" rel="noopener noreferrer">set and published by HUD</a>. Conventional loans have PMI, which can be cheaper for borrowers with good credit.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-8">
             Most online comparisons are written by lenders who prefer FHA because they earn higher origination fees. Bankrate has a comparison table, but it is buried under ads. NerdWallet&apos;s comparison requires scrolling through pages of lead forms. LendingTree does not compare — they just want you to apply. Here is the real math for 2026.
@@ -116,10 +116,10 @@ export default function FHAvsConventionalLoan2026Page() {
             Conventional loan at 6.8%: Monthly principal and interest: $2,478. PMI at 0.8% annually (for 5% down, 700 credit) = $253 per month. Total PITI (assuming taxes $400, insurance $100) = $2,478 + $253 + $400 + $100 = $3,231. PMI can be canceled when you reach 20% equity, around year 11. Total PMI paid over 11 years: about $33,400.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            FHA loan at 6.5% (FHA rates are slightly lower than conventional because they are government-backed): Monthly P&amp;I at 6.5% on $380,000 = $2,402. Upfront MIP (mortgage insurance premium) of 1.75% = $6,650. This is either paid at closing or rolled into the loan. If rolled in, loan becomes $386,650. Annual MIP (ongoing) at 0.55% (for 5% down, 30-year term) = 0.55% × $380,000 = $2,090 per year, or $174 per month. Total monthly PITI = $2,402 + $174 + $400 + $100 = $3,076. That is $155 per month cheaper than conventional.
+            FHA loan at 6.5% (FHA rates are slightly lower than conventional because they are government-backed): Monthly P&amp;I at 6.5% on $380,000 = $2,402. Upfront MIP (mortgage insurance premium) of 1.75% = $6,650. This is either paid at closing or rolled into the loan. If rolled in, loan becomes $386,650. Annual MIP (ongoing) at 0.50% (for 5% down, 30-year term) = 0.50% × $380,000 = $1,900 per year, or $158 per month. Total monthly PITI = $2,402 + $158 + $400 + $100 = $3,060. That is $171 per month cheaper than conventional.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            But here is the catch. On an FHA loan with 5% down, the MIP lasts for the entire 30-year term if you put less than 10% down. You cannot cancel it unless you refinance to a conventional loan later. Over 30 years, total MIP paid = $174 × 360 = $62,640, plus the upfront $6,650, total $69,290. On the conventional loan, total PMI paid is $33,400 over 11 years, then nothing. So the conventional loan is actually cheaper in the long run if you hold the loan past year 11.
+            But here is the catch. On an FHA loan with 5% down, the MIP lasts for the entire 30-year term if you put less than 10% down. You cannot cancel it unless you refinance to a conventional loan later. Over 30 years, total MIP paid = $158 × 360 = $56,880, plus the upfront $6,650, total $63,530. On the conventional loan, total PMI paid is $33,400 over 11 years, then nothing. So the conventional loan is actually cheaper in the long run if you hold the loan past year 11.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             Which is better? If you plan to sell or refinance within 10 years, FHA&apos;s lower monthly payment might win. If you plan to stay for 30 years, conventional wins. Also, if your credit score is below 680, FHA&apos;s PMI rate might be lower than conventional&apos;s PMI, making FHA cheaper even long-term.

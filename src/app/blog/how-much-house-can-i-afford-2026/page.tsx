@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: 'How much house can I afford on $70,000 a year?', a: 'Using the 28% rule, your maximum housing payment is $1,633 per month ($70,000/12*0.28). With 20% down, 6.8% interest, and assuming $300/month for taxes and insurance, the principal and interest portion is about $1,333. That supports a loan amount of roughly $205,000. With 20% down, that is a home price of $256,000. In most markets, that buys a small condo or an older townhouse. With 3% down (FHA), the payment would be higher due to PMI, so you would need a cheaper home.' },
-  { q: 'Does the calculator include PMI automatically?', a: 'Yes. If you enter a down payment less than 20%, the calculator adds PMI. The default PMI rate is 0.8% of the loan amount annually, which is typical for conventional loans. FHA loans have MIP (mortgage insurance premium) at 0.55% to 1.05% depending on down payment and term. Our calculator lets you adjust the PMI rate if you know your specific loan type.' },
+  { q: 'Does the calculator include PMI automatically?', a: 'Yes. If you enter a down payment less than 20%, the calculator adds PMI. The default PMI rate is 0.8% of the loan amount annually, which is typical for conventional loans. FHA loans have MIP (mortgage insurance premium) at 0.15% to 0.75% depending on loan amount, down payment and term. Our calculator lets you adjust the PMI rate if you know your specific loan type.' },
   { q: 'How much down payment do I need to avoid PMI?', a: '20% of the purchase price. On a $300,000 home, you need $60,000 down. On a $420,000 home, $84,000 down. Some conventional loans allow 5% down with PMI that automatically drops off when you reach 20% equity. FHA loans require MIP for the life of the loan if you put less than 10% down.' },
   { q: 'What is a comfortable debt-to-income ratio for most people?', a: 'Financial planners recommend 28% or less for housing and 36% or less for total debt. In expensive cities (NYC, San Francisco, Boston), many people stretch to 35% housing and 45% total debt. But that leaves little room for error. A $2,000 car repair or medical bill becomes a crisis. I recommend staying under 30% housing if you have any other debts.' },
   { q: 'Can I afford a $500,000 house on a combined income of $120,000?', a: '$120,000 annual gross = $10,000 per month. 28% = $2,800 max housing payment. On a $500,000 house with 10% down ($50,000), loan is $450,000. Principal and interest at 6.8%: $2,935. Add taxes at 1.2% ($500/month), insurance ($125/month), PMI ($300/month) = $3,860 total. That is $1,060 over the 28% rule. You would need a much larger down payment to make this work, or you need to look at homes under $350,000.' },
@@ -26,7 +26,7 @@ const jsonLd = {
       'headline': 'How Much House Can I Afford? (2026 Calculator)',
       'description': 'The real question is not what a bank will lend you. It is what you can pay every month without becoming house-poor. The 28/36 rule explained with real 2026 numbers.',
       'datePublished': '2026-06-10',
-      'dateModified': '2026-08-29',
+      'dateModified': '2026-11-06',
       'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/', 'sameAs': ['https://www.linkedin.com/in/george-smith-832113217/'] },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/how-much-house-can-i-afford-2026',
