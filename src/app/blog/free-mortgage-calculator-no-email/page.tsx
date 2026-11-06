@@ -43,7 +43,7 @@ const jsonLd = {
 };
 
 const steps = [
-  ['1. Go to trulyfreemortgage.com', 'No account, no email field, no "sign up to continue." The calculator is front and center. I designed it to work without JavaScript? Actually it uses JavaScript, but nothing is sent to my server until you choose to generate an amortization schedule. Your inputs stay in your browser.'],
+  ['1. Go to trulyfreemortgage.com', 'No account, no email field, no "sign up to continue." The calculator is front and center. It runs on JavaScript in your browser, and nothing you enter is sent to my server, even when you generate an amortization schedule. Your inputs stay in your browser.'],
   ['2. Enter the home price', 'Use the actual sale price or the maximum you are considering. For a first-time buyer in 2026, the median is around $420,000. But maybe you are looking at $350,000 or $500,000. Type it in. The slider helps you visualize.'],
   ['3. Enter your down payment amount or percentage', 'You can type either the dollar amount (e.g., $84,000) or the percentage (20%). The calculator automatically converts. If you put less than 20%, you will see a PMI field appear automatically. PMI typically costs 0.5% to 1.5% of the loan amount annually. On a $336,000 loan at 0.8%, that is $2,688 per year or $224 per month.'],
   ['4. Enter the interest rate', 'Use the current rate your lender quoted you. As of mid-2026, 30-year fixed rates are around 6.8% for well-qualified buyers. If you have a lower credit score, expect 7% to 7.5%. You can also check national averages on Freddie Mac\'s website.'],
@@ -167,7 +167,7 @@ export default function FreeMortgageCalculatorNoEmailPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Rates, tax rates, and insurance costs vary by lender, location, and borrower profile. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Rates, tax rates, and insurance costs vary by lender, location, and borrower profile. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

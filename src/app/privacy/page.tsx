@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Truly Free Mortgage Calculator",
-  description: "Truly Free Mortgage Calculator privacy policy. No data collection, no tracking, no registration required.",
+  description: "Truly Free Mortgage Calculator privacy policy: your numbers stay in your browser, and this page lists the analytics and advertising services we use.",
   alternates: { canonical: "https://trulyfreemortgage.com/privacy" },
 };
 
@@ -25,10 +25,10 @@ export default function PrivacyPage() {
           <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-[#718096] mb-2">Legal</div>
           <h1 className="text-2xl font-bold text-[#181c1e] tracking-tight mb-8">Privacy Policy</h1>
           <div className="space-y-6 text-[15px] text-[#4a5568] leading-relaxed">
-            <p>Last updated: May 9, 2026</p>
+            <p>Last updated: November 6, 2026</p>
             <div>
-              <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">No data collection</h2>
-              <p>Truly Free Mortgage Calculator does not collect, store, or transmit any personal data. All mortgage calculations are performed entirely within your browser. The numbers you enter — loan amount, interest rate, income, or any other financial figures — never leave your device.</p>
+              <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Your numbers stay in your browser</h2>
+              <p>All mortgage calculations are performed entirely within your browser. The numbers you enter — loan amount, interest rate, income, or any other financial figures — never leave your device, and we never collect them.</p>
             </div>
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">No registration required</h2>
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
             </div>
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Analytics</h2>
-              <p>We may use anonymous, aggregated analytics to understand general traffic patterns. This data contains no personally identifiable information and cannot be traced back to any individual user.</p>
+              <p>We use Google Analytics and Google Tag Manager to understand how visitors use this site. They record pages viewed, approximate location, device and browser type, and the referring site, and they set first-party cookies such as <code>_ga</code>. Google handles this data under its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#0058c3] font-medium">Privacy Policy</a>, and you can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-[#0058c3] font-medium">Google Analytics opt-out add-on</a>. We also use Cloudflare Web Analytics, which measures page performance and does not set cookies. None of these services receive the numbers you enter into the calculators.</p>
             </div>
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Third-party links</h2>

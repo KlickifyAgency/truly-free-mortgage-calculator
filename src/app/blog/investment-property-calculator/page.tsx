@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Investment Property Mortgage Calculator — Free | Truly Free Mortgage',
-  description: 'Calculate your investment property mortgage payment, cash flow, cap rate, and cash-on-cash return instantly. No registration. Your data never leaves your browser.',
+  description: 'Calculate your investment property mortgage payment, cash flow, cap rate, and cash-on-cash return instantly. No registration. Your numbers never leave your browser.',
   alternates: { canonical: 'https://trulyfreemortgage.com/blog/investment-property-calculator' },
 };
 
@@ -247,7 +247,7 @@ export default function InvestmentPropertyCalculatorPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only and do not constitute investment advice. Actual financing terms, rental income, and investment returns vary significantly by market and individual circumstances. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only and do not constitute investment advice. Actual financing terms, rental income, and investment returns vary significantly by market and individual circumstances. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

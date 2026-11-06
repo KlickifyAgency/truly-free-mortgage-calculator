@@ -218,7 +218,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
 
           <h2 id="generate" className="text-[22px] font-bold tracking-tight text-gray-900 mb-3 mt-10">Calculate Your Payment for Free</h2>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
-            Truly Free Mortgage calculates your complete USDA payment breakdown including the guarantee fee, property taxes, and insurance with no registration and no lender referral. Every calculation runs in your browser and your data never reaches a server.
+            Truly Free Mortgage calculates your complete USDA payment breakdown including the guarantee fee, property taxes, and insurance with no registration and no lender referral. Every calculation runs in your browser and your numbers never reach a server.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             Use it to model different purchase prices, compare USDA against FHA side by side, and understand exactly where your money goes every month before you ever speak to a lender.
@@ -243,7 +243,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. USDA loan eligibility, income limits, and guarantee fees are set by the U.S. Department of Agriculture and subject to change. Consult a USDA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. USDA loan eligibility, income limits, and guarantee fees are set by the U.S. Department of Agriculture and subject to change. Consult a USDA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

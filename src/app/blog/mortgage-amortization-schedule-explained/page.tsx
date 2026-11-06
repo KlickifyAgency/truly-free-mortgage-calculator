@@ -44,7 +44,7 @@ const jsonLd = {
 
 const steps = [
   ['1. Go to trulyfreemortgage.com and enter your loan details', 'Home price, down payment, interest rate, term. Use real numbers for your situation. The calculator will show the monthly payment.'],
-  ['2. Click the "Full Amortization Schedule" button', 'This is below the main results. It will generate a table with 360 rows (for a 30-year loan). The generation happens entirely in your browser. Your data is not sent anywhere.'],
+  ['2. Click the "Full Amortization Schedule" button', 'This is below the main results. It will generate a table with 360 rows (for a 30-year loan). The generation happens entirely in your browser. Your numbers are not sent anywhere.'],
   ['3. Look at the first few rows', 'You will see month 1: payment $2,191, interest $1,904, principal $287, remaining balance $335,713. Notice how the principal portion is tiny. This is normal.'],
   ['4. Scroll to year 5 (month 60)', 'See how much principal you have paid. In our example, after 5 years, total principal paid is about $20,000. Total interest paid is about $114,000. Remaining balance is about $316,000. This is eye-opening. You paid $131,000 over 5 years, but only $20,000 went to equity.'],
   ['5. Scroll to year 15 (month 180)', 'At this point, principal paid accelerates. Remaining balance is about $220,000. You have paid $116,000 toward principal over 15 years (half the loan). Interest paid to date is about $278,000.'],
@@ -167,7 +167,7 @@ export default function MortgageAmortizationScheduleExplainedPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Rates, tax rates, and insurance costs vary by lender, location, and borrower profile. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Rates, tax rates, and insurance costs vary by lender, location, and borrower profile. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

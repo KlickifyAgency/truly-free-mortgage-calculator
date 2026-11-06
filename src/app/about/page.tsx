@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About George Smith — Truly Free Mortgage Calculator",
-  description: "George Smith is the founder of Klickify Agency and creator of Truly Free Mortgage Calculator. Free tools built on client-side math, no data collection, no lead funnels.",
+  description: "George Smith is the founder of Klickify Agency and creator of Truly Free Mortgage Calculator. Free tools built on client-side math, no signup, no lead funnels.",
   alternates: { canonical: "https://trulyfreemortgage.com/about" },
 };
 
@@ -69,9 +69,9 @@ export default function AboutPage() {
 
               <p>That model is profitable for the platforms and the lenders. It is terrible for anyone who just wants to run numbers before they are ready to talk to anyone. Most people shopping for a home spend weeks or months in the research phase — comparing purchase prices, modeling different down payments, understanding what a rate change actually costs over 30 years — before they ever want to speak with a loan officer. They shouldn&apos;t have to give up their contact information to do basic math.</p>
 
-              <p>This calculator is different in one specific way: it runs entirely in your browser. The standard amortization formula, the PMI calculation, the full amortization schedule — all of it executes on your device. Nothing is sent to a server. No account is created. No session is stored. You can close the tab and no record of what you calculated exists anywhere outside your browser history.</p>
+              <p>This calculator is different in one specific way: it runs entirely in your browser. The standard amortization formula, the PMI calculation, the full amortization schedule — all of it executes on your device. Your numbers are not sent to a server. No account is created. You can close the tab and no record of what you calculated exists anywhere outside your browser history.</p>
 
-              <p>I run Klickify Agency, a digital agency focused on web tools, SEO, and performance marketing. Before starting the agency, I spent years inside the digital marketing industry watching exactly how lead generation worked — including the mortgage space. The gap between what borrowers needed (a clean calculation tool) and what the industry provided (a contact harvesting mechanism) was obvious. Building this calculator was straightforward. The math is not proprietary. The decision to not collect data is a choice, not a technical limitation.</p>
+              <p>I run Klickify Agency, a digital agency focused on web tools, SEO, and performance marketing. Before starting the agency, I spent years inside the digital marketing industry watching exactly how lead generation worked — including the mortgage space. The gap between what borrowers needed (a clean calculation tool) and what the industry provided (a contact harvesting mechanism) was obvious. Building this calculator was straightforward. The math is not proprietary. The decision not to collect your numbers or contact details is a choice, not a technical limitation.</p>
 
               <p>The tool is ad-supported — display advertising, clearly marked as ads. That is the entire revenue model. No lead fees, no affiliate commissions, no lender partnerships. The business works as long as people find the calculator useful enough to return to it — which means the incentive is to build something genuinely useful, not something that extracts value from the people using it.</p>
 

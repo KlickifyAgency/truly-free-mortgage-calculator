@@ -29,7 +29,7 @@ const faqJsonLd = JSON.stringify({
     {
       '@type': 'Question',
       name: 'Why does this FHA calculator not ask for my email?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Because we do not sell leads. Every major mortgage calculator collects your contact information and sells it to lenders who will call you repeatedly. Our tool runs entirely in your browser. No data is transmitted to any server.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Because we do not sell leads. Every major mortgage calculator collects your contact information and sells it to lenders who will call you repeatedly. Our tool runs entirely in your browser. Your numbers are not transmitted to any server.' },
     },
     {
       '@type': 'Question',
@@ -95,7 +95,7 @@ export default function FHAMortgageCalculator() {
             </div>
           </div>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            The FHA loan is the most misunderstood mortgage product in the United States. Lenders market its low 3.5% down payment prominently while burying the true cost of Mortgage Insurance Premium (MIP) in footnotes. This guide gives you the technical formula to calculate your exact FHA payment — including both upfront and annual MIP — with zero data collection on our end.
+            The FHA loan is the most misunderstood mortgage product in the United States. Lenders market its low 3.5% down payment prominently while burying the true cost of Mortgage Insurance Premium (MIP) in footnotes. This guide gives you the technical formula to calculate your exact FHA payment — including both upfront and annual MIP — without collecting your numbers on our end.
           </p>
 
           <Link href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
@@ -236,7 +236,7 @@ export default function FHAMortgageCalculator() {
           <h2 id="faq" className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-5">
             {[
-              ['Why does this FHA calculator not ask for my email?', 'Because we do not sell leads. Every major mortgage calculator collects your contact information and sells it to lenders who will call you repeatedly. Our tool runs entirely in your browser. No data is transmitted to any server.'],
+              ['Why does this FHA calculator not ask for my email?', 'Because we do not sell leads. Every major mortgage calculator collects your contact information and sells it to lenders who will call you repeatedly. Our tool runs entirely in your browser. Your numbers are not transmitted to any server.'],
               ['What is FHA MIP and how is it calculated?', 'FHA Mortgage Insurance Premium has two components: an upfront MIP of 1.75% of the loan amount paid at closing, and an annual MIP ranging from 0.15% to 0.75% depending on loan term, loan amount, and LTV ratio. For a 30-year loan up to $726,200, the annual MIP is 0.55% with less than 5% down and 0.50% with 5% or more down.'],
               ['What is the minimum down payment for an FHA loan?', 'The minimum down payment for an FHA loan is 3.5% of the purchase price for borrowers with a credit score of 580 or higher. Borrowers with credit scores between 500 and 579 are required to put down at least 10%.'],
               ['Does FHA MIP ever go away?', 'For FHA loans originated after June 3, 2013 with a down payment below 10%, annual MIP remains for the life of the loan. With a down payment of 10% or more, MIP is removed after 11 years. This is why many borrowers refinance into a conventional loan once they reach 20% equity.'],
@@ -251,7 +251,7 @@ export default function FHAMortgageCalculator() {
 
           <div className="mt-10 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              The calculations and information on this page are for educational purposes only. Actual FHA loan terms, MIP rates, and eligibility requirements are set by HUD and may change. Consult a HUD-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              The calculations and information on this page are for educational purposes only. Actual FHA loan terms, MIP rates, and eligibility requirements are set by HUD and may change. Consult a HUD-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
           <AuthorBox />

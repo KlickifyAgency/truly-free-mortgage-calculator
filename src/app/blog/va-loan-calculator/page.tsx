@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'VA Loan Calculator — Free, No Sign-Up | Truly Free Mortgage',
-  description: 'Calculate your VA loan payment instantly. No PMI, no down payment required. Free forever, no account needed. Your data never leaves your browser.',
+  description: 'Calculate your VA loan payment instantly. No PMI, no down payment required. Free forever, no account needed. Your numbers never leave your browser.',
   alternates: { canonical: 'https://trulyfreemortgage.com/blog/va-loan-calculator' },
 };
 
@@ -274,7 +274,7 @@ export default function VALoanCalculatorPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. VA loan eligibility, funding fees, and program terms are set by the Department of Veterans Affairs and subject to change. Consult a VA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. VA loan eligibility, funding fees, and program terms are set by the Department of Veterans Affairs and subject to change. Consult a VA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

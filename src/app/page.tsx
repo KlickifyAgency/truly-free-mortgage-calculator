@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Truly Free Mortgage Calculator — No Email, No Registration',
-  description: 'Calculate your mortgage payment instantly. Full amortization, PMI, taxes, HOA. 100% free. No signup. Your data never leaves your browser.',
+  description: 'Calculate your mortgage payment instantly. Full amortization, PMI, taxes, HOA. 100% free. No signup. Your numbers never leave your browser.',
   alternates: { canonical: 'https://trulyfreemortgage.com' },
 };
 
@@ -38,7 +38,7 @@ const faqJsonLd = JSON.stringify({
     {
       '@type': 'Question',
       name: 'Does the calculator store my financial information?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. Every calculation runs entirely in your browser. Nothing is transmitted to a server. The numbers you enter — home price, income, down payment — never leave your device. No account, no session, no data retention.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. Every calculation runs entirely in your browser. Your inputs are never transmitted to a server. The numbers you enter — home price, income, down payment — never leave your device. No account, and nothing you type is saved.' },
     },
     {
       '@type': 'Question',
@@ -53,7 +53,7 @@ const faqJsonLd = JSON.stringify({
     {
       '@type': 'Question',
       name: 'Why do most mortgage calculators ask for my email?',
-      acceptedAnswer: { '@type': 'Answer', text: "Most mortgage calculators are lead generation tools for lenders. They collect your contact information and sell it to loan officers who will call you. This calculator doesn't participate in that model. No data is collected, no leads are sold." },
+      acceptedAnswer: { '@type': 'Answer', text: "Most mortgage calculators are lead generation tools for lenders. They collect your contact information and sell it to loan officers who will call you. This calculator doesn't participate in that model. Your numbers are not collected, and no leads are sold." },
     },
     {
       '@type': 'Question',
@@ -65,10 +65,10 @@ const faqJsonLd = JSON.stringify({
 
 const faqs = [
   { q: 'Is this mortgage calculator really free?', a: "Yes — completely free, with no limits. No trial period, no daily cap, no premium version. You can run as many calculations as you want. It's supported by advertising, not by selling your data or requiring registration." },
-  { q: 'Does the calculator store my financial information?', a: 'No. Every calculation runs entirely in your browser. Nothing is transmitted to a server. The numbers you enter — home price, income, down payment — never leave your device. No account, no session, no data retention.' },
+  { q: 'Does the calculator store my financial information?', a: 'No. Every calculation runs entirely in your browser. Your inputs are never transmitted to a server. The numbers you enter — home price, income, down payment — never leave your device. No account, and nothing you type is saved.' },
   { q: 'What does the calculator include beyond principal and interest?', a: 'You can toggle property tax, homeowners insurance, PMI, and HOA fees independently to see your full monthly cost. The amortization schedule shows every payment over the life of the loan broken down by principal and interest.' },
   { q: 'How accurate are the results?', a: 'The principal and interest calculation uses the standard amortization formula and is mathematically exact. Property tax, insurance, and PMI are estimates based on national averages — your actual costs depend on location, lender, and loan type.' },
-  { q: "Why do most mortgage calculators ask for my email?", a: "Most mortgage calculators are lead generation tools for lenders. They collect your contact information and sell it to loan officers who will call you. This calculator doesn't participate in that model. No data is collected, no leads are sold." },
+  { q: "Why do most mortgage calculators ask for my email?", a: "Most mortgage calculators are lead generation tools for lenders. They collect your contact information and sell it to loan officers who will call you. This calculator doesn't participate in that model. Your numbers are not collected, and no leads are sold." },
   { q: 'Can I compare multiple loan scenarios?', a: 'Yes. The calculator has a Scenario Comparison tab that lets you run up to three loan scenarios side by side — useful for comparing 15-year vs 30-year terms, different down payments, or the effect of a rate change on total interest paid.' },
 ];
 
@@ -120,7 +120,7 @@ export default function HomePage() {
             Open Calculator
           </Link>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
-            {['No Email Required', 'No Daily Limit', 'Data Stays in Browser', 'No Credit Card'].map((label) => (
+            {['No Email Required', 'No Daily Limit', 'Numbers Stay in Browser', 'No Credit Card'].map((label) => (
               <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#ffffff', borderRadius: '4px', padding: '8px 14px', boxShadow: '0px 2px 8px rgba(24,28,30,0.06)' }}>
                 {checkIcon}
                 <span style={{ fontSize: '13px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>{label}</span>

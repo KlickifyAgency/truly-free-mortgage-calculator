@@ -141,7 +141,7 @@ export default function BankrateMortgageCalculatorReviewPage() {
             Zillow&apos;s mortgage calculator is integrated with their real estate platform. If you are logged into Zillow, they already have your contact information. They use calculator inputs to target you with listings and lender offers.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            The only truly free calculators are those that do not have a lead generation business model. That means they are funded by advertising (like mine) or by donations (like open-source projects). Display advertising does not require collecting your data — the revenue model is showing ads, not selling your information.
+            The only truly free calculators are those that do not have a lead generation business model. That means they are funded by advertising (like mine) or by donations (like open-source projects). Display advertising does not require collecting your contact details — the revenue model is showing ads, not selling your information.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -167,7 +167,7 @@ export default function BankrateMortgageCalculatorReviewPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures and revenue estimates on this page are for educational purposes only. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures and revenue estimates on this page are for educational purposes only. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

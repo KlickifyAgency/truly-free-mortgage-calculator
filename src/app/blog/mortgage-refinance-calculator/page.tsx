@@ -199,7 +199,7 @@ export default function RefinanceCalculator() {
             ))}
           </div>
           <div className="mt-10 pt-8">
-            <p className="text-xs text-gray-400 leading-relaxed">Figures on this page are for educational purposes only. Actual refinance costs, savings, and break-even timelines depend on lender-specific fees and current market rates. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.</p>
+            <p className="text-xs text-gray-400 leading-relaxed">Figures on this page are for educational purposes only. Actual refinance costs, savings, and break-even timelines depend on lender-specific fees and current market rates. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.</p>
           </div>
           <AuthorBox />
         </div>

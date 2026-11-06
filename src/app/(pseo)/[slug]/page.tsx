@@ -354,7 +354,7 @@ export default async function StateCalculatorPage({ params }: Props) {
             </div>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px' }}>
-            {['No Email Required', 'No Daily Limit', 'Data Stays in Browser'].map((label) => (
+            {['No Email Required', 'No Daily Limit', 'Numbers Stay in Browser'].map((label) => (
               <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#ffffff', borderRadius: '4px', padding: '7px 12px', boxShadow: '0px 1px 4px rgba(24,28,30,0.06)' }}>
                 {checkIcon}
                 <span style={{ fontSize: '13px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>{label}</span>

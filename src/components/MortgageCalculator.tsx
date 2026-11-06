@@ -136,7 +136,7 @@ const FAQ_LD = JSON.stringify({
     {
       '@type': 'Question',
       name: 'How does the mortgage calculator work?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Enter your home price, down payment, interest rate, and loan term. The calculator computes your monthly principal and interest payment using the standard amortization formula. Toggle property tax, homeowners insurance, PMI, and HOA to see your full monthly cost. All calculations happen instantly in your browser — no data is sent to any server.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Enter your home price, down payment, interest rate, and loan term. The calculator computes your monthly principal and interest payment using the standard amortization formula. Toggle property tax, homeowners insurance, PMI, and HOA to see your full monthly cost. All calculations happen instantly in your browser — your numbers are not sent to any server.' },
     },
     {
       '@type': 'Question',
@@ -316,7 +316,7 @@ export default function MortgageCalculator() {
         </nav>
         <div className="bg-white px-6 py-2 flex items-center justify-center gap-2 no-print">
           <span className="bg-blue-600 text-white text-xs font-bold tracking-widest px-2 py-0.5 rounded">TRULY FREE</span>
-          <span className="text-xs text-gray-500">No registration. No email. No limits. Your data never leaves your browser.</span>
+          <span className="text-xs text-gray-500">No registration. No email. No limits. Your numbers never leave your browser.</span>
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-12">
           <div className="mb-6"><AdSlot slot={AD_SLOT_TOP} format="leaderboard" /></div>
@@ -327,7 +327,7 @@ export default function MortgageCalculator() {
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 Calculated locally
               </span>
-              All calculations happen in your browser. Zero data transmitted.
+              All calculations happen in your browser. Your numbers are not transmitted.
             </p>
           </div>
           <div className="flex mb-6 no-print">
@@ -368,7 +368,7 @@ export default function MortgageCalculator() {
                     <p className="text-xs font-medium uppercase tracking-widest opacity-75 mb-1">Monthly Payment</p>
                     <p className="text-4xl font-semibold tracking-tight leading-none tabular-nums">{result ? fmtCurrency(result.totalMonthly) : '-'}</p>
                     <p className="text-xs opacity-60 mt-1">{hasPlugins ? 'Including all selected costs' : 'Principal and Interest only'}</p>
-                    <p className="text-xs opacity-50 mt-2">Calculated locally - zero data transmitted - FREE FOREVER</p>
+                    <p className="text-xs opacity-50 mt-2">Calculated locally - your numbers stay here - FREE FOREVER</p>
                   </div>
                   <div className="grid grid-cols-3 divide-x divide-gray-100">
                     {[['Loan Amount', result ? fmtCompact(result.loanAmount) : '-'],['Total Interest', result ? fmtCompact(result.totalInterest) : '-'],['Total Cost', result ? fmtCompact(result.totalCost) : '-']].map(([label,val]) => (
@@ -484,7 +484,7 @@ export default function MortgageCalculator() {
               <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-6">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 {[
-                  ['How does the mortgage calculator work?', 'Enter your home price, down payment, interest rate, and loan term. The calculator computes your monthly principal and interest payment using the standard amortization formula. Toggle property tax, insurance, PMI, and HOA to see your full monthly cost. All calculations happen instantly in your browser — no data is sent anywhere.'],
+                  ['How does the mortgage calculator work?', 'Enter your home price, down payment, interest rate, and loan term. The calculator computes your monthly principal and interest payment using the standard amortization formula. Toggle property tax, insurance, PMI, and HOA to see your full monthly cost. All calculations happen instantly in your browser — your numbers are not sent anywhere.'],
                   ['What is included in a monthly mortgage payment?', 'A full mortgage payment has four components: Principal (reduces your loan balance), Interest (the lender\'s fee for the loan), Taxes (property tax escrowed monthly), and Insurance (homeowners insurance). Below 20% down payment, PMI is added. HOA fees apply to condos and some communities.'],
                   ['What is PMI and when do I need it?', 'PMI is Private Mortgage Insurance. Lenders require it when your down payment is below 20%. It protects the lender — not you — against default. Typical cost is 0.5% to 1.5% of the loan amount annually. It\'s automatically removed when your loan balance hits 80% of the original home value.'],
                   ['What is an amortization schedule?', 'An amortization schedule shows every monthly payment over the life of your loan, broken into principal and interest. In early years, most of each payment is interest. As the loan ages, the principal portion grows. Extra payments made early in the loan have an outsized impact on total interest paid.'],
@@ -521,7 +521,7 @@ export default function MortgageCalculator() {
             {/* Disclaimer */}
             <div className="pt-8">
               <p className="text-xs text-gray-400 leading-relaxed">
-                Calculations are estimates for educational purposes only. Actual mortgage terms, rates, and payments depend on lender requirements and your financial profile. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders. Always consult a licensed mortgage professional before making financial decisions.
+                Calculations are estimates for educational purposes only. Actual mortgage terms, rates, and payments depend on lender requirements and your financial profile. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders. Always consult a licensed mortgage professional before making financial decisions.
               </p>
             </div>
 

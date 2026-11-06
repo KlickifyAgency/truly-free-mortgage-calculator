@@ -246,7 +246,7 @@ export default function MortgagePayoffCalculatorPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Interest savings calculations are approximate and based on illustrative loan parameters. Investment return comparisons use historical averages which do not guarantee future performance. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Interest savings calculations are approximate and based on illustrative loan parameters. Investment return comparisons use historical averages which do not guarantee future performance. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

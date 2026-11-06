@@ -224,7 +224,7 @@ export default function JumboLoanCalculatorPage() {
             Most jumbo mortgage calculators online are designed to capture your contact information and route you to a loan officer. Truly Free Mortgage calculates your complete payment with full amortization schedule for any loan amount with no registration and no lender contact.
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Model different loan amounts, down payment percentages, and interest rate scenarios to understand exactly where the numbers land before you begin lender conversations. Every calculation runs in your browser. No data leaves your device.
+            Model different loan amounts, down payment percentages, and interest rate scenarios to understand exactly where the numbers land before you begin lender conversations. Every calculation runs in your browser. Your numbers stay on your device.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -246,7 +246,7 @@ export default function JumboLoanCalculatorPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Jumbo loan limits, rates, and qualification requirements vary by lender and are subject to change. The 2026 conforming loan limit figures reflect FHFA guidelines. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Jumbo loan limits, rates, and qualification requirements vary by lender and are subject to change. The 2026 conforming loan limit figures reflect FHFA guidelines. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

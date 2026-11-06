@@ -170,7 +170,7 @@ export default function FHAvsConventionalLoan2026Page() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Rates, MIP/PMI rates, and program rules are set by HUD, FHA, and private insurers and are subject to change. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Rates, MIP/PMI rates, and program rules are set by HUD, FHA, and private insurers and are subject to change. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

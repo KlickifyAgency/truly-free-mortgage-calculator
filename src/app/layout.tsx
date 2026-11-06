@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Truly Free Mortgage Calculator — No Registration Required",
-  description: "Calculate your mortgage payment instantly. Full amortization schedule, PMI, taxes, HOA. 100% free. No email. No signup. Your data never leaves your browser.",
+  description: "Calculate your mortgage payment instantly. Full amortization schedule, PMI, taxes, HOA. 100% free. No email. No signup. Your numbers never leave your browser.",
 };
 
 function Footer() {
@@ -38,7 +39,9 @@ function Footer() {
         <span style={{ fontSize: "13px", color: "#a0aec0", letterSpacing: "-0.01em" }}>
           2026 Truly Free Mortgage · Built by{" "}
           <a href="https://klickifyagency.com" target="_blank" rel="noopener noreferrer" style={{ color: "#0058c3", fontWeight: 600, textDecoration: "none" }}>Klickify Agency</a>
-          {" "}· Your data never leaves your browser.
+          {" "}· Powered by{" "}
+          <a href="https://vacaysmith.com" target="_blank" rel="noopener" style={{ color: "#0058c3", fontWeight: 600, textDecoration: "none" }}>VacaySmith</a>
+          {" "}· Your numbers never leave your browser.
           {" "}·{" "}
           <a href="https://google.com/preferences/source?q=trulyfreemortgage.com" target="_blank" rel="noopener noreferrer" style={{ color: "#0058c3", fontWeight: 600, textDecoration: "none" }}>Preferred Source on Google</a>
         </span>
@@ -73,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
       </head>
       <body style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NV72BDPP');`}</Script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: siteSchemas }} />
         {children}
         <Footer />

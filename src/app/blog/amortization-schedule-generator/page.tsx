@@ -43,7 +43,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           'name': 'Can I get a free amortization schedule without signing up?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Truly Free Mortgage generates a complete month-by-month amortization schedule with zero registration required. The calculation runs entirely in your browser and no data is sent to any server.' },
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Truly Free Mortgage generates a complete month-by-month amortization schedule with zero registration required. The calculation runs entirely in your browser and your numbers are not sent to any server.' },
         },
         {
           '@type': 'Question',
@@ -84,7 +84,7 @@ export default function AmortizationScheduleGeneratorPage() {
     },
     {
       q: 'Can I get a free amortization schedule without signing up?',
-      a: 'Yes. Truly Free Mortgage generates a complete month-by-month amortization schedule with zero registration required. The calculation runs entirely in your browser and no data is sent to any server.',
+      a: 'Yes. Truly Free Mortgage generates a complete month-by-month amortization schedule with zero registration required. The calculation runs entirely in your browser and your numbers are not sent to any server.',
     },
     {
       q: 'What is the difference between a 15-year and 30-year amortization schedule?',
@@ -256,7 +256,7 @@ export default function AmortizationScheduleGeneratorPage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Actual loan terms vary by lender, credit score, and market conditions. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Actual loan terms vary by lender, credit score, and market conditions. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

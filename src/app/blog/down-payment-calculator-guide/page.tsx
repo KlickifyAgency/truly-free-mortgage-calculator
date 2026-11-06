@@ -150,7 +150,7 @@ export default function DownPaymentCalculatorGuidePage() {
             LendingTree&apos;s down payment tool is not a calculator. It is a single question: &quot;How much can you put down?&quot; Then they ask for your contact information to &quot;match you with lenders who accept low down payments.&quot;
           </p>
           <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
-            Truly Free Mortgage Calculator does not track your inputs. There are no cookies. No &quot;save my results&quot; feature because I do not want your data. You use the calculator, you see the numbers, you close the tab. That is it.
+            Truly Free Mortgage Calculator does not track your inputs. No cookie stores them. No &quot;save my results&quot; feature because I do not want your numbers. You use the calculator, you see the numbers, you close the tab. That is it.
           </p>
 
           <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -176,7 +176,7 @@ export default function DownPaymentCalculatorGuidePage() {
 
           <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
-              Figures on this page are for educational purposes only. Rates, PMI rates, and program rules vary by lender, location, and borrower profile. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
+              Figures on this page are for educational purposes only. Rates, PMI rates, and program rules vary by lender, location, and borrower profile. Consult a licensed lender for loan-specific figures. Truly Free Mortgage Calculator does not ask for your name, email or phone number and does not connect users with lenders.
             </p>
           </div>
 

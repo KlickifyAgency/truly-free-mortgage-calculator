@@ -45,7 +45,7 @@ const sections = [
   },
   {
     heading: 'How Your Data Is Handled',
-    body: 'Every calculation in this tool runs in your browser. No data is transmitted to any server. The home price, income assumptions, or rate information you enter never leaves your device. There is no account, no session cookie that stores your inputs, and no analytics that track what numbers you ran. This is a deliberate architectural choice — not a privacy policy promise. Client-side calculation means there is no server to send your data to.',
+    body: 'Every calculation in this tool runs in your browser. Your inputs are never transmitted to any server. The home price, income assumptions, or rate information you enter never leaves your device. There is no account, no session cookie that stores your inputs, and no analytics that track what numbers you ran. This is a deliberate architectural choice — not a privacy policy promise. Client-side calculation means there is no server to send your numbers to.',
   },
 ];
 
