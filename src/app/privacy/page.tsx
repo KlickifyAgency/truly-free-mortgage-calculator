@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-[#718096] mb-2">Legal</div>
           <h1 className="text-2xl font-bold text-[#181c1e] tracking-tight mb-8">Privacy Policy</h1>
           <div className="space-y-6 text-[15px] text-[#4a5568] leading-relaxed">
-            <p>Last updated: November 6, 2026</p>
+            <p>Last updated: November 20, 2026</p>
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Your numbers stay in your browser</h2>
               <p>All mortgage calculations are performed entirely within your browser. The numbers you enter — loan amount, interest rate, income, or any other financial figures — never leave your device, and we never collect them.</p>
@@ -45,6 +45,10 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Third-party links</h2>
               <p>This site may contain links to external websites. We are not responsible for the privacy practices or content of those sites.</p>
+            </div>
+            <div>
+              <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Your privacy rights (California and other U.S. states)</h2>
+              <p>Residents of California (CCPA/CPRA) and other U.S. states with privacy laws have the right to know what personal information is collected, to ask for it to be deleted or corrected, and to opt out of its sale or sharing for targeted advertising. We do not sell personal information. We keep no names, emails or accounts, so we hold nothing we could look up about you; analytics and advertising cookies are held by Google. To limit them, use <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-[#0058c3] font-medium">Google Ads Settings</a>, the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-[#0058c3] font-medium">Google Analytics opt-out add-on</a>, or your browser&apos;s cookie controls. For any other request, email us at the address below and we will answer within 30 days.</p>
             </div>
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Contact</h2>
